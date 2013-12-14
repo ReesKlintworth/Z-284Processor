@@ -43,7 +43,7 @@ namespace ProcessorAssembler
 			aluCodes["sll"] = "110";
 			aluCodes["srl"] = "111";
 
-			string[] lines = File.ReadAllLines(@"C:\Repos\284Processor\SampleAssemblyProgram.s");
+			string[] lines = File.ReadAllLines(@"C:\Users\Derek Nordgren\Documents\GitHub\284Processor\SampleAssemblyProgram.s");
 
 			List<string> outputLines = new List<string>();
 
@@ -54,14 +54,91 @@ namespace ProcessorAssembler
 			outputLines.Add("\nCONTENT");
 			outputLines.Add("\tBEGIN");
 
-			for (int i = 0; i < lines.Length; i++)
+			Hashtable methods = new Hashtable();
+
+			// Sets method line positions
+			for (int currentLineIndex = 0; currentLineIndex < lines.Length; currentLineIndex++)
 			{
-				string line = "\t" + i + "\t:\t";
-				string[] components = lines[i].Split(' ');
-				line += opCodes[components[0]].ToString();
+				string currentLine = lines[currentLineIndex];
+				if (!currentLine.StartsWith("\t"))
+				{
+					string methodName = currentLine.Split(':')[0];
+					methods[methodName] = (Int32)currentLineIndex;
+
+				}
 			}
 
-			File.WriteAllLines(@"C:\Repos\284Processor\FirstMif.mif", outputLines.ToArray());
+			for (int i = 0; i < lines.Length; i++)
+			{
+				string outputLine = "\t" + i + "\t:\t";
+
+				string currentLine = lines[i];
+
+				string[] splitByTab = currentLine.Split('\t');
+
+				string[] components = splitByTab[1].Split(' ');
+
+				string op = opCodes[components[0]].ToString();
+				
+				outputLine += op + " ";
+
+				string[] registers = components[1].Split(',');
+
+				int rTypeCounter = 0;
+				foreach (string reg in registers)
+				{
+					int convertedReg = 0;
+					// getting register
+					if (reg.StartsWith("$"))
+					{
+						int register = Int32.Parse(reg[1].ToString());
+						string binReg = Convert.ToString(register, 2);
+						binReg = binReg.PadLeft(3, '0');
+						outputLine += binReg + " ";
+						rTypeCounter++;
+					}
+					
+					// getting immediate
+					else if (Int32.TryParse(reg, out convertedReg))
+					{
+						string immBin = Convert.ToString(convertedReg, 2);
+						immBin = immBin.PadLeft(6, '0');
+						outputLine += immBin + " ";
+					}
+
+					else if (reg.Contains("("))
+					{
+						string[] pieces = reg.Split('(');
+						string iTypeImm = Convert.ToString(Int32.Parse(pieces[0]), 2);
+						iTypeImm = iTypeImm.PadLeft(6, '0');
+						string iTypeReg = pieces[1][1].ToString();
+						iTypeReg = iTypeReg.PadLeft(3, '0');
+						outputLine += iTypeReg + " ";
+						outputLine += iTypeImm + " ";
+					}
+
+					else
+					{
+						string method = reg;
+						int methodNum = Convert.ToInt32(methods[method]);
+						string methodNumStr = Convert.ToString(methodNum, 2);
+						methodNumStr = methodNumStr.PadLeft(6, '0');
+						if (components[0] == "j")
+						{
+							methodNumStr = methodNumStr.PadLeft(12, '0'); 
+						}
+						outputLine += methodNumStr + " ";
+					}
+				}
+
+				if (rTypeCounter == 3)
+				{
+					outputLine += aluCodes[components[0]];
+				}
+				outputLines.Add(outputLine);
+			}
+
+			File.WriteAllLines(@"C:\Users\Derek Nordgren\Documents\GitHub\284Processor\FirstMif.mif", outputLines.ToArray());
 		}
 	}
 }
