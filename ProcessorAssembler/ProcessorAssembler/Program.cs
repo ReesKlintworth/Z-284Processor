@@ -10,6 +10,8 @@ namespace ProcessorAssembler
 {
 	class Program
 	{
+		public static bool lengthMoreThan256 = false;
+
 		static void Main(string[] args)
 		{
 			#region hashtables
@@ -44,6 +46,7 @@ namespace ProcessorAssembler
 			aluCodes["sll"] = "110";
 			aluCodes["srl"] = "111";
 			#endregion
+
 			Console.WriteLine("Specify input .s file.");
 			string filename = Console.ReadLine();
 
@@ -83,6 +86,13 @@ namespace ProcessorAssembler
 
 				for (int i = 0; i < lines.Length; i++)
 				{
+                    if (!(i < 256))
+                    {
+                        // do we want to just run the loop for 256?
+                        // or should it just break and set a flag?
+                        lengthMoreThan256 = true;
+                        break;
+                    }
 					string outputLine = "\t" + i + "\t\t\t:\t";
 
 					string currentLine = lines[i];
@@ -154,6 +164,12 @@ namespace ProcessorAssembler
 					outputLines.Add(outputLine);
 				}
 				outputLines.Add("END;");
+
+				if (lengthMoreThan256)
+				{
+					// do something here
+					Console.WriteLine("File has more than 256 instructions. Only first 256 assembled.");
+				}
 
 				Console.WriteLine("Assembly successful. Specify output location.");
 				string outputFilename = Console.ReadLine();
