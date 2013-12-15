@@ -1,0 +1,22 @@
+OP codes
+	addiu	0001
+	subiu	0010
+	addi 	0011
+	subi 	0100
+	j		0101
+	jr		0110
+	jal		0111
+	beq		1000
+	bne		1001
+	lw		1010
+	sw		1011
+
+ALU codes
+	and		000
+	add 	001
+	xor		010
+	or		011
+	slt		100
+	sub 	101
+	sll		110
+	srl		111
