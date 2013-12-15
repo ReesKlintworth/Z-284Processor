@@ -151,6 +151,7 @@ namespace ProcessorAssembler
 					}
 					outputLines.Add(outputLine);
 				}
+				outputLines.Add("END;");
 
 				Console.WriteLine("Assembly successful. Specify output location.");
 				string outputFilename = Console.ReadLine();
