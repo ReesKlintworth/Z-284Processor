@@ -1,0 +1,264 @@
+Simulator report for ROM
+Sun Dec 15 16:17:21 2013
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |ROM|lpm_rom:lpm_rom_component|altrom:srom|content
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 57 nodes     ;
+; Simulation Coverage         ;       1.75 % ;
+; Total Number of Transitions ; 217          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; FLEX10K      ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                        ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Option                                                                                     ; Setting      ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Simulation mode                                                                            ; Functional   ; Timing        ;
+; Start time                                                                                 ; 0 ns         ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF         ;               ;
+; Vector input source                                                                        ; ROM_test.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On           ; On            ;
+; Check outputs                                                                              ; Off          ; Off           ;
+; Report simulation coverage                                                                 ; On           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On           ; On            ;
+; Display missing 1-value coverage report                                                    ; On           ; On            ;
+; Display missing 0-value coverage report                                                    ; On           ; On            ;
+; Detect setup and hold time violations                                                      ; Off          ; Off           ;
+; Detect glitches                                                                            ; Off          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off          ; Off           ;
+; Generate Signal Activity File                                                              ; Off          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto         ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++----------------------------------------------------+
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|content ;
++----------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       1.75 % ;
+; Total nodes checked                                 ; 57           ;
+; Total output ports checked                          ; 57           ;
+; Total output ports with complete 1/0-value coverage ; 1            ;
+; Total output ports with no 1/0-value coverage       ; 38           ;
+; Total output ports with no 1-value coverage         ; 47           ;
+; Total output ports with no 0-value coverage         ; 47           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------+
+; Complete 1/0-Value Coverage                        ;
++--------------+------------------+------------------+
+; Node Name    ; Output Port Name ; Output Port Type ;
++--------------+------------------+------------------+
+; |ROM|inclock ; |ROM|inclock     ; out              ;
++--------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                        ;
++-----------------------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                                 ; Output Port Name                                 ; Output Port Type ;
++-----------------------------------------------------------+--------------------------------------------------+------------------+
+; |ROM|address[0]                                           ; |ROM|address[0]                                  ; out              ;
+; |ROM|address[1]                                           ; |ROM|address[1]                                  ; out              ;
+; |ROM|address[2]                                           ; |ROM|address[2]                                  ; out              ;
+; |ROM|address[3]                                           ; |ROM|address[3]                                  ; out              ;
+; |ROM|address[4]                                           ; |ROM|address[4]                                  ; out              ;
+; |ROM|address[5]                                           ; |ROM|address[5]                                  ; out              ;
+; |ROM|address[6]                                           ; |ROM|address[6]                                  ; out              ;
+; |ROM|address[7]                                           ; |ROM|address[7]                                  ; out              ;
+; |ROM|q[0]                                                 ; |ROM|q[0]                                        ; pin_out          ;
+; |ROM|q[2]                                                 ; |ROM|q[2]                                        ; pin_out          ;
+; |ROM|q[3]                                                 ; |ROM|q[3]                                        ; pin_out          ;
+; |ROM|q[4]                                                 ; |ROM|q[4]                                        ; pin_out          ;
+; |ROM|q[5]                                                 ; |ROM|q[5]                                        ; pin_out          ;
+; |ROM|q[6]                                                 ; |ROM|q[6]                                        ; pin_out          ;
+; |ROM|q[7]                                                 ; |ROM|q[7]                                        ; pin_out          ;
+; |ROM|q[8]                                                 ; |ROM|q[8]                                        ; pin_out          ;
+; |ROM|q[9]                                                 ; |ROM|q[9]                                        ; pin_out          ;
+; |ROM|q[10]                                                ; |ROM|q[10]                                       ; pin_out          ;
+; |ROM|q[12]                                                ; |ROM|q[12]                                       ; pin_out          ;
+; |ROM|q[13]                                                ; |ROM|q[13]                                       ; pin_out          ;
+; |ROM|q[14]                                                ; |ROM|q[14]                                       ; pin_out          ;
+; |ROM|lpm_rom:lpm_rom_component|otri[14]                   ; |ROM|lpm_rom:lpm_rom_component|otri[14]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[13]                   ; |ROM|lpm_rom:lpm_rom_component|otri[13]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[12]                   ; |ROM|lpm_rom:lpm_rom_component|otri[12]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[10]                   ; |ROM|lpm_rom:lpm_rom_component|otri[10]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[9]                    ; |ROM|lpm_rom:lpm_rom_component|otri[9]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[8]                    ; |ROM|lpm_rom:lpm_rom_component|otri[8]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[7]                    ; |ROM|lpm_rom:lpm_rom_component|otri[7]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[6]                    ; |ROM|lpm_rom:lpm_rom_component|otri[6]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[5]                    ; |ROM|lpm_rom:lpm_rom_component|otri[5]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[4]                    ; |ROM|lpm_rom:lpm_rom_component|otri[4]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[3]                    ; |ROM|lpm_rom:lpm_rom_component|otri[3]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[2]                    ; |ROM|lpm_rom:lpm_rom_component|otri[2]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[0]                    ; |ROM|lpm_rom:lpm_rom_component|otri[0]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][14] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[14] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][13] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[13] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][12] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[12] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][10] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[10] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][9]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[9]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][8]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[8]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][7]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[7]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][6]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[6]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][5]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[5]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][4]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[4]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][3]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[3]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][2]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[2]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][0]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[0]  ; dataout          ;
++-----------------------------------------------------------+--------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                        ;
++-----------------------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                                 ; Output Port Name                                 ; Output Port Type ;
++-----------------------------------------------------------+--------------------------------------------------+------------------+
+; |ROM|address[0]                                           ; |ROM|address[0]                                  ; out              ;
+; |ROM|address[1]                                           ; |ROM|address[1]                                  ; out              ;
+; |ROM|address[2]                                           ; |ROM|address[2]                                  ; out              ;
+; |ROM|address[3]                                           ; |ROM|address[3]                                  ; out              ;
+; |ROM|address[4]                                           ; |ROM|address[4]                                  ; out              ;
+; |ROM|address[5]                                           ; |ROM|address[5]                                  ; out              ;
+; |ROM|address[6]                                           ; |ROM|address[6]                                  ; out              ;
+; |ROM|address[7]                                           ; |ROM|address[7]                                  ; out              ;
+; |ROM|q[1]                                                 ; |ROM|q[1]                                        ; pin_out          ;
+; |ROM|q[2]                                                 ; |ROM|q[2]                                        ; pin_out          ;
+; |ROM|q[3]                                                 ; |ROM|q[3]                                        ; pin_out          ;
+; |ROM|q[4]                                                 ; |ROM|q[4]                                        ; pin_out          ;
+; |ROM|q[5]                                                 ; |ROM|q[5]                                        ; pin_out          ;
+; |ROM|q[6]                                                 ; |ROM|q[6]                                        ; pin_out          ;
+; |ROM|q[7]                                                 ; |ROM|q[7]                                        ; pin_out          ;
+; |ROM|q[8]                                                 ; |ROM|q[8]                                        ; pin_out          ;
+; |ROM|q[10]                                                ; |ROM|q[10]                                       ; pin_out          ;
+; |ROM|q[11]                                                ; |ROM|q[11]                                       ; pin_out          ;
+; |ROM|q[13]                                                ; |ROM|q[13]                                       ; pin_out          ;
+; |ROM|q[14]                                                ; |ROM|q[14]                                       ; pin_out          ;
+; |ROM|q[15]                                                ; |ROM|q[15]                                       ; pin_out          ;
+; |ROM|lpm_rom:lpm_rom_component|otri[15]                   ; |ROM|lpm_rom:lpm_rom_component|otri[15]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[14]                   ; |ROM|lpm_rom:lpm_rom_component|otri[14]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[13]                   ; |ROM|lpm_rom:lpm_rom_component|otri[13]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[11]                   ; |ROM|lpm_rom:lpm_rom_component|otri[11]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[10]                   ; |ROM|lpm_rom:lpm_rom_component|otri[10]          ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[8]                    ; |ROM|lpm_rom:lpm_rom_component|otri[8]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[7]                    ; |ROM|lpm_rom:lpm_rom_component|otri[7]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[6]                    ; |ROM|lpm_rom:lpm_rom_component|otri[6]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[5]                    ; |ROM|lpm_rom:lpm_rom_component|otri[5]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[4]                    ; |ROM|lpm_rom:lpm_rom_component|otri[4]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[3]                    ; |ROM|lpm_rom:lpm_rom_component|otri[3]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[2]                    ; |ROM|lpm_rom:lpm_rom_component|otri[2]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|otri[1]                    ; |ROM|lpm_rom:lpm_rom_component|otri[1]           ; out              ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][15] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[15] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][14] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[14] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][13] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[13] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][11] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[11] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][10] ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[10] ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][8]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[8]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][7]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[7]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][6]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[6]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][5]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[5]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][4]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[4]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][3]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[3]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][2]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[2]  ; dataout          ;
+; |ROM|lpm_rom:lpm_rom_component|altrom:srom|segment[0][1]  ; |ROM|lpm_rom:lpm_rom_component|altrom:srom|q[1]  ; dataout          ;
++-----------------------------------------------------------+--------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Dec 15 16:17:20 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ROM -c ROM
+Info: Using vector source file "C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ROM/ROM_test.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       1.75 %
+Info: Number of transitions in simulation is 217
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Sun Dec 15 16:17:21 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

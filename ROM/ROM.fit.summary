@@ -1,0 +1,10 @@
+Fitter Status : Successful - Sun Dec 15 16:15:43 2013
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : ROM
+Top-level Entity Name : ROM
+Family : FLEX10K
+Device : EPF10K70RC240-4
+Timing Models : Final
+Total logic elements : 0 / 3,744 ( 0 % )
+Total pins : 25 / 189 ( 13 % )
+Total memory bits : 4,096 / 18,432 ( 22 % )
