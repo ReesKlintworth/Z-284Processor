@@ -60,12 +60,13 @@ namespace ProcessorAssembler
 
 				List<string> outputLines = new List<string>();
 
-				outputLines.Add("WIDTH = 16");
-				outputLines.Add("DEPTH = " + lines.Length);
+				outputLines.Add("WIDTH = 16;");
+				outputLines.Add("DEPTH = 256;");
 				outputLines.Add("ADDRESS_RADIX = DEC;");
 				outputLines.Add("DATA_RADIX = BIN;");
 				outputLines.Add("\nCONTENT");
 				outputLines.Add("\tBEGIN");
+				outputLines.Add("\t[0..255]\t:\t0000000000000000;");
 
 				Hashtable methods = new Hashtable();
 
@@ -82,7 +83,7 @@ namespace ProcessorAssembler
 
 				for (int i = 0; i < lines.Length; i++)
 				{
-					string outputLine = "\t" + i + "\t:\t";
+					string outputLine = "\t" + i + "\t\t\t:\t";
 
 					string currentLine = lines[i];
 
@@ -149,6 +150,7 @@ namespace ProcessorAssembler
 					{
 						outputLine += aluCodes[components[0]];
 					}
+					outputLine += ";";
 					outputLines.Add(outputLine);
 				}
 				outputLines.Add("END;");
