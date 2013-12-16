@@ -1,5 +1,5 @@
 	addi $1,$0,1
-init:	add $7,$0,$0
+init:	add $7,$0,$1
 loop:	sw $7,0($0)
 	lw $2,1($0)
 	lw $4,2($0)

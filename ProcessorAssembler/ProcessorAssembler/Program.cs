@@ -195,7 +195,7 @@ namespace ProcessorAssembler
 							iTypeReg = iTypeReg.PadLeft(3, '0');
 							outputLine += iTypeReg;
 							outputLine += iTypeImm;
-							totalArgs++;
+							totalArgs += 2;
 							immCounter++;
 							regCounter++;
 						}
@@ -223,20 +223,20 @@ namespace ProcessorAssembler
 					}
 					string rd = outputLine.Substring(outputLine.Length - 12, 3);
 
-					//if (!(totalArgs == ((int)numOfImmPerOperationTable[components[0]] + (int)numOfRegistersPerOperationTable[components[0]])))
-					//{
-					//	throw new FormatException();
-					//}
+					if (!(totalArgs == ((int)numOfImmPerOperationTable[components[0]] + (int)numOfRegistersPerOperationTable[components[0]])))
+					{
+						throw new FormatException();
+					}
 
-					//if (!(immCounter == ((int)numOfImmPerOperationTable[components[0]])))
-					//{
-					//	throw new FormatException();
-					//}
+					if (!(immCounter == ((int)numOfImmPerOperationTable[components[0]])))
+					{
+						throw new FormatException();
+					}
 
-					//if (!(regCounter == ((int)numOfRegistersPerOperationTable[components[0]])))
-					//{
-					//	throw new FormatException();
-					//}
+					if (!(regCounter == ((int)numOfRegistersPerOperationTable[components[0]])))
+					{
+						throw new FormatException();
+					}
 
 					if (rd.Equals("000") && (!((int)numOfRegistersPerOperationTable[components[0]] == 0)))
 					{
