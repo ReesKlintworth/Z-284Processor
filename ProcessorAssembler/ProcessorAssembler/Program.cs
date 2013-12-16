@@ -181,6 +181,10 @@ namespace ProcessorAssembler
 						{
 							string immBin = Convert.ToString(convertedReg, 2);
 							immBin = immBin.PadLeft(6, '0');
+							if (immBin.Length > 6)
+							{
+								throw new FormatException();
+							}
 							outputLine += immBin;
 							totalArgs++;
 							immCounter++;
@@ -212,7 +216,7 @@ namespace ProcessorAssembler
 							methodNumStr = methodNumStr.PadLeft(6, '0');
 							if (components[0] == "j")
 							{
-								if (methodNumStr.Length > 8)
+								if (methodNumStr.Length > 6)
 								{
 									throw new FormatException();
 								}
