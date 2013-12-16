@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
+
+// TODO check that arguments are correct for all operations
 
 namespace ProcessorAssembler
 {
@@ -45,6 +44,49 @@ namespace ProcessorAssembler
 			aluCodes["sub"] = "101";
 			aluCodes["sll"] = "110";
 			aluCodes["srl"] = "111";
+
+			var numOfRegistersPerOperationTable = new Hashtable();
+			numOfRegistersPerOperationTable["and"] = 3;
+			numOfRegistersPerOperationTable["add"] = 3;
+			numOfRegistersPerOperationTable["xor"] = 3;
+			numOfRegistersPerOperationTable["or"] = 3;
+			numOfRegistersPerOperationTable["slt"] = 3;
+			numOfRegistersPerOperationTable["sub"] = 3;
+			numOfRegistersPerOperationTable["sll"] = 3;
+			numOfRegistersPerOperationTable["srl"] = 3;
+			numOfRegistersPerOperationTable["addiu"] = 2;
+			numOfRegistersPerOperationTable["subiu"] = 2;
+			numOfRegistersPerOperationTable["addi"] = 2;
+			numOfRegistersPerOperationTable["subi"] = 2;
+			numOfRegistersPerOperationTable["j"] = 0;
+			numOfRegistersPerOperationTable["jr"] = 1;
+			numOfRegistersPerOperationTable["jal"] = 0;
+			numOfRegistersPerOperationTable["beq"] = 2;
+			numOfRegistersPerOperationTable["bne"] = 2;
+			numOfRegistersPerOperationTable["lw"] = 2;
+			numOfRegistersPerOperationTable["sw"] = 2;
+
+			var numOfImmPerOperationTable = new Hashtable();
+			numOfImmPerOperationTable["and"] = 0;
+			numOfImmPerOperationTable["add"] = 0;
+			numOfImmPerOperationTable["xor"] = 0;
+			numOfImmPerOperationTable["or"] = 0;
+			numOfImmPerOperationTable["slt"] = 0;
+			numOfImmPerOperationTable["sub"] = 0;
+			numOfImmPerOperationTable["sll"] = 0;
+			numOfImmPerOperationTable["srl"] = 0;
+			numOfImmPerOperationTable["addiu"] = 1;
+			numOfImmPerOperationTable["subiu"] = 1;
+			numOfImmPerOperationTable["addi"] = 1;
+			numOfImmPerOperationTable["subi"] = 1;
+			numOfImmPerOperationTable["j"] = 1;
+			numOfImmPerOperationTable["jr"] = 1;
+			numOfImmPerOperationTable["jal"] = 1;
+			numOfImmPerOperationTable["beq"] = 1;
+			numOfImmPerOperationTable["bne"] = 1;
+			numOfImmPerOperationTable["lw"] = 1;
+			numOfImmPerOperationTable["sw"] = 1;
+
 			#endregion
 
 			Console.WriteLine("Specify input .s file.");
@@ -86,13 +128,13 @@ namespace ProcessorAssembler
 
 				for (int i = 0; i < lines.Length; i++)
 				{
-                    if (!(i < 256))
-                    {
-                        // do we want to just run the loop for 256?
-                        // or should it just break and set a flag?
-                        lengthMoreThan256 = true;
-                        break;
-                    }
+					if (!(i < 256))
+					{
+						// do we want to just run the loop for 256?
+						// or should it just break and set a flag?
+						lengthMoreThan256 = true;
+						break;
+					}
 					string outputLine = "\t" + i + "\t\t\t:\t";
 
 					string currentLine = lines[i];
@@ -108,6 +150,10 @@ namespace ProcessorAssembler
 					string[] registers = components[1].Split(',');
 
 					int rTypeCounter = 0;
+					int regCounter = 0;
+					int immCounter = 0;
+					int totalArgs = 0;
+
 					foreach (string reg in registers)
 					{
 						#region parse arguments
@@ -116,10 +162,18 @@ namespace ProcessorAssembler
 						if (reg.StartsWith("$"))
 						{
 							int register = Int32.Parse(reg[1].ToString());
+							// 3 bit registers only
+							if (register > 7)
+							{
+								throw new InvalidOperationException();
+							}
 							string binReg = Convert.ToString(register, 2);
 							binReg = binReg.PadLeft(3, '0');
 							outputLine += binReg;
 							rTypeCounter++;
+
+							regCounter++;
+							totalArgs++;
 						}
 
 						// getting immediate
@@ -128,6 +182,8 @@ namespace ProcessorAssembler
 							string immBin = Convert.ToString(convertedReg, 2);
 							immBin = immBin.PadLeft(6, '0');
 							outputLine += immBin;
+							totalArgs++;
+							immCounter++;
 						}
 
 						else if (reg.Contains("("))
@@ -139,6 +195,9 @@ namespace ProcessorAssembler
 							iTypeReg = iTypeReg.PadLeft(3, '0');
 							outputLine += iTypeReg;
 							outputLine += iTypeImm;
+							totalArgs++;
+							immCounter++;
+							regCounter++;
 						}
 
 						else
@@ -152,6 +211,8 @@ namespace ProcessorAssembler
 								methodNumStr = methodNumStr.PadLeft(12, '0');
 							}
 							outputLine += methodNumStr;
+							totalArgs++;
+							immCounter++;
 						}
 						#endregion
 					}
@@ -159,6 +220,27 @@ namespace ProcessorAssembler
 					if (rTypeCounter == 3)
 					{
 						outputLine += aluCodes[components[0]];
+					}
+					string rd = outputLine.Substring(outputLine.Length - 12, 3);
+
+					//if (!(totalArgs == ((int)numOfImmPerOperationTable[components[0]] + (int)numOfRegistersPerOperationTable[components[0]])))
+					//{
+					//	throw new FormatException();
+					//}
+
+					//if (!(immCounter == ((int)numOfImmPerOperationTable[components[0]])))
+					//{
+					//	throw new FormatException();
+					//}
+
+					//if (!(regCounter == ((int)numOfRegistersPerOperationTable[components[0]])))
+					//{
+					//	throw new FormatException();
+					//}
+
+					if (rd.Equals("000") && (!((int)numOfRegistersPerOperationTable[components[0]] == 0)))
+					{
+						throw new EntryPointNotFoundException();
 					}
 					outputLine += ";";
 					outputLines.Add(outputLine);
@@ -176,6 +258,19 @@ namespace ProcessorAssembler
 
 				File.WriteAllLines(outputFilename, outputLines.ToArray());
 				Console.WriteLine("Output file written successfully. Press Return to exit.");
+				Console.ReadLine();
+				return;
+			}
+			#region exceptions
+			catch (FormatException)
+			{
+				Console.WriteLine("Syntax error. Please check your assembly file. Press Return to exit.");
+				Console.ReadLine();
+				return;
+			}
+			catch (EntryPointNotFoundException)
+			{
+				Console.WriteLine("You are not allowed to modify the 0 register. Press Return to exit.");
 				Console.ReadLine();
 				return;
 			}
@@ -197,12 +292,19 @@ namespace ProcessorAssembler
 				Console.ReadLine();
 				return;
 			}
+			catch (InvalidOperationException)
+			{
+				Console.WriteLine("Error: You may only use registers 0 - 7. Press Return to exit.");
+				Console.ReadLine();
+				return;
+			}
 			catch (Exception)
 			{
 				Console.WriteLine("Output file not able to be written. Press Return to exit.");
 				Console.ReadLine();
 				return;
 			}
+			#endregion
 		}
 	}
 }
