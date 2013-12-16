@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.100 ns
+From           : data[7]
+To             : lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[7]~reg_in
+From Clock     : --
+To Clock       : inclock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 31.800 ns
+From           : lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[7]~reg_wa7
+To             : q[7]
+From Clock     : inclock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.800 ns
+From           : address[0]
+To             : lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[7]~reg_wa0
+From Clock     : --
+To Clock       : inclock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
