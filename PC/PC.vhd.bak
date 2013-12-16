@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity program_counter is
+entity PC is
 port
 (
 	clk : in std_logic;
@@ -10,9 +10,9 @@ port
 	enable : in std_logic;
 	count : out std_logic_vector(7 downto 0)
 );
-end program_counter;
+end PC;
 
-architecture behav of program_counter is
+architecture behav of PC is
 	signal pre_count : std_logic_vector(7 downto 0);
 	begin
 		process(clk, enable, reset)

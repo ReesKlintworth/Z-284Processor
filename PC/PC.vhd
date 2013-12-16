@@ -5,6 +5,7 @@ use ieee.std_logic_unsigned.all;
 entity PC is
 port
 (
+	input : in std_logic_vector(7 downto 0);
 	clk : in std_logic;
 	reset : in std_logic;
 	enable : in std_logic;
@@ -21,7 +22,8 @@ architecture behav of PC is
 				pre_count <= "00000000";
 			elsif (clk = '1' and clk'event) then
 				if enable = '1' then
-					pre_count <= pre_count + "1";
+					--pre_count <= pre_count + "1";
+					pre_count <= input;
 				end if;
 			end if;
 		end process;
