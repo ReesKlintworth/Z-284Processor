@@ -18,12 +18,20 @@
 #
 # Quartus II
 # Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+<<<<<<< HEAD
 # Date created = 17:20:17  December 15, 2013
+=======
+# Date created = 15:48:49  December 15, 2013
+>>>>>>> origin/ROM
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "9.0"
+<<<<<<< HEAD
 DATE = "17:20:17  December 15, 2013"
+=======
+DATE = "15:48:49  December 15, 2013"
+>>>>>>> origin/ROM
 
 # Revisions
 

@@ -20,6 +20,7 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
+<<<<<<< HEAD
 VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ROM/ROM_test.vwf")
 {
 	ZOOM{
@@ -27,6 +28,15 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ROM/ROM_test.vwf")
 		ZEND = 1000000;
 		NUMERATOR = 20;
 		DENOMINATOR = 1000;
+=======
+VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ROM/db/ROM.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 14799;
+		NUMERATOR = 522;
+		DENOMINATOR = 14799;
+>>>>>>> origin/ROM
 		TOP_INDEX = 0;
 	}
 	CLOCK{
