@@ -191,6 +191,10 @@ namespace ProcessorAssembler
 							string[] pieces = reg.Split('(');
 							string iTypeImm = Convert.ToString(Int32.Parse(pieces[0]), 2);
 							iTypeImm = iTypeImm.PadLeft(6, '0');
+							if (iTypeImm.Length > 6)
+							{
+								throw new FormatException();
+							}
 							string iTypeReg = pieces[1][1].ToString();
 							iTypeReg = iTypeReg.PadLeft(3, '0');
 							outputLine += iTypeReg;
@@ -208,7 +212,18 @@ namespace ProcessorAssembler
 							methodNumStr = methodNumStr.PadLeft(6, '0');
 							if (components[0] == "j")
 							{
+								if (methodNumStr.Length > 8)
+								{
+									throw new FormatException();
+								}
 								methodNumStr = methodNumStr.PadLeft(12, '0');
+							}
+							else
+							{
+								if (methodNumStr.Length > 6)
+								{
+									throw new FormatException();
+								}
 							}
 							outputLine += methodNumStr;
 							totalArgs++;
