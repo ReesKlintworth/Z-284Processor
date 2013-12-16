@@ -1,0 +1,35 @@
+|PC
+clk => pre_count[7].CLK
+clk => pre_count[6].CLK
+clk => pre_count[5].CLK
+clk => pre_count[4].CLK
+clk => pre_count[3].CLK
+clk => pre_count[2].CLK
+clk => pre_count[1].CLK
+clk => pre_count[0].CLK
+reset => pre_count[7].ACLR
+reset => pre_count[6].ACLR
+reset => pre_count[5].ACLR
+reset => pre_count[4].ACLR
+reset => pre_count[3].ACLR
+reset => pre_count[2].ACLR
+reset => pre_count[1].ACLR
+reset => pre_count[0].ACLR
+enable => pre_count[7].ENA
+enable => pre_count[6].ENA
+enable => pre_count[5].ENA
+enable => pre_count[4].ENA
+enable => pre_count[3].ENA
+enable => pre_count[2].ENA
+enable => pre_count[1].ENA
+enable => pre_count[0].ENA
+count[0] <= pre_count[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= pre_count[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= pre_count[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= pre_count[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= pre_count[4].DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= pre_count[5].DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= pre_count[6].DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= pre_count[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
