@@ -1,0 +1,588 @@
+Simulator report for eightBitAdder
+Mon Dec 16 18:48:51 2013
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 200 nodes    ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; FLEX10K      ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Option                                                                                     ; Setting               ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Simulation mode                                                                            ; Functional            ; Timing        ;
+; Start time                                                                                 ; 0 ns                  ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                  ;               ;
+; Vector input source                                                                        ; eightBitAdderTest.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                    ; On            ;
+; Check outputs                                                                              ; Off                   ; Off           ;
+; Report simulation coverage                                                                 ; On                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                   ; Off           ;
+; Detect glitches                                                                            ; Off                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 200          ;
+; Total output ports checked                          ; 214          ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 214          ;
+; Total output ports with no 1-value coverage         ; 214          ;
+; Total output ports with no 0-value coverage         ; 214          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                        ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                          ; Output Port Name                                                                        ; Output Port Type ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
+; |eightBitAdder|process_0~0                                                         ; |eightBitAdder|process_0~0                                                              ; out0             ;
+; |eightBitAdder|process_0~1                                                         ; |eightBitAdder|process_0~1                                                              ; out0             ;
+; |eightBitAdder|process_0~2                                                         ; |eightBitAdder|process_0~2                                                              ; out0             ;
+; |eightBitAdder|process_0~3                                                         ; |eightBitAdder|process_0~3                                                              ; out0             ;
+; |eightBitAdder|overflow1~0                                                         ; |eightBitAdder|overflow1~0                                                              ; out              ;
+; |eightBitAdder|process_0~4                                                         ; |eightBitAdder|process_0~4                                                              ; out0             ;
+; |eightBitAdder|process_0~5                                                         ; |eightBitAdder|process_0~5                                                              ; out0             ;
+; |eightBitAdder|process_0~6                                                         ; |eightBitAdder|process_0~6                                                              ; out0             ;
+; |eightBitAdder|process_0~7                                                         ; |eightBitAdder|process_0~7                                                              ; out0             ;
+; |eightBitAdder|overflow2~0                                                         ; |eightBitAdder|overflow2~0                                                              ; out              ;
+; |eightBitAdder|s[0]                                                                ; |eightBitAdder|s[0]                                                                     ; out              ;
+; |eightBitAdder|s[1]                                                                ; |eightBitAdder|s[1]                                                                     ; out              ;
+; |eightBitAdder|s[2]                                                                ; |eightBitAdder|s[2]                                                                     ; out              ;
+; |eightBitAdder|s[3]                                                                ; |eightBitAdder|s[3]                                                                     ; out              ;
+; |eightBitAdder|s[4]                                                                ; |eightBitAdder|s[4]                                                                     ; out              ;
+; |eightBitAdder|s[5]                                                                ; |eightBitAdder|s[5]                                                                     ; out              ;
+; |eightBitAdder|s[6]                                                                ; |eightBitAdder|s[6]                                                                     ; out              ;
+; |eightBitAdder|s[7]                                                                ; |eightBitAdder|s[7]                                                                     ; out              ;
+; |eightBitAdder|t[0]                                                                ; |eightBitAdder|t[0]                                                                     ; out              ;
+; |eightBitAdder|t[1]                                                                ; |eightBitAdder|t[1]                                                                     ; out              ;
+; |eightBitAdder|t[2]                                                                ; |eightBitAdder|t[2]                                                                     ; out              ;
+; |eightBitAdder|t[3]                                                                ; |eightBitAdder|t[3]                                                                     ; out              ;
+; |eightBitAdder|t[4]                                                                ; |eightBitAdder|t[4]                                                                     ; out              ;
+; |eightBitAdder|t[5]                                                                ; |eightBitAdder|t[5]                                                                     ; out              ;
+; |eightBitAdder|t[6]                                                                ; |eightBitAdder|t[6]                                                                     ; out              ;
+; |eightBitAdder|t[7]                                                                ; |eightBitAdder|t[7]                                                                     ; out              ;
+; |eightBitAdder|d[0]                                                                ; |eightBitAdder|d[0]                                                                     ; pin_out          ;
+; |eightBitAdder|d[1]                                                                ; |eightBitAdder|d[1]                                                                     ; pin_out          ;
+; |eightBitAdder|d[2]                                                                ; |eightBitAdder|d[2]                                                                     ; pin_out          ;
+; |eightBitAdder|d[3]                                                                ; |eightBitAdder|d[3]                                                                     ; pin_out          ;
+; |eightBitAdder|d[4]                                                                ; |eightBitAdder|d[4]                                                                     ; pin_out          ;
+; |eightBitAdder|d[5]                                                                ; |eightBitAdder|d[5]                                                                     ; pin_out          ;
+; |eightBitAdder|d[6]                                                                ; |eightBitAdder|d[6]                                                                     ; pin_out          ;
+; |eightBitAdder|d[7]                                                                ; |eightBitAdder|d[7]                                                                     ; pin_out          ;
+; |eightBitAdder|e[0]                                                                ; |eightBitAdder|e[0]                                                                     ; pin_out          ;
+; |eightBitAdder|e[1]                                                                ; |eightBitAdder|e[1]                                                                     ; pin_out          ;
+; |eightBitAdder|e[2]                                                                ; |eightBitAdder|e[2]                                                                     ; pin_out          ;
+; |eightBitAdder|e[3]                                                                ; |eightBitAdder|e[3]                                                                     ; pin_out          ;
+; |eightBitAdder|e[4]                                                                ; |eightBitAdder|e[4]                                                                     ; pin_out          ;
+; |eightBitAdder|e[5]                                                                ; |eightBitAdder|e[5]                                                                     ; pin_out          ;
+; |eightBitAdder|e[6]                                                                ; |eightBitAdder|e[6]                                                                     ; pin_out          ;
+; |eightBitAdder|e[7]                                                                ; |eightBitAdder|e[7]                                                                     ; pin_out          ;
+; |eightBitAdder|overflow1                                                           ; |eightBitAdder|overflow1                                                                ; pin_out          ;
+; |eightBitAdder|overflow2                                                           ; |eightBitAdder|overflow2                                                                ; pin_out          ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[1]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[1]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[2]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[2]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[3]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[3]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[4]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[4]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[5]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[5]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[6]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[6]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[7]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[7]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[8]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[8]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                      ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[0]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[0]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~0                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~0                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~1                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~1                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~2                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~2                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~3                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~3                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[8]~1                      ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[8]~1                           ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[8]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[8]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[7]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[7]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[6]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[6]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[5]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[5]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[4]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[4]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[3]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[3]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[2]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[2]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[1]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[1]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]~1                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]~1                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]~2                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]~2                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]~3                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]~3                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]~4                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]~4                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]~5                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]~5                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]~6                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]~6                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~7                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~7                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~8                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~8                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~4                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~4                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~5                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~5                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~6                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~6                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~7                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~7                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~8                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~8                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~9                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~9                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~10                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~10                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~11                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~11                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~12                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~12                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~13                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~13                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~14                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~14                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~15                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~15                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~16                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~16                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~17                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~17                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~18                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~18                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~19                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~19                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~20                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~20                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~21                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~21                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~22                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~22                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~23                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~23                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~24                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~24                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~25                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~25                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~26                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~26                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~27                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~27                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~28                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~28                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~29                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~29                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~30                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~30                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~31                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~31                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~32                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~32                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~33                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~33                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~34                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~34                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~35                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~35                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[8] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[0]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[0]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[1]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[1]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[2]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[2]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[3]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[3]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[4]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[5]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[5]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[6]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[6]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[7]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[7]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~0                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~0                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~3                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~3                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[7]~1                      ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[7]~1                           ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[7]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[7]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[6]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[6]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[5]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[5]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[4]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[4]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~1                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~1                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~2                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~2                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~3                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~3                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~4                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~4                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~5                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~5                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~6                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~6                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~7                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~7                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~11                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~11                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~15                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~15                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~16                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~16                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~17                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~17                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~18                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~18                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~19                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~19                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~20                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~20                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~21                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~21                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~22                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~22                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~23                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~23                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~24                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~24                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~25                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~25                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~26                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~26                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~27                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~27                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~28                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~28                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~29                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~29                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~30                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~30                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~31                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~31                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                        ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                          ; Output Port Name                                                                        ; Output Port Type ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
+; |eightBitAdder|process_0~0                                                         ; |eightBitAdder|process_0~0                                                              ; out0             ;
+; |eightBitAdder|process_0~1                                                         ; |eightBitAdder|process_0~1                                                              ; out0             ;
+; |eightBitAdder|process_0~2                                                         ; |eightBitAdder|process_0~2                                                              ; out0             ;
+; |eightBitAdder|process_0~3                                                         ; |eightBitAdder|process_0~3                                                              ; out0             ;
+; |eightBitAdder|overflow1~0                                                         ; |eightBitAdder|overflow1~0                                                              ; out              ;
+; |eightBitAdder|process_0~4                                                         ; |eightBitAdder|process_0~4                                                              ; out0             ;
+; |eightBitAdder|process_0~5                                                         ; |eightBitAdder|process_0~5                                                              ; out0             ;
+; |eightBitAdder|process_0~6                                                         ; |eightBitAdder|process_0~6                                                              ; out0             ;
+; |eightBitAdder|process_0~7                                                         ; |eightBitAdder|process_0~7                                                              ; out0             ;
+; |eightBitAdder|overflow2~0                                                         ; |eightBitAdder|overflow2~0                                                              ; out              ;
+; |eightBitAdder|s[0]                                                                ; |eightBitAdder|s[0]                                                                     ; out              ;
+; |eightBitAdder|s[1]                                                                ; |eightBitAdder|s[1]                                                                     ; out              ;
+; |eightBitAdder|s[2]                                                                ; |eightBitAdder|s[2]                                                                     ; out              ;
+; |eightBitAdder|s[3]                                                                ; |eightBitAdder|s[3]                                                                     ; out              ;
+; |eightBitAdder|s[4]                                                                ; |eightBitAdder|s[4]                                                                     ; out              ;
+; |eightBitAdder|s[5]                                                                ; |eightBitAdder|s[5]                                                                     ; out              ;
+; |eightBitAdder|s[6]                                                                ; |eightBitAdder|s[6]                                                                     ; out              ;
+; |eightBitAdder|s[7]                                                                ; |eightBitAdder|s[7]                                                                     ; out              ;
+; |eightBitAdder|t[0]                                                                ; |eightBitAdder|t[0]                                                                     ; out              ;
+; |eightBitAdder|t[1]                                                                ; |eightBitAdder|t[1]                                                                     ; out              ;
+; |eightBitAdder|t[2]                                                                ; |eightBitAdder|t[2]                                                                     ; out              ;
+; |eightBitAdder|t[3]                                                                ; |eightBitAdder|t[3]                                                                     ; out              ;
+; |eightBitAdder|t[4]                                                                ; |eightBitAdder|t[4]                                                                     ; out              ;
+; |eightBitAdder|t[5]                                                                ; |eightBitAdder|t[5]                                                                     ; out              ;
+; |eightBitAdder|t[6]                                                                ; |eightBitAdder|t[6]                                                                     ; out              ;
+; |eightBitAdder|t[7]                                                                ; |eightBitAdder|t[7]                                                                     ; out              ;
+; |eightBitAdder|d[0]                                                                ; |eightBitAdder|d[0]                                                                     ; pin_out          ;
+; |eightBitAdder|d[1]                                                                ; |eightBitAdder|d[1]                                                                     ; pin_out          ;
+; |eightBitAdder|d[2]                                                                ; |eightBitAdder|d[2]                                                                     ; pin_out          ;
+; |eightBitAdder|d[3]                                                                ; |eightBitAdder|d[3]                                                                     ; pin_out          ;
+; |eightBitAdder|d[4]                                                                ; |eightBitAdder|d[4]                                                                     ; pin_out          ;
+; |eightBitAdder|d[5]                                                                ; |eightBitAdder|d[5]                                                                     ; pin_out          ;
+; |eightBitAdder|d[6]                                                                ; |eightBitAdder|d[6]                                                                     ; pin_out          ;
+; |eightBitAdder|d[7]                                                                ; |eightBitAdder|d[7]                                                                     ; pin_out          ;
+; |eightBitAdder|e[0]                                                                ; |eightBitAdder|e[0]                                                                     ; pin_out          ;
+; |eightBitAdder|e[1]                                                                ; |eightBitAdder|e[1]                                                                     ; pin_out          ;
+; |eightBitAdder|e[2]                                                                ; |eightBitAdder|e[2]                                                                     ; pin_out          ;
+; |eightBitAdder|e[3]                                                                ; |eightBitAdder|e[3]                                                                     ; pin_out          ;
+; |eightBitAdder|e[4]                                                                ; |eightBitAdder|e[4]                                                                     ; pin_out          ;
+; |eightBitAdder|e[5]                                                                ; |eightBitAdder|e[5]                                                                     ; pin_out          ;
+; |eightBitAdder|e[6]                                                                ; |eightBitAdder|e[6]                                                                     ; pin_out          ;
+; |eightBitAdder|e[7]                                                                ; |eightBitAdder|e[7]                                                                     ; pin_out          ;
+; |eightBitAdder|overflow1                                                           ; |eightBitAdder|overflow1                                                                ; pin_out          ;
+; |eightBitAdder|overflow2                                                           ; |eightBitAdder|overflow2                                                                ; pin_out          ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[1]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[1]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[2]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[2]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[3]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[3]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[4]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[4]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[5]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[5]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[6]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[6]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[7]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[7]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|result_node[8]                                     ; |eightBitAdder|lpm_add_sub:Add1|result_node[8]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                      ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[0]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[0]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~0                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~0                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~1                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~1                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~2                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~2                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~3                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~3                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[8]~1                      ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[8]~1                           ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[8]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[8]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[7]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[7]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[6]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[6]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[5]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[5]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[4]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[4]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[3]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[3]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[2]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[2]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[1]                        ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|datab_node[1]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]~1                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]~1                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]~2                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]~2                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]~3                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]~3                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]~4                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]~4                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]~5                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]~5                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]~6                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]~6                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~7                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~7                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~8                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~8                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[8]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[7]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[6]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[5]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                    ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~4                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~4                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~5                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~5                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~6                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~6                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~7                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~7                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~8                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~8                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~9                                  ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~9                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~10                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~10                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~11                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~11                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~12                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~12                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~13                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~13                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~14                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~14                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~15                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~15                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~16                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~16                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~17                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~17                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~18                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~18                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~19                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~19                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~20                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~20                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~21                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~21                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~22                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~22                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~23                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~23                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~24                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~24                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~25                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~25                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~26                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~26                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~27                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~27                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~28                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~28                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~29                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~29                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~30                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~30                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~31                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~31                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~32                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~32                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~33                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~33                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~34                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~34                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~35                                 ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|_~35                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[8] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |eightBitAdder|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[0]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[0]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[1]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[1]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[2]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[2]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[3]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[3]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[4]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[4]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[5]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[5]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[6]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[6]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|result_node[7]                                     ; |eightBitAdder|lpm_add_sub:Add0|result_node[7]                                          ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~0                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~0                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~3                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~3                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[7]~1                      ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[7]~1                           ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[7]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[7]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[6]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[6]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[5]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[5]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[4]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[4]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~1                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]~1                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~2                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]~2                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~3                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]~3                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~4                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]~4                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~5                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~5                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~6                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~6                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~7                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~7                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[7]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[6]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[5]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[4]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                    ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~11                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~11                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~15                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~15                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~16                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~16                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~17                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~17                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~18                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~18                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~19                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~19                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~20                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~20                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~21                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~21                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~22                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~22                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~23                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~23                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~24                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~24                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~25                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~25                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~26                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~26                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~27                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~27                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~28                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~28                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~29                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~29                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~30                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~30                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~31                                 ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|_~31                                      ; out0             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |eightBitAdder|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Dec 16 18:48:51 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off eightBitAdder -c eightBitAdder
+Info: Using vector source file "C:/Repos/284Processor/eightBitAdder/eightBitAdderTest.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 0
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Mon Dec 16 18:48:51 2013
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
