@@ -16,6 +16,8 @@ begin
 	process(clk)
 	variable counter : integer range 1 to 2;
 	begin
+		--if falling_edge(clk)
+		--if rising_edge(clk)
 		if clk'event and clk = '1' then
 			if counter = 1 then
 				counter := 2;

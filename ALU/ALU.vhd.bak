@@ -9,7 +9,7 @@ port(   clk : in std_logic;
         immediate : in std_logic_vector(5 downto 0);
         opCode : in std_logic_vector(3 downto 0);
         aluCode : in std_logic_vector(2 downto 0);
-        d : out std_logic_vector(7 downto 0)
+        d : out std_logic_vector(7 downto 0);
         overflow : out std_logic
         );
 end alu;

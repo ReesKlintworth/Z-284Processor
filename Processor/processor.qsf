@@ -47,8 +47,10 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE ANY
 set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Tests/alu_test.vwf
+set_global_assignment -name BSF_FILE ../ALU/alu.bsf
+set_global_assignment -name VHDL_FILE ../ALU/ALU.vhd
 set_global_assignment -name VHDL_FILE addOne.vhd
-set_global_assignment -name VHDL_FILE ALU.vhd
 set_global_assignment -name VHDL_FILE clock_splitter.vhd
 set_global_assignment -name VHDL_FILE clock1hz.vhd
 set_global_assignment -name VHDL_FILE controller.vhd
@@ -58,7 +60,6 @@ set_global_assignment -name VHDL_FILE RAM.vhd
 set_global_assignment -name VHDL_FILE ROM.vhd
 set_global_assignment -name VHDL_FILE sign_ext.vhd
 set_global_assignment -name BSF_FILE addOne.bsf
-set_global_assignment -name BSF_FILE alu.bsf
 set_global_assignment -name BSF_FILE clock_splitter.bsf
 set_global_assignment -name BSF_FILE Clock1Hz.bsf
 set_global_assignment -name BSF_FILE controller.bsf
@@ -73,8 +74,8 @@ set_global_assignment -name QIP_FILE ../ROM/ROM_2.qip
 set_global_assignment -name QIP_FILE ../ROM/lpm_rom0.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/rom_test.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/controller_sig_ext_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/reg_file_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/alu_test.vwf
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file\\mux_8"
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file\\demux_8"
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file"
-set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/reg_file_test.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Tests/reg_file_test.vwf

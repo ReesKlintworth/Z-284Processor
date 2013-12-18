@@ -1,5 +1,5 @@
 Assembler report for ALU
-Tue Dec 17 21:13:55 2013
+Wed Dec 18 02:03:14 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Repos/284Processor/ALU/ALU.sof
-  6. Assembler Device Options: C:/Repos/284Processor/ALU/ALU.pof
+  5. Assembler Device Options: C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ALU/ALU.sof
+  6. Assembler Device Options: C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ALU/ALU.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Dec 17 21:13:55 2013 ;
+; Assembler Status      ; Successful - Wed Dec 18 02:03:14 2013 ;
 ; Revision Name         ; ALU                                   ;
 ; Top-level Entity Name ; alu                                   ;
 ; Family                ; FLEX10K                               ;
@@ -74,37 +74,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-----------------------------------+
-; Assembler Generated Files         ;
-+-----------------------------------+
-; File Name                         ;
-+-----------------------------------+
-; C:/Repos/284Processor/ALU/ALU.sof ;
-; C:/Repos/284Processor/ALU/ALU.pof ;
-+-----------------------------------+
++-------------------------------------------------------------------+
+; Assembler Generated Files                                         ;
++-------------------------------------------------------------------+
+; File Name                                                         ;
++-------------------------------------------------------------------+
+; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ALU/ALU.sof ;
+; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ALU/ALU.pof ;
++-------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------+
-; Assembler Device Options: C:/Repos/284Processor/ALU/ALU.sof ;
-+----------------+--------------------------------------------+
-; Option         ; Setting                                    ;
-+----------------+--------------------------------------------+
-; Device         ; EPF10K70RC240-4                            ;
-; JTAG usercode  ; 0x0000007F                                 ;
-; Checksum       ; 0x0004474F                                 ;
-+----------------+--------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ALU/ALU.sof ;
++----------------+----------------------------------------------------------------------------+
+; Option         ; Setting                                                                    ;
++----------------+----------------------------------------------------------------------------+
+; Device         ; EPF10K70RC240-4                                                            ;
+; JTAG usercode  ; 0x0000007F                                                                 ;
+; Checksum       ; 0x0003FFCB                                                                 ;
++----------------+----------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------+
-; Assembler Device Options: C:/Repos/284Processor/ALU/ALU.pof ;
-+--------------------+----------------------------------------+
-; Option             ; Setting                                ;
-+--------------------+----------------------------------------+
-; Device             ; EPC2                                   ;
-; JTAG usercode      ; 0x00000000                             ;
-; Checksum           ; 0x018E48C0                             ;
-; Compression Ratio  ; 1                                      ;
-+--------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ALU/ALU.pof ;
++--------------------+------------------------------------------------------------------------+
+; Option             ; Setting                                                                ;
++--------------------+------------------------------------------------------------------------+
+; Device             ; EPC2                                                                   ;
+; JTAG usercode      ; 0x00000000                                                             ;
+; Checksum           ; 0x018DF22C                                                             ;
+; Compression Ratio  ; 1                                                                      ;
++--------------------+------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -113,13 +113,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Dec 17 21:13:55 2013
+    Info: Processing started: Wed Dec 18 02:03:13 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ALU -c ALU
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 213 megabytes
-    Info: Processing ended: Tue Dec 17 21:13:55 2013
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Wed Dec 18 02:03:14 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor
-Wed Dec 18 01:23:10 2013
+Wed Dec 18 02:08:11 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -12,13 +12,21 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. Registers Removed During Synthesis
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Source assignments for PC:inst3|lpm_counter:pre_count_rtl_0
- 11. Parameter Settings for User Entity Instance: lpm_rom0:inst10|lpm_rom:lpm_rom_component
- 12. Parameter Settings for Inferred Entity Instance: PC:inst3|lpm_counter:pre_count_rtl_0
- 13. Analysis & Synthesis Messages
+  7. Analysis & Synthesis RAM Summary
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Source assignments for PC:inst3|lpm_counter:pre_count_rtl_0
+ 13. Source assignments for alu:inst15|lpm_add_sub:Add0|addcore:adder
+ 14. Source assignments for alu:inst15|lpm_add_sub:Add4|addcore:adder
+ 15. Source assignments for alu:inst15|lpm_add_sub:Add6|addcore:adder
+ 16. Parameter Settings for User Entity Instance: lpm_rom0:inst10|lpm_rom:lpm_rom_component
+ 17. Parameter Settings for Inferred Entity Instance: PC:inst3|lpm_counter:pre_count_rtl_0
+ 18. Parameter Settings for Inferred Entity Instance: alu:inst15|lpm_add_sub:Add0
+ 19. Parameter Settings for Inferred Entity Instance: alu:inst15|lpm_add_sub:Add4
+ 20. Parameter Settings for Inferred Entity Instance: alu:inst15|lpm_add_sub:Add6
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +52,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 18 01:23:10 2013        ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 18 02:08:11 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; processor                                    ;
 ; Top-level Entity Name       ; processor                                    ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 3                                            ;
-; Total pins                  ; 37                                           ;
-; Total memory bits           ; 0                                            ;
+; Total logic elements        ; 89                                           ;
+; Total pins                  ; 59                                           ;
+; Total memory bits           ; 2,560                                        ;
 +-----------------------------+----------------------------------------------+
 
 
@@ -117,79 +125,147 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                       ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------------+
-; addOne.vhd                       ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/addOne.vhd         ;
-; clock_splitter.vhd               ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/clock_splitter.vhd ;
-; clock1hz.vhd                     ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/clock1hz.vhd       ;
-; controller.vhd                   ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/controller.vhd     ;
-; decoder.vhd                      ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/decoder.vhd        ;
-; PC.vhd                           ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/PC.vhd             ;
-; sign_ext.vhd                     ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/sign_ext.vhd       ;
-; processor.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/processor.bdf      ;
-; ../ROM/lpm_rom0.vhd              ; yes             ; User Wizard-Generated File               ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ROM/lpm_rom0.vhd             ;
-; reg_file.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; c:/users/derek nordgren/documents/github/284processor/reg_file/reg_file.bdf        ;
-; mux_8.vhd                        ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/reg_file/mux_8/mux_8.vhd     ;
-; 8dffe.bdf                        ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/8dffe.bdf                        ;
-; demux_8.vhd                      ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/reg_file/demux_8/demux_8.vhd ;
-; lpm_rom.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_rom.tdf                        ;
-; altrom.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.inc                         ;
-; aglobal90.inc                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc                      ;
-; altrom.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.tdf                         ;
-; memmodes.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/memmodes.inc                     ;
-; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc                     ;
-; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.inc                        ;
-; altqpram.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altqpram.inc                       ;
-; altsyncram.inc                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altsyncram.inc                     ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.tdf                    ;
-; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc                   ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.inc                    ;
-; cmpconst.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpconst.inc                       ;
-; lpm_compare.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_compare.inc                    ;
-; lpm_counter.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.inc                    ;
-; dffeea.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/dffeea.inc                         ;
-; alt_synch_counter.inc            ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter.inc              ;
-; alt_synch_counter_f.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter_f.inc            ;
-; alt_counter_f10ke.inc            ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.inc              ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_stratix.inc            ;
-; alt_counter_f10ke.tdf            ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.tdf              ;
-; flex10ke_lcell.inc               ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/flex10ke_lcell.inc                 ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
++------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                     ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                            ;
++------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------------------+
+; ../ALU/ALU.vhd                                       ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ALU/ALU.vhd                                       ;
+; addOne.vhd                                           ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/addOne.vhd                              ;
+; clock_splitter.vhd                                   ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/clock_splitter.vhd                      ;
+; clock1hz.vhd                                         ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/clock1hz.vhd                            ;
+; controller.vhd                                       ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/controller.vhd                          ;
+; decoder.vhd                                          ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/decoder.vhd                             ;
+; PC.vhd                                               ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/PC.vhd                                  ;
+; sign_ext.vhd                                         ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/sign_ext.vhd                            ;
+; processor.bdf                                        ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/processor.bdf                           ;
+; ../ROM/lpm_rom0.vhd                                  ; yes             ; User Wizard-Generated File               ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/ROM/lpm_rom0.vhd                                  ;
+; lpm_rom.tdf                                          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_rom.tdf                                             ;
+; altrom.inc                                           ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.inc                                              ;
+; aglobal90.inc                                        ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc                                           ;
+; altrom.tdf                                           ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.tdf                                              ;
+; memmodes.inc                                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/memmodes.inc                                          ;
+; lpm_decode.inc                                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc                                          ;
+; lpm_mux.inc                                          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.inc                                             ;
+; altqpram.inc                                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altqpram.inc                                            ;
+; altsyncram.inc                                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altsyncram.inc                                          ;
+; ../Assembler/ProcessorAssembler/bin/Debug/output.mif ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Assembler/ProcessorAssembler/bin/Debug/output.mif ;
+; reg_file.bdf                                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; c:/users/derek nordgren/documents/github/284processor/reg_file/reg_file.bdf                             ;
+; mux_8.vhd                                            ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/reg_file/mux_8/mux_8.vhd                          ;
+; 8dffe.bdf                                            ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/8dffe.bdf                                             ;
+; demux_8.vhd                                          ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/reg_file/demux_8/demux_8.vhd                      ;
+; lpm_counter.tdf                                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.tdf                                         ;
+; lpm_constant.inc                                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc                                        ;
+; lpm_add_sub.inc                                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.inc                                         ;
+; cmpconst.inc                                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpconst.inc                                            ;
+; lpm_compare.inc                                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_compare.inc                                         ;
+; lpm_counter.inc                                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.inc                                         ;
+; dffeea.inc                                           ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/dffeea.inc                                              ;
+; alt_synch_counter.inc                                ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter.inc                                   ;
+; alt_synch_counter_f.inc                              ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter_f.inc                                 ;
+; alt_counter_f10ke.inc                                ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.inc                                   ;
+; alt_counter_stratix.inc                              ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_stratix.inc                                 ;
+; alt_counter_f10ke.tdf                                ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.tdf                                   ;
+; flex10ke_lcell.inc                                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/flex10ke_lcell.inc                                      ;
+; lpm_add_sub.tdf                                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf                                         ;
+; addcore.inc                                          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc                                             ;
+; look_add.inc                                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc                                            ;
+; bypassff.inc                                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc                                            ;
+; altshift.inc                                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc                                            ;
+; alt_stratix_add_sub.inc                              ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                 ;
+; alt_mercury_add_sub.inc                              ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_mercury_add_sub.inc                                 ;
+; addcore.tdf                                          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.tdf                                             ;
+; a_csnbuffer.inc                                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.inc                                         ;
+; a_csnbuffer.tdf                                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.tdf                                         ;
+; altshift.tdf                                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf                                            ;
++------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------------+------------+
-; Resource                       ; Usage      ;
-+--------------------------------+------------+
-; Total logic elements           ; 3          ;
-; Total combinational functions  ; 3          ;
-;     -- Total 4-input functions ; 0          ;
-;     -- Total 3-input functions ; 1          ;
-;     -- Total 2-input functions ; 0          ;
-;     -- Total 1-input functions ; 2          ;
-;     -- Total 0-input functions ; 0          ;
-; Total registers                ; 3          ;
-; I/O pins                       ; 37         ;
-; Maximum fan-out node           ; clk        ;
-; Maximum fan-out                ; 3          ;
-; Total fan-out                  ; 9          ;
-; Average fan-out                ; 0.23       ;
-+--------------------------------+------------+
++-------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                     ;
++-----------------------------------+-------------------------------------------------------------+
+; Resource                          ; Usage                                                       ;
++-----------------------------------+-------------------------------------------------------------+
+; Total logic elements              ; 89                                                          ;
+; Total combinational functions     ; 89                                                          ;
+;     -- Total 4-input functions    ; 31                                                          ;
+;     -- Total 3-input functions    ; 21                                                          ;
+;     -- Total 2-input functions    ; 5                                                           ;
+;     -- Total 1-input functions    ; 23                                                          ;
+;     -- Total 0-input functions    ; 9                                                           ;
+; Total registers                   ; 11                                                          ;
+; Total logic cells in carry chains ; 31                                                          ;
+; I/O pins                          ; 59                                                          ;
+; Total memory bits                 ; 2560                                                        ;
+; Maximum fan-out node              ; lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14] ;
+; Maximum fan-out                   ; 17                                                          ;
+; Total fan-out                     ; 367                                                         ;
+; Average fan-out                   ; 2.32                                                        ;
++-----------------------------------+-------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name             ; Library Name ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
-; |processor                 ; 3 (0)       ; 3            ; 0           ; 37   ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |processor                      ; work         ;
-;    |clock_splitter:inst2|  ; 3 (3)       ; 3            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |processor|clock_splitter:inst2 ; work         ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                              ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                            ; Library Name ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
+; |processor                                ; 89 (0)      ; 11           ; 2560        ; 59   ; 78 (0)       ; 0 (0)             ; 11 (0)           ; 31 (0)          ; 0 (0)      ; |processor                                                                     ; work         ;
+;    |PC:inst3|                             ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |processor|PC:inst3                                                            ; work         ;
+;       |lpm_counter:pre_count_rtl_0|       ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |processor|PC:inst3|lpm_counter:pre_count_rtl_0                                ; work         ;
+;          |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |processor|PC:inst3|lpm_counter:pre_count_rtl_0|alt_counter_f10ke:wysi_counter ; work         ;
+;    |alu:inst15|                           ; 76 (54)     ; 0            ; 0           ; 0    ; 76 (54)      ; 0 (0)             ; 0 (0)            ; 23 (1)          ; 0 (0)      ; |processor|alu:inst15                                                          ; work         ;
+;       |lpm_add_sub:Add0|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add0                                         ; work         ;
+;          |addcore:adder|                  ; 8 (2)       ; 0            ; 0           ; 0    ; 8 (2)        ; 0 (0)             ; 0 (0)            ; 8 (2)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add0|addcore:adder                           ; work         ;
+;             |a_csnbuffer:result_node|     ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node   ; work         ;
+;       |lpm_add_sub:Add4|                  ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add4                                         ; work         ;
+;          |addcore:adder|                  ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add4|addcore:adder                           ; work         ;
+;             |a_csnbuffer:result_node|     ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node   ; work         ;
+;       |lpm_add_sub:Add6|                  ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add6                                         ; work         ;
+;          |addcore:adder|                  ; 7 (1)       ; 0            ; 0           ; 0    ; 7 (1)        ; 0 (0)             ; 0 (0)            ; 7 (1)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add6|addcore:adder                           ; work         ;
+;             |a_csnbuffer:result_node|     ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |processor|alu:inst15|lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node   ; work         ;
+;    |clock_splitter:inst2|                 ; 3 (3)       ; 3            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |processor|clock_splitter:inst2                                                ; work         ;
+;    |controller:inst12|                    ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|controller:inst12                                                   ; work         ;
+;    |lpm_rom0:inst10|                      ; 0 (0)       ; 0            ; 2560        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_rom0:inst10                                                     ; work         ;
+;       |lpm_rom:lpm_rom_component|         ; 0 (0)       ; 0            ; 2560        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_rom0:inst10|lpm_rom:lpm_rom_component                           ; work         ;
+;          |altrom:srom|                    ; 0 (0)       ; 0            ; 2560        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom               ; work         ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                               ;
++---------------------------------------------------------------+------+--------------+--------------+--------------+--------------+------+------------------------------------------------------+
+; Name                                                          ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                  ;
++---------------------------------------------------------------+------+--------------+--------------+--------------+--------------+------+------------------------------------------------------+
+; lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|content ; ROM  ; 256          ; 16           ; --           ; --           ; 4096 ; ../Assembler/ProcessorAssembler/bin/Debug/output.mif ;
++---------------------------------------------------------------+------+--------------+--------------+--------------+--------------+------+------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++-----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal   ; Free of Timing Hazards ;
++-----------------------------------------------------+-----------------------+------------------------+
+; alu:inst15|overflow                                 ; controller:inst12|alu ; yes                    ;
+; alu:inst15|d[7]                                     ; alu:inst15|d[7]~1     ; yes                    ;
+; alu:inst15|d[6]                                     ; alu:inst15|d[7]~1     ; yes                    ;
+; alu:inst15|d[5]                                     ; alu:inst15|d[7]~1     ; yes                    ;
+; alu:inst15|d[4]                                     ; alu:inst15|d[7]~1     ; yes                    ;
+; alu:inst15|d[3]                                     ; alu:inst15|d[7]~1     ; yes                    ;
+; alu:inst15|d[2]                                     ; alu:inst15|d[7]~1     ; yes                    ;
+; alu:inst15|d[1]                                     ; alu:inst15|d[7]~1     ; yes                    ;
+; alu:inst15|d[0]                                     ; alu:inst15|d[7]~1     ; yes                    ;
+; alu:inst15|dCopy[7]                                 ; alu:inst15|dCopy[1]~0 ; yes                    ;
+; alu:inst15|dCopy[6]                                 ; alu:inst15|dCopy[1]~0 ; yes                    ;
+; alu:inst15|dCopy[5]                                 ; alu:inst15|dCopy[1]~0 ; yes                    ;
+; alu:inst15|dCopy[4]                                 ; alu:inst15|dCopy[1]~0 ; yes                    ;
+; alu:inst15|dCopy[3]                                 ; alu:inst15|dCopy[1]~0 ; yes                    ;
+; alu:inst15|dCopy[2]                                 ; alu:inst15|dCopy[1]~0 ; yes                    ;
+; alu:inst15|dCopy[1]                                 ; alu:inst15|dCopy[1]~0 ; yes                    ;
+; alu:inst15|dCopy[0]                                 ; alu:inst15|dCopy[1]~0 ; yes                    ;
+; Number of user-specified and inferred latches = 17  ;                       ;                        ;
++-----------------------------------------------------+-----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------------+
@@ -205,62 +281,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; reg_file:inst7|8dffe:inst6|34          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst6|35          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst6|36          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst13|36         ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst13|35         ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst13|34         ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst13|33         ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst13|32         ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst13|31         ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst13|30         ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst13|29         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst9|36          ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst9|35          ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst9|34          ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst9|33          ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst9|32          ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst9|31          ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst9|30          ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst9|29          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst7|36          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst8|36          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst9|36          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst10|36         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst11|36         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst12|36         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst13|36         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst7|35          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst8|35          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst9|35          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst10|35         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst11|35         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst12|35         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst13|35         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst7|34          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst8|34          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst9|34          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst10|34         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst11|34         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst12|34         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst13|34         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst7|33          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst8|33          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst9|33          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst10|33         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst11|33         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst12|33         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst13|33         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst7|32          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst8|32          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst9|32          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst10|32         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst11|32         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst12|32         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst13|32         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst7|31          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst8|31          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst9|31          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst10|31         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst11|31         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst12|31         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst13|31         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst7|30          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst8|30          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst9|30          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst10|30         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst11|30         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst12|30         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst13|30         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst7|29          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst8|29          ; Stuck at GND due to stuck port clock_enable ;
-; reg_file:inst7|8dffe:inst9|29          ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst10|29         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst11|29         ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst7|8dffe:inst12|29         ; Stuck at GND due to stuck port clock_enable ;
+; reg_file:inst7|8dffe:inst13|29         ; Stuck at GND due to stuck port clock_enable ;
 ; clock_splitter:inst2|out_clk2          ; Lost fanout                                 ;
 ; Total Number of Removed Registers = 65 ;                                             ;
 +----------------------------------------+---------------------------------------------+
@@ -271,7 +347,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
+; Total registers                              ; 11    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -300,6 +376,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                ;
 ; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                ;
 +---------------------------+-------+------+------------------+
+
+
++------------------------------------------------------------------+
+; Source assignments for alu:inst15|lpm_add_sub:Add0|addcore:adder ;
++---------------------------+-------+------+-----------------------+
+; Assignment                ; Value ; From ; To                    ;
++---------------------------+-------+------+-----------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
++---------------------------+-------+------+-----------------------+
+
+
++------------------------------------------------------------------+
+; Source assignments for alu:inst15|lpm_add_sub:Add4|addcore:adder ;
++---------------------------+-------+------+-----------------------+
+; Assignment                ; Value ; From ; To                    ;
++---------------------------+-------+------+-----------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
++---------------------------+-------+------+-----------------------+
+
+
++------------------------------------------------------------------+
+; Source assignments for alu:inst15|lpm_add_sub:Add6|addcore:adder ;
++---------------------------+-------+------+-----------------------+
+; Assignment                ; Value ; From ; To                    ;
++---------------------------+-------+------+-----------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
++---------------------------+-------+------+-----------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -349,20 +452,104 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: alu:inst15|lpm_add_sub:Add0 ;
++------------------------+-------------+---------------------------------------+
+; Parameter Name         ; Value       ; Type                                  ;
++------------------------+-------------+---------------------------------------+
+; LPM_WIDTH              ; 8           ; Untyped                               ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                               ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                               ;
+; LPM_PIPELINE           ; 0           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
+; REGISTERED_AT_END      ; 0           ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                               ;
+; USE_WYS                ; OFF         ; Untyped                               ;
+; STYLE                  ; FAST        ; Untyped                               ;
+; CBXI_PARAMETER         ; add_sub_naj ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
++------------------------+-------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: alu:inst15|lpm_add_sub:Add4 ;
++------------------------+-------------+---------------------------------------+
+; Parameter Name         ; Value       ; Type                                  ;
++------------------------+-------------+---------------------------------------+
+; LPM_WIDTH              ; 8           ; Untyped                               ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
+; LPM_DIRECTION          ; ADD         ; Untyped                               ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                               ;
+; LPM_PIPELINE           ; 0           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
+; REGISTERED_AT_END      ; 0           ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                               ;
+; USE_WYS                ; OFF         ; Untyped                               ;
+; STYLE                  ; FAST        ; Untyped                               ;
+; CBXI_PARAMETER         ; add_sub_lch ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
++------------------------+-------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: alu:inst15|lpm_add_sub:Add6 ;
++------------------------+-------------+---------------------------------------+
+; Parameter Name         ; Value       ; Type                                  ;
++------------------------+-------------+---------------------------------------+
+; LPM_WIDTH              ; 7           ; Untyped                               ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
+; LPM_DIRECTION          ; ADD         ; Untyped                               ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                               ;
+; LPM_PIPELINE           ; 0           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
+; REGISTERED_AT_END      ; 0           ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                               ;
+; USE_WYS                ; OFF         ; Untyped                               ;
+; STYLE                  ; FAST        ; Untyped                               ;
+; CBXI_PARAMETER         ; add_sub_kch ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
++------------------------+-------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 01:23:07 2013
+    Info: Processing started: Wed Dec 18 02:08:05 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
+Info: Found 2 design units, including 1 entities, in source file ../ALU/ALU.vhd
+    Info: Found design unit 1: alu-functions
+    Info: Found entity 1: alu
 Info: Found 2 design units, including 1 entities, in source file addOne.vhd
     Info: Found design unit 1: addOne-behav
     Info: Found entity 1: addOne
-Info: Found 2 design units, including 1 entities, in source file ALU.vhd
-    Info: Found design unit 1: alu-functions
-    Info: Found entity 1: alu
 Info: Found 2 design units, including 1 entities, in source file clock_splitter.vhd
     Info: Found design unit 1: clock_splitter-behav
     Info: Found entity 1: clock_splitter
@@ -395,6 +582,145 @@ Info: Found 2 design units, including 1 entities, in source file ../ROM/lpm_rom0
     Info: Found entity 1: lpm_rom0
 Info: Elaborating entity "processor" for the top level hierarchy
 Info: Elaborating entity "clock_splitter" for hierarchy "clock_splitter:inst2"
+Info: Elaborating entity "alu" for hierarchy "alu:inst15"
+Warning (10492): VHDL Process Statement warning at ALU.vhd(27): signal "aluFlag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(30): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(31): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(33): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(35): signal "aluCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(42): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(50): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(50): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(51): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(55): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(55): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(55): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(62): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(65): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(65): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(67): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(67): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(72): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(72): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(73): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(81): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(81): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(82): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(84): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(84): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(84): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(90): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(90): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(91): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(93): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(93): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(93): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(95): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(95): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(95): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(100): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(102): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(102): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(102): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(104): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(104): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(104): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "signedS", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "signedT", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "d", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "dCopy", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "dCopy[0]" at ALU.vhd(24)
+Info (10041): Inferred latch for "dCopy[1]" at ALU.vhd(24)
+Info (10041): Inferred latch for "dCopy[2]" at ALU.vhd(24)
+Info (10041): Inferred latch for "dCopy[3]" at ALU.vhd(24)
+Info (10041): Inferred latch for "dCopy[4]" at ALU.vhd(24)
+Info (10041): Inferred latch for "dCopy[5]" at ALU.vhd(24)
+Info (10041): Inferred latch for "dCopy[6]" at ALU.vhd(24)
+Info (10041): Inferred latch for "dCopy[7]" at ALU.vhd(24)
+Info (10041): Inferred latch for "d[0]" at ALU.vhd(24)
+Info (10041): Inferred latch for "d[1]" at ALU.vhd(24)
+Info (10041): Inferred latch for "d[2]" at ALU.vhd(24)
+Info (10041): Inferred latch for "d[3]" at ALU.vhd(24)
+Info (10041): Inferred latch for "d[4]" at ALU.vhd(24)
+Info (10041): Inferred latch for "d[5]" at ALU.vhd(24)
+Info (10041): Inferred latch for "d[6]" at ALU.vhd(24)
+Info (10041): Inferred latch for "d[7]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedT[0]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedT[1]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedT[2]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedT[3]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedT[4]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedT[5]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedT[6]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedT[7]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedS[0]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedS[1]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedS[2]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedS[3]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedS[4]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedS[5]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedS[6]" at ALU.vhd(24)
+Info (10041): Inferred latch for "signedS[7]" at ALU.vhd(24)
+Info (10041): Inferred latch for "overflow" at ALU.vhd(24)
+Info: Elaborating entity "controller" for hierarchy "controller:inst12"
+Info: Elaborating entity "decoder" for hierarchy "decoder:inst11"
+Info: Elaborating entity "lpm_rom0" for hierarchy "lpm_rom0:inst10"
+Info: Elaborating entity "lpm_rom" for hierarchy "lpm_rom0:inst10|lpm_rom:lpm_rom_component"
+Info: Elaborated megafunction instantiation "lpm_rom0:inst10|lpm_rom:lpm_rom_component"
+Info: Instantiated megafunction "lpm_rom0:inst10|lpm_rom:lpm_rom_component" with the following parameter:
+    Info: Parameter "intended_device_family" = "FLEX10K"
+    Info: Parameter "lpm_address_control" = "UNREGISTERED"
+    Info: Parameter "lpm_file" = "../Assembler/ProcessorAssembler/bin/Debug/output.mif"
+    Info: Parameter "lpm_outdata" = "UNREGISTERED"
+    Info: Parameter "lpm_type" = "LPM_ROM"
+    Info: Parameter "lpm_width" = "16"
+    Info: Parameter "lpm_widthad" = "8"
+Info: Elaborating entity "altrom" for hierarchy "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom"
+Warning: 14 out of 256 addresses are reinitialized. The latest initialized data will replace the existing data. There are 14 warnings found, and 10 warnings are reported.
+    Warning: Memory Initialization File address 0 is reinitialized
+    Warning: Memory Initialization File address 1 is reinitialized
+    Warning: Memory Initialization File address 2 is reinitialized
+    Warning: Memory Initialization File address 3 is reinitialized
+    Warning: Memory Initialization File address 4 is reinitialized
+    Warning: Memory Initialization File address 5 is reinitialized
+    Warning: Memory Initialization File address 6 is reinitialized
+    Warning: Memory Initialization File address 7 is reinitialized
+    Warning: Memory Initialization File address 8 is reinitialized
+    Warning: Memory Initialization File address 9 is reinitialized
+Info: Elaborated megafunction instantiation "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom", which is child of megafunction instantiation "lpm_rom0:inst10|lpm_rom:lpm_rom_component"
+Info: Elaborating entity "PC" for hierarchy "PC:inst3"
+Info: Elaborating entity "addOne" for hierarchy "addOne:inst6"
 Warning: Using design file ../reg_file/reg_file.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: reg_file
 Info: Elaborating entity "reg_file" for hierarchy "reg_file:inst7"
@@ -416,34 +742,8 @@ Warning: Using design file ../reg_file/demux_8/demux_8.vhd, which is not specifi
     Info: Found design unit 1: demux_8-Behavioral
     Info: Found entity 1: demux_8
 Info: Elaborating entity "demux_8" for hierarchy "reg_file:inst7|demux_8:inst1"
-Info: Elaborating entity "decoder" for hierarchy "decoder:inst11"
-Info: Elaborating entity "lpm_rom0" for hierarchy "lpm_rom0:inst10"
-Info: Elaborating entity "lpm_rom" for hierarchy "lpm_rom0:inst10|lpm_rom:lpm_rom_component"
-Info: Elaborated megafunction instantiation "lpm_rom0:inst10|lpm_rom:lpm_rom_component"
-Info: Instantiated megafunction "lpm_rom0:inst10|lpm_rom:lpm_rom_component" with the following parameter:
-    Info: Parameter "intended_device_family" = "FLEX10K"
-    Info: Parameter "lpm_address_control" = "UNREGISTERED"
-    Info: Parameter "lpm_file" = "../Assembler/ProcessorAssembler/bin/Debug/output.mif"
-    Info: Parameter "lpm_outdata" = "UNREGISTERED"
-    Info: Parameter "lpm_type" = "LPM_ROM"
-    Info: Parameter "lpm_width" = "16"
-    Info: Parameter "lpm_widthad" = "8"
-Info: Elaborating entity "altrom" for hierarchy "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom"
-Info: Elaborated megafunction instantiation "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom", which is child of megafunction instantiation "lpm_rom0:inst10|lpm_rom:lpm_rom_component"
-Info: Elaborating entity "PC" for hierarchy "PC:inst3"
-Info: Elaborating entity "addOne" for hierarchy "addOne:inst6"
 Info: Elaborating entity "Clock1Hz" for hierarchy "Clock1Hz:inst"
-Info: Elaborating entity "controller" for hierarchy "controller:inst12"
 Info: Elaborating entity "sign_ext" for hierarchy "sign_ext:inst14"
-Warning: Synthesized away the following node(s):
-    Warning: Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[15]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[13]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[12]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[2]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[1]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[0]"
 Warning: Synthesized away the following node(s):
     Warning: Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[11]"
@@ -454,26 +754,106 @@ Warning: Synthesized away the following node(s):
         Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[6]"
         Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[7]"
         Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[8]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[3]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[4]"
-        Warning (14320): Synthesized away node "lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[5]"
 Info: Inferred 1 megafunctions from design logic
     Info: Inferred lpm_counter megafunction (LPM_WIDTH=8) from the following logic: "PC:inst3|pre_count[0]~0"
+Info: Inferred 3 megafunctions from design logic
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst15|Add0"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst15|Add4"
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst15|Add6"
 Info: Elaborated megafunction instantiation "PC:inst3|lpm_counter:pre_count_rtl_0"
 Info: Instantiated megafunction "PC:inst3|lpm_counter:pre_count_rtl_0" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "8"
     Info: Parameter "LPM_DIRECTION" = "UP"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
 Info: Elaborated megafunction instantiation "PC:inst3|lpm_counter:pre_count_rtl_0|alt_counter_f10ke:wysi_counter", which is child of megafunction instantiation "PC:inst3|lpm_counter:pre_count_rtl_0"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add0"
+Info: Instantiated megafunction "alu:inst15|lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add0|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add4"
+Info: Instantiated megafunction "alu:inst15|lpm_add_sub:Add4" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add4|addcore:adder", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add4"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add6"
+Info: Instantiated megafunction "alu:inst15|lpm_add_sub:Add6" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "7"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add6|addcore:adder", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add6"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add6|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add6"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add6"
+Info: Elaborated megafunction instantiation "alu:inst15|lpm_add_sub:Add6|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "alu:inst15|lpm_add_sub:Add6"
+Warning: Always-enabled tri-state buffer(s) removed
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[2]" to the node "alu_code[2]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[2]" to the node "imm[2]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[1]" to the node "alu_code[1]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[1]" to the node "imm[1]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[0]" to the node "alu_code[0]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[0]" to the node "imm[0]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[5]" to the node "imm[5]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[4]" to the node "imm[4]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[3]" to the node "imm[3]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[15]" to the node "op_code[3]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[14]" to the node "op_code[2]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[13]" to the node "op_code[1]" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[12]" to the node "op_code[0]" into a wire
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[2]" to the node "alu:inst15|Mux1" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[1]" to the node "alu:inst15|Mux1" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[0]" to the node "alu:inst15|Mux1" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[5]" to the node "alu:inst15|Mux3" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[4]" to the node "alu:inst15|Mux12" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[3]" to the node "alu:inst15|Mux10" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[15]" to the node "controller:inst12|Equal0" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[14]" to the node "controller:inst12|Equal0" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[13]" to the node "controller:inst12|Equal0" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst10|lpm_rom:lpm_rom_component|otri[12]" to the node "controller:inst12|Equal0" into an OR gate
+Warning: Latch alu:inst15|overflow has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[15]
+Warning: Latch alu:inst15|d[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|d[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|d[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|d[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|d[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|d[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|d[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|d[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|dCopy[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|dCopy[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|dCopy[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|dCopy[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|dCopy[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|dCopy[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|dCopy[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst15|dCopy[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom|q[14]
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "display[7]" is stuck at GND
-    Warning (13410): Pin "display[6]" is stuck at GND
-    Warning (13410): Pin "display[5]" is stuck at GND
-    Warning (13410): Pin "display[4]" is stuck at GND
-    Warning (13410): Pin "display[3]" is stuck at GND
-    Warning (13410): Pin "display[2]" is stuck at GND
-    Warning (13410): Pin "display[1]" is stuck at GND
-    Warning (13410): Pin "display[0]" is stuck at GND
     Warning (13410): Pin "read_data_rs[7]" is stuck at GND
     Warning (13410): Pin "read_data_rs[6]" is stuck at GND
     Warning (13410): Pin "read_data_rs[5]" is stuck at GND
@@ -490,6 +870,15 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "read_data_rt[2]" is stuck at GND
     Warning (13410): Pin "read_data_rt[1]" is stuck at GND
     Warning (13410): Pin "read_data_rt[0]" is stuck at GND
+    Warning (13410): Pin "display[7]" is stuck at GND
+    Warning (13410): Pin "display[6]" is stuck at GND
+    Warning (13410): Pin "display[5]" is stuck at GND
+    Warning (13410): Pin "display[4]" is stuck at GND
+    Warning (13410): Pin "display[3]" is stuck at GND
+    Warning (13410): Pin "display[2]" is stuck at GND
+    Warning (13410): Pin "display[1]" is stuck at GND
+    Warning (13410): Pin "display[0]" is stuck at GND
+Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
 Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
     Info: Register "clock_splitter:inst2|out_clk2" lost all its fanouts during netlist optimizations.
 Warning: Design contains 11 input pin(s) that do not drive logic
@@ -504,14 +893,15 @@ Warning: Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "LED_reg[0]"
     Warning (15610): No output dependent on input pin "LED_reg[1]"
     Warning (15610): No output dependent on input pin "LED_reg[2]"
-Info: Implemented 40 device resources after synthesis - the final resource count might be different
+Info: Implemented 158 device resources after synthesis - the final resource count might be different
     Info: Implemented 12 input pins
-    Info: Implemented 25 output pins
-    Info: Implemented 3 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 71 warnings
-    Info: Peak virtual memory: 251 megabytes
-    Info: Processing ended: Wed Dec 18 01:23:10 2013
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Implemented 47 output pins
+    Info: Implemented 89 logic cells
+    Info: Implemented 10 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 206 warnings
+    Info: Peak virtual memory: 252 megabytes
+    Info: Processing ended: Wed Dec 18 02:08:11 2013
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
