@@ -1,5 +1,5 @@
 Fitter report for ALU
-Tue Dec 17 21:13:54 2013
+Wed Dec 18 10:42:22 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -14,22 +14,21 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   6. Input Pins
   7. Output Pins
   8. All Package Pins
-  9. Control Signals
- 10. Global & Other Fast Signals
- 11. Carry Chains
- 12. Cascade Chains
- 13. Non-Global High Fan-Out Signals
- 14. LAB
- 15. Local Routing Interconnect
- 16. LAB External Interconnect
- 17. Row Interconnect
+  9. Global & Other Fast Signals
+ 10. Carry Chains
+ 11. Cascade Chains
+ 12. Non-Global High Fan-Out Signals
+ 13. LAB
+ 14. Local Routing Interconnect
+ 15. LAB External Interconnect
+ 16. Row Interconnect
+ 17. LAB Column Interconnect
  18. LAB Column Interconnect
- 19. LAB Column Interconnect
- 20. Fitter Resource Usage Summary
- 21. Fitter Resource Utilization by Entity
- 22. Delay Chain Summary
- 23. Pin-Out File
- 24. Fitter Messages
+ 19. Fitter Resource Usage Summary
+ 20. Fitter Resource Utilization by Entity
+ 21. Delay Chain Summary
+ 22. Pin-Out File
+ 23. Fitter Messages
 
 
 
@@ -55,15 +54,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Tue Dec 17 21:13:54 2013        ;
+; Fitter Status         ; Successful - Wed Dec 18 10:42:22 2013        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; ALU                                          ;
 ; Top-level Entity Name ; alu                                          ;
 ; Family                ; FLEX10K                                      ;
 ; Device                ; EPF10K70RC240-4                              ;
 ; Timing Models         ; Final                                        ;
-; Total logic elements  ; 308 / 3,744 ( 8 % )                          ;
-; Total pins            ; 40 / 189 ( 21 % )                            ;
+; Total logic elements  ; 299 / 3,744 ( 8 % )                          ;
+; Total pins            ; 41 / 189 ( 22 % )                            ;
 ; Total memory bits     ; 0 / 18,432 ( 0 % )                           ;
 +-----------------------+----------------------------------------------+
 
@@ -133,37 +132,37 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 ; Name         ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; Single-Pin CE ; I/O Standard ;
 +--------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
-; clk          ; 91    ; --  ; --   ; 33      ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
-; opCode[3]    ; 81    ; --  ; 33   ; 13      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; opCode[2]    ; 211   ; --  ; --   ; 14      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; opCode[0]    ; 68    ; --  ; 45   ; 18      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; opCode[1]    ; 92    ; --  ; --   ; 19      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; aluCode[1]   ; 212   ; --  ; --   ; 47      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; s[0]         ; 200   ; --  ; 20   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; t[3]         ; 188   ; --  ; 10   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; t[2]         ; 181   ; --  ; 2    ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; s[2]         ; 35    ;  E  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; s[3]         ; 152   ;  E  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; t[1]         ; 184   ; --  ; 6    ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; t[0]         ; 151   ;  E  ; --   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; s[1]         ; 204   ; --  ; 24   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; s[7]         ; 190   ; --  ; 11   ; 12      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; t[7]         ; 31    ;  E  ; --   ; 6       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; s[6]         ; 196   ; --  ; 16   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; t[6]         ; 84    ; --  ; 30   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; s[5]         ; 234   ; --  ; 45   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; t[5]         ; 198   ; --  ; 18   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; t[4]         ; 105   ; --  ; 15   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; s[4]         ; 33    ;  E  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; aluCode[0]   ; 210   ; --  ; --   ; 32      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; aluCode[2]   ; 90    ; --  ; --   ; 31      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; immediate[5] ; 83    ; --  ; 31   ; 11      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; aluFlag      ; 199   ; --  ; 20   ; 18      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; immediate[0] ; 237   ; --  ; 48   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; immediate[1] ; 215   ; --  ; 29   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; immediate[2] ; 79    ; --  ; 35   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; immediate[3] ; 82    ; --  ; 32   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; immediate[4] ; 67    ; --  ; 46   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; aluCode[0]   ; 211   ; --  ; --   ; 14      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; aluCode[1]   ; 102   ; --  ; 17   ; 3       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; opCode[2]    ; 91    ; --  ; --   ; 16      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; opCode[0]    ; 210   ; --  ; --   ; 19      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; opCode[1]    ; 90    ; --  ; --   ; 19      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; s[0]         ; 181   ; --  ; 2    ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; t[0]         ; 168   ;  B  ; --   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; aluCode[2]   ; 212   ; --  ; --   ; 30      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; aluFlag      ; 92    ; --  ; --   ; 19      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; opCode[3]    ; 190   ; --  ; 11   ; 3       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; s[7]         ; 17    ;  B  ; --   ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; s[6]         ; 18    ;  B  ; --   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; t[6]         ; 64    ; --  ; 49   ; 6       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; t[7]         ; 219   ; --  ; 32   ; 6       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; s[5]         ; 217   ; --  ; 31   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; t[5]         ; 169   ;  B  ; --   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; s[4]         ; 167   ;  B  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; t[4]         ; 226   ; --  ; 38   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; s[1]         ; 15    ;  B  ; --   ; 6       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; t[1]         ; 166   ;  B  ; --   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; s[2]         ; 13    ;  B  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; t[2]         ; 214   ; --  ; 28   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; s[3]         ; 225   ; --  ; 37   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; t[3]         ; 233   ; --  ; 44   ; 5       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; immediate[5] ; 215   ; --  ; 29   ; 10      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; immediate[0] ; 183   ; --  ; 5    ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; immediate[1] ; 193   ; --  ; 14   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; immediate[2] ; 105   ; --  ; 15   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; immediate[3] ; 191   ; --  ; 12   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; immediate[4] ; 199   ; --  ; 20   ; 4       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; clk          ; 97    ; --  ; 23   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 +--------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 
 
@@ -172,15 +171,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 ; Name     ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
 +----------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
-; d[0]     ; 154   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; d[1]     ; 221   ; --  ; 33   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; d[2]     ; 34    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; d[3]     ; 161   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; d[4]     ; 30    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; d[5]     ; 7     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; d[6]     ; 149   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; d[7]     ; 153   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; overflow ; 201   ; --  ; 21   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; d[0]     ; 213   ; --  ; 27   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; d[1]     ; 65    ; --  ; 47   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; d[2]     ; 237   ; --  ; 48   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; d[3]     ; 35    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; d[4]     ; 223   ; --  ; 36   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; d[5]     ; 163   ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; d[6]     ; 7     ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; d[7]     ; 12    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; overflow ; 200   ; --  ; 20   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; zero     ; 14    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 +----------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 
 
@@ -195,18 +195,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 4     ; #TDO         ;              ;
 ; 5     ; VCC_INT      ;              ;
 ; 6     ; GND*         ;              ;
-; 7     ; d[5]         ; TTL          ;
+; 7     ; d[6]         ; TTL          ;
 ; 8     ; GND*         ;              ;
 ; 9     ; GND*         ;              ;
 ; 10    ; GND_INT      ;              ;
 ; 11    ; GND*         ;              ;
-; 12    ; GND*         ;              ;
-; 13    ; GND*         ;              ;
-; 14    ; GND*         ;              ;
-; 15    ; GND*         ;              ;
+; 12    ; d[7]         ; TTL          ;
+; 13    ; s[2]         ; TTL          ;
+; 14    ; zero         ; TTL          ;
+; 15    ; s[1]         ; TTL          ;
 ; 16    ; VCC_INT      ;              ;
-; 17    ; GND*         ;              ;
-; 18    ; GND*         ;              ;
+; 17    ; s[7]         ; TTL          ;
+; 18    ; s[6]         ; TTL          ;
 ; 19    ; GND*         ;              ;
 ; 20    ; GND*         ;              ;
 ; 21    ; GND*         ;              ;
@@ -218,12 +218,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 27    ; VCC_INT      ;              ;
 ; 28    ; GND*         ;              ;
 ; 29    ; GND*         ;              ;
-; 30    ; d[4]         ; TTL          ;
-; 31    ; t[7]         ; TTL          ;
+; 30    ; GND*         ;              ;
+; 31    ; GND*         ;              ;
 ; 32    ; GND_INT      ;              ;
-; 33    ; s[4]         ; TTL          ;
-; 34    ; d[2]         ; TTL          ;
-; 35    ; s[2]         ; TTL          ;
+; 33    ; GND*         ;              ;
+; 34    ; GND*         ;              ;
+; 35    ; d[3]         ; TTL          ;
 ; 36    ; GND*         ;              ;
 ; 37    ; VCC_INT      ;              ;
 ; 38    ; GND*         ;              ;
@@ -252,11 +252,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 61    ; GND*         ;              ;
 ; 62    ; GND*         ;              ;
 ; 63    ; GND*         ;              ;
-; 64    ; GND*         ;              ;
-; 65    ; GND*         ;              ;
+; 64    ; t[6]         ; TTL          ;
+; 65    ; d[1]         ; TTL          ;
 ; 66    ; GND*         ;              ;
-; 67    ; immediate[4] ; TTL          ;
-; 68    ; opCode[0]    ; TTL          ;
+; 67    ; GND*         ;              ;
+; 68    ; GND*         ;              ;
 ; 69    ; GND_INT      ;              ;
 ; 70    ; GND*         ;              ;
 ; 71    ; GND*         ;              ;
@@ -267,33 +267,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 76    ; GND*         ;              ;
 ; 77    ; VCC_INT      ;              ;
 ; 78    ; GND*         ;              ;
-; 79    ; immediate[2] ; TTL          ;
+; 79    ; GND*         ;              ;
 ; 80    ; GND*         ;              ;
-; 81    ; opCode[3]    ; TTL          ;
-; 82    ; immediate[3] ; TTL          ;
-; 83    ; immediate[5] ; TTL          ;
-; 84    ; t[6]         ; TTL          ;
+; 81    ; GND*         ;              ;
+; 82    ; GND*         ;              ;
+; 83    ; GND*         ;              ;
+; 84    ; GND*         ;              ;
 ; 85    ; GND_INT      ;              ;
 ; 86    ; GND*         ;              ;
 ; 87    ; GND*         ;              ;
 ; 88    ; GND*         ;              ;
 ; 89    ; VCC_INT      ;              ;
-; 90    ; aluCode[2]   ; TTL          ;
-; 91    ; clk          ; TTL          ;
-; 92    ; opCode[1]    ; TTL          ;
+; 90    ; opCode[1]    ; TTL          ;
+; 91    ; opCode[2]    ; TTL          ;
+; 92    ; aluFlag      ; TTL          ;
 ; 93    ; GND_INT      ;              ;
 ; 94    ; GND*         ;              ;
 ; 95    ; GND*         ;              ;
 ; 96    ; VCC_INT      ;              ;
-; 97    ; GND*         ;              ;
+; 97    ; clk          ; TTL          ;
 ; 98    ; GND*         ;              ;
 ; 99    ; GND*         ;              ;
 ; 100   ; GND*         ;              ;
 ; 101   ; GND*         ;              ;
-; 102   ; GND*         ;              ;
+; 102   ; aluCode[1]   ; TTL          ;
 ; 103   ; GND*         ;              ;
 ; 104   ; GND_INT      ;              ;
-; 105   ; t[4]         ; TTL          ;
+; 105   ; immediate[2] ; TTL          ;
 ; 106   ; GND*         ;              ;
 ; 107   ; GND*         ;              ;
 ; 108   ; GND*         ;              ;
@@ -337,27 +337,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 146   ; GND*         ;              ;
 ; 147   ; GND*         ;              ;
 ; 148   ; GND*         ;              ;
-; 149   ; d[6]         ; TTL          ;
+; 149   ; GND*         ;              ;
 ; 150   ; VCC_INT      ;              ;
-; 151   ; t[0]         ; TTL          ;
-; 152   ; s[3]         ; TTL          ;
-; 153   ; d[7]         ; TTL          ;
-; 154   ; d[0]         ; TTL          ;
+; 151   ; GND*         ;              ;
+; 152   ; GND*         ;              ;
+; 153   ; GND*         ;              ;
+; 154   ; GND*         ;              ;
 ; 155   ; GND_INT      ;              ;
 ; 156   ; GND*         ;              ;
 ; 157   ; GND*         ;              ;
 ; 158   ; GND*         ;              ;
 ; 159   ; GND*         ;              ;
 ; 160   ; VCC_INT      ;              ;
-; 161   ; d[3]         ; TTL          ;
+; 161   ; GND*         ;              ;
 ; 162   ; GND*         ;              ;
-; 163   ; GND*         ;              ;
+; 163   ; d[5]         ; TTL          ;
 ; 164   ; GND*         ;              ;
 ; 165   ; GND_INT      ;              ;
-; 166   ; GND*         ;              ;
-; 167   ; GND*         ;              ;
-; 168   ; GND*         ;              ;
-; 169   ; GND*         ;              ;
+; 166   ; t[1]         ; TTL          ;
+; 167   ; s[4]         ; TTL          ;
+; 168   ; t[0]         ; TTL          ;
+; 169   ; t[5]         ; TTL          ;
 ; 170   ; VCC_INT      ;              ;
 ; 171   ; GND*         ;              ;
 ; 172   ; GND*         ;              ;
@@ -369,79 +369,67 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 178   ; ^nCE         ;              ;
 ; 179   ; ^DCLK        ;              ;
 ; 180   ; ^DATA0       ;              ;
-; 181   ; t[2]         ; TTL          ;
+; 181   ; s[0]         ; TTL          ;
 ; 182   ; GND*         ;              ;
-; 183   ; GND*         ;              ;
-; 184   ; t[1]         ; TTL          ;
+; 183   ; immediate[0] ; TTL          ;
+; 184   ; GND*         ;              ;
 ; 185   ; GND*         ;              ;
 ; 186   ; GND*         ;              ;
 ; 187   ; GND*         ;              ;
-; 188   ; t[3]         ; TTL          ;
+; 188   ; GND*         ;              ;
 ; 189   ; VCC_INT      ;              ;
-; 190   ; s[7]         ; TTL          ;
-; 191   ; GND*         ;              ;
+; 190   ; opCode[3]    ; TTL          ;
+; 191   ; immediate[3] ; TTL          ;
 ; 192   ; GND*         ;              ;
-; 193   ; GND*         ;              ;
+; 193   ; immediate[1] ; TTL          ;
 ; 194   ; GND*         ;              ;
 ; 195   ; GND*         ;              ;
-; 196   ; s[6]         ; TTL          ;
+; 196   ; GND*         ;              ;
 ; 197   ; GND_INT      ;              ;
-; 198   ; t[5]         ; TTL          ;
-; 199   ; aluFlag      ; TTL          ;
-; 200   ; s[0]         ; TTL          ;
-; 201   ; overflow     ; TTL          ;
+; 198   ; GND*         ;              ;
+; 199   ; immediate[4] ; TTL          ;
+; 200   ; overflow     ; TTL          ;
+; 201   ; GND*         ;              ;
 ; 202   ; GND*         ;              ;
 ; 203   ; GND*         ;              ;
-; 204   ; s[1]         ; TTL          ;
+; 204   ; GND*         ;              ;
 ; 205   ; VCC_INT      ;              ;
 ; 206   ; GND*         ;              ;
 ; 207   ; GND*         ;              ;
 ; 208   ; GND*         ;              ;
 ; 209   ; GND*         ;              ;
-; 210   ; aluCode[0]   ; TTL          ;
-; 211   ; opCode[2]    ; TTL          ;
-; 212   ; aluCode[1]   ; TTL          ;
-; 213   ; GND*         ;              ;
-; 214   ; GND*         ;              ;
-; 215   ; immediate[1] ; TTL          ;
+; 210   ; opCode[0]    ; TTL          ;
+; 211   ; aluCode[0]   ; TTL          ;
+; 212   ; aluCode[2]   ; TTL          ;
+; 213   ; d[0]         ; TTL          ;
+; 214   ; t[2]         ; TTL          ;
+; 215   ; immediate[5] ; TTL          ;
 ; 216   ; GND_INT      ;              ;
-; 217   ; GND*         ;              ;
+; 217   ; s[5]         ; TTL          ;
 ; 218   ; GND*         ;              ;
-; 219   ; GND*         ;              ;
+; 219   ; t[7]         ; TTL          ;
 ; 220   ; GND*         ;              ;
-; 221   ; d[1]         ; TTL          ;
+; 221   ; GND*         ;              ;
 ; 222   ; GND*         ;              ;
-; 223   ; GND*         ;              ;
+; 223   ; d[4]         ; TTL          ;
 ; 224   ; VCC_INT      ;              ;
-; 225   ; GND*         ;              ;
-; 226   ; GND*         ;              ;
+; 225   ; s[3]         ; TTL          ;
+; 226   ; t[4]         ; TTL          ;
 ; 227   ; GND*         ;              ;
 ; 228   ; GND*         ;              ;
 ; 229   ; GND*         ;              ;
 ; 230   ; GND*         ;              ;
 ; 231   ; GND*         ;              ;
 ; 232   ; GND_INT      ;              ;
-; 233   ; GND*         ;              ;
-; 234   ; s[5]         ; TTL          ;
+; 233   ; t[3]         ; TTL          ;
+; 234   ; GND*         ;              ;
 ; 235   ; GND*         ;              ;
 ; 236   ; GND*         ;              ;
-; 237   ; immediate[0] ; TTL          ;
+; 237   ; d[2]         ; TTL          ;
 ; 238   ; GND*         ;              ;
 ; 239   ; GND*         ;              ;
 ; 240   ; GND*         ;              ;
 +-------+--------------+--------------+
-
-
-+-----------------------------------------------------------+
-; Control Signals                                           ;
-+---------+---------+---------+--------------+--------------+
-; Name    ; Pin #   ; Fan-Out ; Usage        ; Global Usage ;
-+---------+---------+---------+--------------+--------------+
-; clk     ; 91      ; 33      ; Clock        ; Pin          ;
-; t[0]    ; 151     ; 4       ; Sync. load   ; Non-global   ;
-; aluFlag ; 199     ; 18      ; Clock enable ; Non-global   ;
-; d[0]~93 ; LC4_E14 ; 16      ; Clock enable ; Non-global   ;
-+---------+---------+---------+--------------+--------------+
 
 
 +---------------------------------------+
@@ -449,12 +437,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-------+---------+--------+
 ; Name       ; Pin # ; Fan-Out ; Global ;
 +------------+-------+---------+--------+
-; clk        ; 91    ; 33      ; yes    ;
-; opCode[2]  ; 211   ; 14      ; no     ;
-; opCode[1]  ; 92    ; 19      ; no     ;
-; aluCode[1] ; 212   ; 47      ; no     ;
-; aluCode[0] ; 210   ; 32      ; no     ;
-; aluCode[2] ; 90    ; 31      ; no     ;
+; aluCode[0] ; 211   ; 14      ; no     ;
+; opCode[2]  ; 91    ; 16      ; no     ;
+; opCode[0]  ; 210   ; 19      ; no     ;
+; opCode[1]  ; 90    ; 19      ; no     ;
+; aluCode[2] ; 212   ; 30      ; no     ;
+; aluFlag    ; 92    ; 19      ; no     ;
 +------------+-------+---------+--------+
 
 
@@ -471,8 +459,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 5                  ; 0                      ;
 ; 6                  ; 0                      ;
 ; 7                  ; 0                      ;
-; 8                  ; 6                      ;
-; 9                  ; 1                      ;
+; 8                  ; 4                      ;
+; 9                  ; 2                      ;
 +--------------------+------------------------+
 
 
@@ -481,7 +469,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------+-------+
 ; Length ; Count ;
 +--------+-------+
-; 2      ; 17    ;
+; 2      ; 3     ;
 +--------+-------+
 
 
@@ -490,56 +478,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------------------------------+---------+
 ; Name                                                                     ; Fan-Out ;
 +--------------------------------------------------------------------------+---------+
-; aluCode[1]                                                               ; 47      ;
-; lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; 41      ;
-; aluCode[0]                                                               ; 32      ;
-; aluCode[2]                                                               ; 31      ;
-; signedT[1]~15                                                            ; 27      ;
+; aluCode[2]                                                               ; 30      ;
+; signedT[1]~14                                                            ; 25      ;
+; lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; 21      ;
 ; opCode[1]                                                                ; 19      ;
-; opCode[0]                                                                ; 18      ;
-; aluFlag                                                                  ; 18      ;
-; d~221                                                                    ; 16      ;
-; d[0]~238                                                                 ; 16      ;
+; aluFlag                                                                  ; 19      ;
+; signedT[7]~8                                                             ; 19      ;
+; opCode[0]                                                                ; 19      ;
+; signedT[0]~13                                                            ; 17      ;
 ; lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; 16      ;
+; opCode[2]                                                                ; 16      ;
+; signedS[2]~15                                                            ; 15      ;
 ; signedS[3]~13                                                            ; 15      ;
-; signedS[4]~9                                                             ; 15      ;
-; signedS[2]~14                                                            ; 14      ;
-; signedT[7]~9                                                             ; 14      ;
-; opCode[2]                                                                ; 14      ;
+; aluCode[0]                                                               ; 14      ;
+; signedS[7]~10                                                            ; 14      ;
+; signedS[4]~9                                                             ; 14      ;
 ; signedS[5]~8                                                             ; 14      ;
-; opCode[3]                                                                ; 13      ;
-; d~229                                                                    ; 12      ;
-; d~236                                                                    ; 12      ;
-; signedS[1]~15                                                            ; 12      ;
+; signedT[2]~15                                                            ; 13      ;
+; signedS[0]~12                                                            ; 13      ;
+; signedS[1]~14                                                            ; 12      ;
+; d~153                                                                    ; 12      ;
 ; signedS[6]~11                                                            ; 12      ;
-; s[7]                                                                     ; 12      ;
-; immediate[5]                                                             ; 11      ;
-; signedS[7]~10                                                            ; 11      ;
-; signedS[0]~12                                                            ; 9       ;
-; Mux32~7                                                                  ; 8       ;
-; Mux24~6                                                                  ; 8       ;
-; Mux24~4                                                                  ; 8       ;
-; LessThan0~30                                                             ; 8       ;
-; dCopy[7]~31                                                              ; 7       ;
-; s[0]                                                                     ; 7       ;
-; s[4]                                                                     ; 7       ;
-; s[5]                                                                     ; 7       ;
-; s[6]                                                                     ; 7       ;
-; s[1]                                                                     ; 7       ;
-; signedT[2]~16                                                            ; 7       ;
+; Mux5~5                                                                   ; 11      ;
+; s[7]                                                                     ; 10      ;
+; d~148                                                                    ; 10      ;
+; signedT[6]~12                                                            ; 10      ;
+; immediate[5]                                                             ; 10      ;
+; s[6]                                                                     ; 8       ;
+; Mux22~18                                                                 ; 8       ;
+; Mux22~20                                                                 ; 8       ;
+; Mux22~22                                                                 ; 8       ;
+; d[7]~167                                                                 ; 8       ;
+; dCopy[1]~10                                                              ; 8       ;
+; d~147                                                                    ; 7       ;
+; d~146                                                                    ; 7       ;
 ; s[3]                                                                     ; 7       ;
 ; s[2]                                                                     ; 7       ;
-; ShiftLeft0~5                                                             ; 7       ;
+; s[0]                                                                     ; 7       ;
+; s[5]                                                                     ; 7       ;
+; s[4]                                                                     ; 7       ;
+; t[6]                                                                     ; 6       ;
+; d~160                                                                    ; 6       ;
+; dCopy[7]~18                                                              ; 6       ;
+; s[1]                                                                     ; 6       ;
 ; t[7]                                                                     ; 6       ;
-; ShiftRight0~5                                                            ; 6       ;
-; d~224                                                                    ; 5       ;
 ; lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; 5       ;
-; d~248                                                                    ; 4       ;
-; signedT[3]~10                                                            ; 4       ;
-; immediate[2]                                                             ; 4       ;
-; immediate[4]                                                             ; 4       ;
-; immediate[3]                                                             ; 4       ;
-; immediate[1]                                                             ; 4       ;
+; t[3]                                                                     ; 5       ;
+; t[2]                                                                     ; 5       ;
+; t[0]                                                                     ; 5       ;
+; t[4]                                                                     ; 5       ;
+; t[5]                                                                     ; 5       ;
 +--------------------------------------------------------------------------+---------+
 
 
@@ -549,13 +537,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
 ; 0                        ; 425            ;
-; 1                        ; 3              ;
-; 2                        ; 0              ;
-; 3                        ; 1              ;
+; 1                        ; 4              ;
+; 2                        ; 1              ;
+; 3                        ; 0              ;
 ; 4                        ; 1              ;
-; 5                        ; 0              ;
+; 5                        ; 1              ;
 ; 6                        ; 1              ;
-; 7                        ; 4              ;
+; 7                        ; 2              ;
 ; 8                        ; 33             ;
 +--------------------------+----------------+
 
@@ -565,14 +553,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+----------------+
 ; Local Routing Interconnects ; Number of LABs ;
 +-----------------------------+----------------+
-; 0                           ; 436            ;
-; 1                           ; 2              ;
-; 2                           ; 5              ;
-; 3                           ; 6              ;
-; 4                           ; 3              ;
-; 5                           ; 6              ;
-; 6                           ; 4              ;
-; 7                           ; 6              ;
+; 0                           ; 437            ;
+; 1                           ; 1              ;
+; 2                           ; 2              ;
+; 3                           ; 3              ;
+; 4                           ; 6              ;
+; 5                           ; 8              ;
+; 6                           ; 3              ;
+; 7                           ; 1              ;
+; 8                           ; 7              ;
 +-----------------------------+----------------+
 
 
@@ -581,17 +570,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+----------------+
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
-; 0 - 1                      ; 426            ;
-; 2 - 3                      ; 2              ;
-; 4 - 5                      ; 2              ;
+; 0 - 1                      ; 425            ;
+; 2 - 3                      ; 4              ;
+; 4 - 5                      ; 1              ;
 ; 6 - 7                      ; 4              ;
-; 8 - 9                      ; 6              ;
+; 8 - 9                      ; 5              ;
 ; 10 - 11                    ; 6              ;
-; 12 - 13                    ; 3              ;
-; 14 - 15                    ; 7              ;
-; 16 - 17                    ; 5              ;
-; 18 - 19                    ; 3              ;
-; 20 - 21                    ; 4              ;
+; 12 - 13                    ; 4              ;
+; 14 - 15                    ; 10             ;
+; 16 - 17                    ; 2              ;
+; 18 - 19                    ; 6              ;
+; 20 - 21                    ; 1              ;
 +----------------------------+----------------+
 
 
@@ -600,16 +589,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------------+-----------------------------+------------------------------+
 ; Row   ; Interconnect Used  ; Left Half Interconnect Used ; Right Half Interconnect Used ;
 +-------+--------------------+-----------------------------+------------------------------+
-;  A    ;  1 / 208 ( < 1 % ) ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  B    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  C    ;  0 / 208 ( 0 % )   ;  1 / 104 ( < 1 % )          ;  0 / 104 ( 0 % )             ;
+;  A    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  1 / 104 ( < 1 % )           ;
+;  B    ;  79 / 208 ( 38 % ) ;  52 / 104 ( 50 % )          ;  79 / 104 ( 76 % )           ;
+;  C    ;  1 / 208 ( < 1 % ) ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  D    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  E    ;  92 / 208 ( 44 % ) ;  75 / 104 ( 72 % )          ;  53 / 104 ( 51 % )           ;
+;  E    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  1 / 104 ( < 1 % )           ;
 ;  F    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  G    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  H    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  I    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-; Total ;  93 / 1872 ( 5 % ) ;  76 / 936 ( 8 % )           ;  53 / 936 ( 6 % )            ;
+; Total ;  80 / 1872 ( 4 % ) ;  52 / 936 ( 6 % )           ;  81 / 936 ( 9 % )            ;
 +-------+--------------------+-----------------------------+------------------------------+
 
 
@@ -622,54 +611,54 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 2     ;  1 / 24 ( 4 % )    ;
 ; 3     ;  0 / 24 ( 0 % )    ;
 ; 4     ;  0 / 24 ( 0 % )    ;
-; 5     ;  0 / 24 ( 0 % )    ;
-; 6     ;  1 / 24 ( 4 % )    ;
+; 5     ;  1 / 24 ( 4 % )    ;
+; 6     ;  0 / 24 ( 0 % )    ;
 ; 7     ;  0 / 24 ( 0 % )    ;
 ; 8     ;  0 / 24 ( 0 % )    ;
-; 9     ;  1 / 24 ( 4 % )    ;
-; 10    ;  1 / 24 ( 4 % )    ;
+; 9     ;  0 / 24 ( 0 % )    ;
+; 10    ;  0 / 24 ( 0 % )    ;
 ; 11    ;  1 / 24 ( 4 % )    ;
-; 12    ;  0 / 24 ( 0 % )    ;
+; 12    ;  1 / 24 ( 4 % )    ;
 ; 13    ;  0 / 24 ( 0 % )    ;
-; 14    ;  0 / 24 ( 0 % )    ;
+; 14    ;  1 / 24 ( 4 % )    ;
 ; 15    ;  1 / 24 ( 4 % )    ;
-; 16    ;  1 / 24 ( 4 % )    ;
-; 17    ;  0 / 24 ( 0 % )    ;
-; 18    ;  1 / 24 ( 4 % )    ;
-; 19    ;  1 / 24 ( 4 % )    ;
+; 16    ;  0 / 24 ( 0 % )    ;
+; 17    ;  1 / 24 ( 4 % )    ;
+; 18    ;  0 / 24 ( 0 % )    ;
+; 19    ;  0 / 24 ( 0 % )    ;
 ; 20    ;  2 / 24 ( 8 % )    ;
-; 21    ;  1 / 24 ( 4 % )    ;
+; 21    ;  0 / 24 ( 0 % )    ;
 ; 22    ;  0 / 24 ( 0 % )    ;
 ; 23    ;  0 / 24 ( 0 % )    ;
-; 24    ;  1 / 24 ( 4 % )    ;
+; 24    ;  0 / 24 ( 0 % )    ;
 ; 25    ;  0 / 24 ( 0 % )    ;
 ; 26    ;  0 / 24 ( 0 % )    ;
-; 27    ;  0 / 24 ( 0 % )    ;
-; 28    ;  0 / 24 ( 0 % )    ;
+; 27    ;  1 / 24 ( 4 % )    ;
+; 28    ;  1 / 24 ( 4 % )    ;
 ; 29    ;  1 / 24 ( 4 % )    ;
-; 30    ;  1 / 24 ( 4 % )    ;
+; 30    ;  0 / 24 ( 0 % )    ;
 ; 31    ;  1 / 24 ( 4 % )    ;
 ; 32    ;  1 / 24 ( 4 % )    ;
-; 33    ;  2 / 24 ( 8 % )    ;
+; 33    ;  0 / 24 ( 0 % )    ;
 ; 34    ;  0 / 24 ( 0 % )    ;
-; 35    ;  1 / 24 ( 4 % )    ;
-; 36    ;  0 / 24 ( 0 % )    ;
-; 37    ;  0 / 24 ( 0 % )    ;
-; 38    ;  0 / 24 ( 0 % )    ;
+; 35    ;  0 / 24 ( 0 % )    ;
+; 36    ;  1 / 24 ( 4 % )    ;
+; 37    ;  1 / 24 ( 4 % )    ;
+; 38    ;  1 / 24 ( 4 % )    ;
 ; 39    ;  0 / 24 ( 0 % )    ;
 ; 40    ;  0 / 24 ( 0 % )    ;
 ; 41    ;  0 / 24 ( 0 % )    ;
 ; 42    ;  0 / 24 ( 0 % )    ;
 ; 43    ;  0 / 24 ( 0 % )    ;
-; 44    ;  0 / 24 ( 0 % )    ;
-; 45    ;  2 / 24 ( 8 % )    ;
-; 46    ;  1 / 24 ( 4 % )    ;
-; 47    ;  0 / 24 ( 0 % )    ;
-; 48    ;  1 / 24 ( 4 % )    ;
-; 49    ;  0 / 24 ( 0 % )    ;
+; 44    ;  1 / 24 ( 4 % )    ;
+; 45    ;  0 / 24 ( 0 % )    ;
+; 46    ;  0 / 24 ( 0 % )    ;
+; 47    ;  1 / 24 ( 4 % )    ;
+; 48    ;  2 / 24 ( 8 % )    ;
+; 49    ;  2 / 24 ( 8 % )    ;
 ; 50    ;  0 / 24 ( 0 % )    ;
 ; 51    ;  0 / 24 ( 0 % )    ;
-; 52    ;  0 / 24 ( 0 % )    ;
+; 52    ;  1 / 24 ( 4 % )    ;
 ; Total ;  24 / 1248 ( 2 % ) ;
 +-------+--------------------+
 
@@ -684,29 +673,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-------------------+
 
 
-+----------------------------------------------------------+
-; Fitter Resource Usage Summary                            ;
-+-----------------------------------+----------------------+
-; Resource                          ; Usage                ;
-+-----------------------------------+----------------------+
-; Total logic elements              ; 308 / 3,744 ( 8 % )  ;
-; Registers                         ; 33 / 3,744 ( < 1 % ) ;
-; Logic elements in carry chains    ; 57                   ;
-; User inserted logic elements      ; 0                    ;
-; I/O pins                          ; 40 / 189 ( 21 % )    ;
-;     -- Clock pins                 ; 3 / 2 ( 150 % )      ;
-;     -- Dedicated input pins       ; 5 / 4 ( 125 % )      ;
-; Global signals                    ; 1                    ;
-; EABs                              ; 0 / 9 ( 0 % )        ;
-; Total memory bits                 ; 0 / 18,432 ( 0 % )   ;
-; Total RAM block bits              ; 0 / 18,432 ( 0 % )   ;
-; Maximum fan-out node              ; aluCode[1]           ;
-; Maximum fan-out                   ; 47                   ;
-; Highest non-global fan-out signal ; aluCode[1]           ;
-; Highest non-global fan-out        ; 47                   ;
-; Total fan-out                     ; 1085                 ;
-; Average fan-out                   ; 3.12                 ;
-+-----------------------------------+----------------------+
++---------------------------------------------------------+
+; Fitter Resource Usage Summary                           ;
++-----------------------------------+---------------------+
+; Resource                          ; Usage               ;
++-----------------------------------+---------------------+
+; Total logic elements              ; 299 / 3,744 ( 8 % ) ;
+; Registers                         ; 0 / 3,744 ( 0 % )   ;
+; Logic elements in carry chains    ; 50                  ;
+; User inserted logic elements      ; 0                   ;
+; I/O pins                          ; 41 / 189 ( 22 % )   ;
+;     -- Clock pins                 ; 3 / 2 ( 150 % )     ;
+;     -- Dedicated input pins       ; 5 / 4 ( 125 % )     ;
+; Global signals                    ; 0                   ;
+; EABs                              ; 0 / 9 ( 0 % )       ;
+; Total memory bits                 ; 0 / 18,432 ( 0 % )  ;
+; Total RAM block bits              ; 0 / 18,432 ( 0 % )  ;
+; Maximum fan-out node              ; aluCode[2]          ;
+; Maximum fan-out                   ; 30                  ;
+; Highest non-global fan-out signal ; aluCode[2]          ;
+; Highest non-global fan-out        ; 30                  ;
+; Total fan-out                     ; 994                 ;
+; Average fan-out                   ; 2.92                ;
++-----------------------------------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -714,16 +703,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
-; |alu                               ; 308 (252)   ; 33           ; 0           ; 40   ; 275 (219)    ; 15 (15)           ; 18 (18)          ; 57 (1)          ; 0 (0)      ; |alu                                                        ; work         ;
-;    |lpm_add_sub:Add0|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add0                                       ; work         ;
-;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add0|addcore:adder                         ; work         ;
+; |alu                               ; 299 (243)   ; 0            ; 0           ; 41   ; 299 (243)    ; 0 (0)             ; 0 (0)            ; 50 (0)          ; 0 (0)      ; |alu                                                        ; work         ;
+;    |lpm_add_sub:Add0|              ; 15 (0)      ; 0            ; 0           ; 0    ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add0                                       ; work         ;
+;       |addcore:adder|              ; 15 (8)      ; 0            ; 0           ; 0    ; 15 (8)       ; 0 (0)             ; 0 (0)            ; 9 (2)           ; 0 (0)      ; |alu|lpm_add_sub:Add0|addcore:adder                         ; work         ;
 ;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node ; work         ;
-;    |lpm_add_sub:Add1|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add1                                       ; work         ;
-;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add1|addcore:adder                         ; work         ;
-;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node ; work         ;
-;    |lpm_add_sub:Add2|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add2                                       ; work         ;
-;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add2|addcore:adder                         ; work         ;
-;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add2|              ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add2                                       ; work         ;
+;       |addcore:adder|              ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add2|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |alu|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node ; work         ;
 ;    |lpm_add_sub:Add3|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add3                                       ; work         ;
 ;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add3|addcore:adder                         ; work         ;
 ;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node ; work         ;
@@ -746,31 +732,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name         ; Pin Type ; Pad to Core ;
 +--------------+----------+-------------+
 ; clk          ; Input    ; OFF         ;
-; opCode[3]    ; Input    ; OFF         ;
+; aluCode[0]   ; Input    ; OFF         ;
+; aluCode[1]   ; Input    ; OFF         ;
 ; opCode[2]    ; Input    ; OFF         ;
 ; opCode[0]    ; Input    ; OFF         ;
 ; opCode[1]    ; Input    ; OFF         ;
-; aluCode[1]   ; Input    ; OFF         ;
 ; s[0]         ; Input    ; OFF         ;
-; t[3]         ; Input    ; OFF         ;
-; t[2]         ; Input    ; OFF         ;
-; s[2]         ; Input    ; OFF         ;
-; s[3]         ; Input    ; OFF         ;
-; t[1]         ; Input    ; OFF         ;
 ; t[0]         ; Input    ; OFF         ;
-; s[1]         ; Input    ; OFF         ;
+; aluCode[2]   ; Input    ; OFF         ;
+; aluFlag      ; Input    ; OFF         ;
+; opCode[3]    ; Input    ; OFF         ;
 ; s[7]         ; Input    ; OFF         ;
-; t[7]         ; Input    ; OFF         ;
 ; s[6]         ; Input    ; OFF         ;
 ; t[6]         ; Input    ; OFF         ;
+; t[7]         ; Input    ; OFF         ;
 ; s[5]         ; Input    ; OFF         ;
 ; t[5]         ; Input    ; OFF         ;
-; t[4]         ; Input    ; OFF         ;
 ; s[4]         ; Input    ; OFF         ;
-; aluCode[0]   ; Input    ; OFF         ;
-; aluCode[2]   ; Input    ; OFF         ;
+; t[4]         ; Input    ; OFF         ;
+; s[1]         ; Input    ; OFF         ;
+; t[1]         ; Input    ; OFF         ;
+; s[2]         ; Input    ; OFF         ;
+; t[2]         ; Input    ; OFF         ;
+; s[3]         ; Input    ; OFF         ;
+; t[3]         ; Input    ; OFF         ;
 ; immediate[5] ; Input    ; OFF         ;
-; aluFlag      ; Input    ; OFF         ;
 ; immediate[0] ; Input    ; OFF         ;
 ; immediate[1] ; Input    ; OFF         ;
 ; immediate[2] ; Input    ; OFF         ;
@@ -785,6 +771,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; d[6]         ; Output   ; OFF         ;
 ; d[7]         ; Output   ; OFF         ;
 ; overflow     ; Output   ; OFF         ;
+; zero         ; Output   ; OFF         ;
 +--------------+----------+-------------+
 
 
@@ -800,7 +787,7 @@ The pin-out file can be found in C:/Repos/284Processor/ALU/ALU.pin.
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Dec 17 21:13:49 2013
+    Info: Processing started: Wed Dec 18 10:42:17 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off ALU -c ALU
 Info: Selected device EPF10K70RC240-4 for design "ALU"
 Info: Fitter is using the Classic Timing Analyzer
@@ -810,7 +797,7 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Inserted 0 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Tue Dec 17 2013 at 21:13:50
+Info: Started fitting attempt 1 on Wed Dec 18 2013 at 10:42:18
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -819,7 +806,7 @@ Info: Fitter routing operations beginning
 Info: Fitter routing operations ending: elapsed time is 00:00:01
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 245 megabytes
-    Info: Processing ended: Tue Dec 17 21:13:54 2013
+    Info: Processing ended: Wed Dec 18 10:42:22 2013
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 

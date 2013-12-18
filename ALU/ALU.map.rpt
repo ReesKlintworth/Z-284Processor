@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Tue Dec 17 21:13:49 2013
+Wed Dec 18 10:42:17 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -12,22 +12,21 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Source assignments for lpm_add_sub:Add2|addcore:adder
-  9. Source assignments for lpm_add_sub:Add0|addcore:adder
- 10. Source assignments for lpm_add_sub:Add1|addcore:adder
+  7. User-Specified and Inferred Latches
+  8. General Register Statistics
+  9. Source assignments for lpm_add_sub:Add2|addcore:adder
+ 10. Source assignments for lpm_add_sub:Add0|addcore:adder
  11. Source assignments for lpm_add_sub:Add3|addcore:adder
  12. Source assignments for lpm_add_sub:Add4|addcore:adder
  13. Source assignments for lpm_add_sub:Add5|addcore:adder
  14. Source assignments for lpm_add_sub:Add6|addcore:adder
  15. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add2
  16. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add0
- 17. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add1
- 18. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add3
- 19. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add4
- 20. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add5
- 21. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add6
- 22. Analysis & Synthesis Messages
+ 17. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add3
+ 18. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add4
+ 19. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add5
+ 20. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add6
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -53,13 +52,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Dec 17 21:13:49 2013        ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 18 10:42:17 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; ALU                                          ;
 ; Top-level Entity Name       ; alu                                          ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 308                                          ;
-; Total pins                  ; 40                                           ;
+; Total logic elements        ; 299                                          ;
+; Total pins                  ; 41                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
@@ -152,20 +151,20 @@ applicable agreement for further details.
 +-----------------------------------+------------+
 ; Resource                          ; Usage      ;
 +-----------------------------------+------------+
-; Total logic elements              ; 308        ;
-; Total combinational functions     ; 293        ;
-;     -- Total 4-input functions    ; 138        ;
-;     -- Total 3-input functions    ; 80         ;
-;     -- Total 2-input functions    ; 61         ;
-;     -- Total 1-input functions    ; 12         ;
-;     -- Total 0-input functions    ; 2          ;
-; Total registers                   ; 33         ;
-; Total logic cells in carry chains ; 57         ;
-; I/O pins                          ; 40         ;
-; Maximum fan-out node              ; aluCode[1] ;
-; Maximum fan-out                   ; 47         ;
-; Total fan-out                     ; 1085       ;
-; Average fan-out                   ; 3.12       ;
+; Total logic elements              ; 299        ;
+; Total combinational functions     ; 299        ;
+;     -- Total 4-input functions    ; 126        ;
+;     -- Total 3-input functions    ; 101        ;
+;     -- Total 2-input functions    ; 58         ;
+;     -- Total 1-input functions    ; 14         ;
+;     -- Total 0-input functions    ; 0          ;
+; Total registers                   ; 0          ;
+; Total logic cells in carry chains ; 50         ;
+; I/O pins                          ; 41         ;
+; Maximum fan-out node              ; aluCode[2] ;
+; Maximum fan-out                   ; 30         ;
+; Total fan-out                     ; 994        ;
+; Average fan-out                   ; 2.92       ;
 +-----------------------------------+------------+
 
 
@@ -174,16 +173,13 @@ applicable agreement for further details.
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
-; |alu                               ; 308 (252)   ; 33           ; 0           ; 40   ; 275 (219)    ; 15 (15)           ; 18 (18)          ; 57 (1)          ; 0 (0)      ; |alu                                                        ; work         ;
-;    |lpm_add_sub:Add0|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add0                                       ; work         ;
-;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add0|addcore:adder                         ; work         ;
+; |alu                               ; 299 (243)   ; 0            ; 0           ; 41   ; 299 (243)    ; 0 (0)             ; 0 (0)            ; 50 (0)          ; 0 (0)      ; |alu                                                        ; work         ;
+;    |lpm_add_sub:Add0|              ; 15 (0)      ; 0            ; 0           ; 0    ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add0                                       ; work         ;
+;       |addcore:adder|              ; 15 (8)      ; 0            ; 0           ; 0    ; 15 (8)       ; 0 (0)             ; 0 (0)            ; 9 (2)           ; 0 (0)      ; |alu|lpm_add_sub:Add0|addcore:adder                         ; work         ;
 ;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node ; work         ;
-;    |lpm_add_sub:Add1|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add1                                       ; work         ;
-;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add1|addcore:adder                         ; work         ;
-;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node ; work         ;
-;    |lpm_add_sub:Add2|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add2                                       ; work         ;
-;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add2|addcore:adder                         ; work         ;
-;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node ; work         ;
+;    |lpm_add_sub:Add2|              ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add2                                       ; work         ;
+;       |addcore:adder|              ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add2|addcore:adder                         ; work         ;
+;          |a_csnbuffer:result_node| ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |alu|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node ; work         ;
 ;    |lpm_add_sub:Add3|              ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add3                                       ; work         ;
 ;       |addcore:adder|              ; 8 (1)       ; 0            ; 0           ; 0    ; 8 (1)        ; 0 (0)             ; 0 (0)            ; 8 (1)           ; 0 (0)      ; |alu|lpm_add_sub:Add3|addcore:adder                         ; work         ;
 ;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node ; work         ;
@@ -200,17 +196,61 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; d[0]$latch                                          ; d[7]~1              ; yes                    ;
+; d[1]$latch                                          ; d[7]~1              ; yes                    ;
+; d[2]$latch                                          ; d[7]~1              ; yes                    ;
+; d[3]$latch                                          ; d[7]~1              ; yes                    ;
+; d[4]$latch                                          ; d[7]~1              ; yes                    ;
+; d[5]$latch                                          ; d[7]~1              ; yes                    ;
+; d[6]$latch                                          ; d[7]~1              ; yes                    ;
+; d[7]$latch                                          ; d[7]~1              ; yes                    ;
+; overflow$latch                                      ; aluFlag             ; yes                    ;
+; zero$latch                                          ; aluFlag             ; yes                    ;
+; dCopy[0]                                            ; dCopy[1]~0          ; yes                    ;
+; signedT[3]                                          ; aluFlag             ; yes                    ;
+; signedT[4]                                          ; aluFlag             ; yes                    ;
+; signedT[5]                                          ; aluFlag             ; yes                    ;
+; signedT[6]                                          ; aluFlag             ; yes                    ;
+; signedT[7]                                          ; aluFlag             ; yes                    ;
+; signedS[0]                                          ; aluFlag             ; yes                    ;
+; signedT[2]                                          ; aluFlag             ; yes                    ;
+; signedT[0]                                          ; aluFlag             ; yes                    ;
+; signedT[1]                                          ; aluFlag             ; yes                    ;
+; signedS[1]                                          ; aluFlag             ; yes                    ;
+; signedS[2]                                          ; aluFlag             ; yes                    ;
+; signedS[3]                                          ; aluFlag             ; yes                    ;
+; signedS[4]                                          ; aluFlag             ; yes                    ;
+; signedS[5]                                          ; aluFlag             ; yes                    ;
+; signedS[6]                                          ; aluFlag             ; yes                    ;
+; signedS[7]                                          ; aluFlag             ; yes                    ;
+; dCopy[1]                                            ; dCopy[1]~0          ; yes                    ;
+; dCopy[2]                                            ; dCopy[1]~0          ; yes                    ;
+; dCopy[3]                                            ; dCopy[1]~0          ; yes                    ;
+; dCopy[4]                                            ; dCopy[1]~0          ; yes                    ;
+; dCopy[5]                                            ; dCopy[1]~0          ; yes                    ;
+; dCopy[6]                                            ; dCopy[1]~0          ; yes                    ;
+; dCopy[7]                                            ; dCopy[1]~0          ; yes                    ;
+; Number of user-specified and inferred latches = 34  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 33    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 33    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -226,15 +266,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +-------------------------------------------------------+
 ; Source assignments for lpm_add_sub:Add0|addcore:adder ;
-+---------------------------+-------+------+------------+
-; Assignment                ; Value ; From ; To         ;
-+---------------------------+-------+------+------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -          ;
-+---------------------------+-------+------+------------+
-
-
-+-------------------------------------------------------+
-; Source assignments for lpm_add_sub:Add1|addcore:adder ;
 +---------------------------+-------+------+------------+
 ; Assignment                ; Value ; From ; To         ;
 +---------------------------+-------+------+------------+
@@ -313,7 +344,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+-------------+----------------------------+
 ; LPM_WIDTH              ; 8           ; Untyped                    ;
 ; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
-; LPM_DIRECTION          ; ADD         ; Untyped                    ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                    ;
 ; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
 ; LPM_PIPELINE           ; 0           ; Untyped                    ;
 ; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
@@ -325,35 +356,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY          ; FLEX10K     ; Untyped                    ;
 ; USE_WYS                ; OFF         ; Untyped                    ;
 ; STYLE                  ; FAST        ; Untyped                    ;
-; CBXI_PARAMETER         ; add_sub_rjh ; Untyped                    ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
-+------------------------+-------------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add1 ;
-+------------------------+-------------+----------------------------+
-; Parameter Name         ; Value       ; Type                       ;
-+------------------------+-------------+----------------------------+
-; LPM_WIDTH              ; 9           ; Untyped                    ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
-; LPM_DIRECTION          ; ADD         ; Untyped                    ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
-; LPM_PIPELINE           ; 0           ; Untyped                    ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
-; REGISTERED_AT_END      ; 0           ; Untyped                    ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                    ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
-; DEVICE_FAMILY          ; FLEX10K     ; Untyped                    ;
-; USE_WYS                ; OFF         ; Untyped                    ;
-; STYLE                  ; FAST        ; Untyped                    ;
-; CBXI_PARAMETER         ; add_sub_sjh ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_fei ; Untyped                    ;
 ; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
@@ -480,17 +483,133 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Dec 17 21:13:47 2013
+    Info: Processing started: Wed Dec 18 10:42:15 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Info: Found 2 design units, including 1 entities, in source file ALU.vhd
     Info: Found design unit 1: alu-functions
     Info: Found entity 1: alu
 Info: Elaborating entity "ALU" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at ALU.vhd(27): signal "aluFlag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info: Inferred 7 megafunctions from design logic
+Warning (10492): VHDL Process Statement warning at ALU.vhd(28): signal "aluFlag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(32): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(33): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(35): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "aluCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(43): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(43): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(52): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(56): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(56): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(57): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(65): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(69): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(69): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(71): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(71): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(72): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(83): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(83): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(84): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(88): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(88): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(88): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(92): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(96): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(96): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(97): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(101): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(101): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(101): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(105): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(109): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(109): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(110): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(112): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(112): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(112): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(114): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(114): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(114): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(118): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(122): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(122): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(123): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(125): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(125): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(125): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(127): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(127): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(127): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(131): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "signedS", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "signedT", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "d", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "dCopy", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "dCopy[0]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[1]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[2]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[3]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[4]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[5]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[6]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[7]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[0]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[1]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[2]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[3]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[4]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[5]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[6]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[7]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[0]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[1]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[2]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[3]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[4]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[5]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[6]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[7]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[0]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[1]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[2]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[3]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[4]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[5]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[6]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[7]" at ALU.vhd(25)
+Info (10041): Inferred latch for "zero" at ALU.vhd(25)
+Info (10041): Inferred latch for "overflow" at ALU.vhd(25)
+Info: Inferred 6 megafunctions from design logic
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add2"
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add0"
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add1"
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add3"
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add4"
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add5"
@@ -509,39 +628,81 @@ Info: Elaborated megafunction instantiation "lpm_add_sub:Add2|altshift:carry_ext
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add0"
 Info: Instantiated megafunction "lpm_add_sub:Add0" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "8"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_DIRECTION" = "DEFAULT"
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add0|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "lpm_add_sub:Add0"
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "lpm_add_sub:Add1"
-Info: Instantiated megafunction "lpm_add_sub:Add1" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "9"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info: Elaborated megafunction instantiation "lpm_add_sub:Add1|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add1"
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add3"
 Info: Instantiated megafunction "lpm_add_sub:Add3" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "8"
     Info: Parameter "LPM_DIRECTION" = "ADD"
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add3|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add3"
 Info: Elaborated megafunction instantiation "lpm_add_sub:Add4"
 Info: Instantiated megafunction "lpm_add_sub:Add4" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "9"
     Info: Parameter "LPM_DIRECTION" = "ADD"
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info: Implemented 348 device resources after synthesis - the final resource count might be different
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add4|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add4"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add5"
+Info: Instantiated megafunction "lpm_add_sub:Add5" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add6"
+Info: Instantiated megafunction "lpm_add_sub:Add6" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "9"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Warning: Latch d[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
+Warning: Latch d[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
+Warning: Latch d[2]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
+Warning: Latch d[3]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
+Warning: Latch d[4]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
+Warning: Latch d[5]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
+Warning: Latch d[6]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
+Warning: Latch d[7]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
+Warning: Latch dCopy[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
+Warning: Latch dCopy[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
+Warning: Latch dCopy[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
+Warning: Latch dCopy[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
+Warning: Latch dCopy[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
+Warning: Latch dCopy[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
+Warning: Latch dCopy[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
+Warning: Latch dCopy[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
+Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+Info: Implemented 340 device resources after synthesis - the final resource count might be different
     Info: Implemented 31 input pins
-    Info: Implemented 9 output pins
-    Info: Implemented 308 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Implemented 10 output pins
+    Info: Implemented 299 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 118 warnings
     Info: Peak virtual memory: 245 megabytes
-    Info: Processing ended: Tue Dec 17 21:13:49 2013
+    Info: Processing ended: Wed Dec 18 10:42:17 2013
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
