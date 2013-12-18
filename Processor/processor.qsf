@@ -73,4 +73,8 @@ set_global_assignment -name QIP_FILE ../ROM/ROM_2.qip
 set_global_assignment -name QIP_FILE ../ROM/lpm_rom0.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/rom_test.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/controller_sig_ext_test.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Tests/controller_sig_ext_test.vwf
+set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file\\mux_8"
+set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file\\demux_8"
+set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/reg_file_test.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Tests/reg_file_test.vwf

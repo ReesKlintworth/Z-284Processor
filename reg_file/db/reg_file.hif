@@ -807,7 +807,7 @@ db|reg_file.(0).cnf
 # case_insensitive
 # source_file
 reg_file.bdf
-b4b59fd2eab653afc16a66caf3aba872
+e7138a345ac998b78470c4f511e9cee2
 26
 # internal_option {
 BLOCK_DESIGN_NAMING

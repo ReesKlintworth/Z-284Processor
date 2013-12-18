@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "read_reg_rt[3..0]" (rect 0 0 95 14)(font "Arial" (font_size 8)))
-		(text "read_reg_rt[3..0]" (rect 21 59 116 73)(font "Arial" (font_size 8)))
+		(text "read_reg_rt[2..0]" (rect 0 0 95 14)(font "Arial" (font_size 8)))
+		(text "read_reg_rt[2..0]" (rect 21 59 116 73)(font "Arial" (font_size 8)))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port

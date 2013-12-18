@@ -109,7 +109,6 @@ read_data_rt[7] <= mux_8:inst2.output[7]
 read_reg_rt[0] => mux_8:inst2.sel[0]
 read_reg_rt[1] => mux_8:inst2.sel[1]
 read_reg_rt[2] => mux_8:inst2.sel[2]
-read_reg_rt[3] => ~NO_FANOUT~
 
 
 |reg_file|mux_8:inst3
