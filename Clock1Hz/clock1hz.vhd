@@ -1,12 +1,13 @@
 ENTITY Clock1Hz IS
-     PORT ( 
+PORT 
+( 
 		reset: 	IN BIT;
 		clk:	IN BIT;
 		clock:	OUT BIT
-        );
+);
 END Clock1Hz;
 
-ARCHITECTURE a OF Clock1Hz IS
+ARCHITECTURE behav OF Clock1Hz IS
 	SIGNAL clockTmp: BIT;
 BEGIN
 PROCESS (reset, clk)
@@ -26,5 +27,5 @@ BEGIN
 END PROCESS;
 
 clock <= clockTmp;	
-END a;
+END behav;
 
