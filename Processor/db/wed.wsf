@@ -1283,13 +1283,13 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/Tests/al
 	}
 }
 
-VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/processor.sim.cvwf")
+VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/Tests/ram_test.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 25692;
-		NUMERATOR = 1008;
-		DENOMINATOR = 25692;
+		ZEND = 1000000;
+		NUMERATOR = 20;
+		DENOMINATOR = 1000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -1309,7 +1309,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "LED_reg";
+		SIGNAL = "op_code";
 		INDEX = 1;
 		FORMAT = T;
 		SCALE = 1;
@@ -1317,7 +1317,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "LED_reg[2]";
+		SIGNAL = "op_code[3]";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -1325,7 +1325,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "LED_reg[1]";
+		SIGNAL = "op_code[2]";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -1333,7 +1333,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "LED_reg[0]";
+		SIGNAL = "op_code[1]";
 		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
@@ -1341,192 +1341,8 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "write_data";
-		INDEX = 5;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_data[7]";
-		INDEX = 6;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_data[6]";
-		INDEX = 7;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_data[5]";
-		INDEX = 8;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_data[4]";
-		INDEX = 9;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_data[3]";
-		INDEX = 10;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_data[2]";
-		INDEX = 11;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_data[1]";
-		INDEX = 12;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_data[0]";
-		INDEX = 13;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd";
-		INDEX = 14;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd[7]";
-		INDEX = 15;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd[6]";
-		INDEX = 16;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd[5]";
-		INDEX = 17;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd[4]";
-		INDEX = 18;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd[3]";
-		INDEX = 19;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd[2]";
-		INDEX = 20;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd[1]";
-		INDEX = 21;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "write_reg_rd[0]";
-		INDEX = 22;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "overflow";
-		INDEX = 23;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "op_code";
-		INDEX = 24;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "op_code[3]";
-		INDEX = 25;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "op_code[2]";
-		INDEX = 26;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "op_code[1]";
-		INDEX = 27;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "op_code[0]";
-		INDEX = 28;
+		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1534,7 +1350,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "alu_code";
-		INDEX = 29;
+		INDEX = 6;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1542,7 +1358,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "alu_code[2]";
-		INDEX = 30;
+		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1550,7 +1366,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "alu_code[1]";
-		INDEX = 31;
+		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1558,7 +1374,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "alu_code[0]";
-		INDEX = 32;
+		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1566,7 +1382,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "imm";
-		INDEX = 33;
+		INDEX = 10;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1574,7 +1390,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "imm[5]";
-		INDEX = 34;
+		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1582,7 +1398,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "imm[4]";
-		INDEX = 35;
+		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1590,7 +1406,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "imm[3]";
-		INDEX = 36;
+		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1598,7 +1414,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "imm[2]";
-		INDEX = 37;
+		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1606,7 +1422,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "imm[1]";
-		INDEX = 38;
+		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1614,23 +1430,95 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "imm[0]";
-		INDEX = 39;
+		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "pc_clk";
-		INDEX = 40;
+		SIGNAL = "write_reg_rd";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[7]";
+		INDEX = 18;
 		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[6]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[5]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[4]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[3]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[2]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[1]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[0]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs";
+		INDEX = 26;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
 		SIGNAL = "read_data_rs[7]";
-		INDEX = 41;
+		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1638,7 +1526,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rs[6]";
-		INDEX = 42;
+		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1646,7 +1534,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rs[5]";
-		INDEX = 43;
+		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1654,7 +1542,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rs[4]";
-		INDEX = 44;
+		INDEX = 30;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1662,7 +1550,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rs[3]";
-		INDEX = 45;
+		INDEX = 31;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1670,7 +1558,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rs[2]";
-		INDEX = 46;
+		INDEX = 32;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1678,7 +1566,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rs[1]";
-		INDEX = 47;
+		INDEX = 33;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1686,15 +1574,23 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rs[0]";
-		INDEX = 48;
+		INDEX = 34;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
+		SIGNAL = "read_data_rt";
+		INDEX = 35;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
 		SIGNAL = "read_data_rt[7]";
-		INDEX = 49;
+		INDEX = 36;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1702,7 +1598,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rt[6]";
-		INDEX = 50;
+		INDEX = 37;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1710,7 +1606,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rt[5]";
-		INDEX = 51;
+		INDEX = 38;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1718,7 +1614,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rt[4]";
-		INDEX = 52;
+		INDEX = 39;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1726,7 +1622,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rt[3]";
-		INDEX = 53;
+		INDEX = 40;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1734,7 +1630,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rt[2]";
-		INDEX = 54;
+		INDEX = 41;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1742,7 +1638,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rt[1]";
-		INDEX = 55;
+		INDEX = 42;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1750,7 +1646,530 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "read_data_rt[0]";
-		INDEX = 56;
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data";
+		INDEX = 44;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[7]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[6]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[5]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[4]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[3]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[2]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[1]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[0]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/processor.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 27297;
+		NUMERATOR = 1071;
+		DENOMINATOR = 27297;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "op_code";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "op_code[3]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "op_code[2]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "op_code[1]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "op_code[0]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "alu_code";
+		INDEX = 6;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "alu_code[2]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "alu_code[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "alu_code[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "imm";
+		INDEX = 10;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "imm[5]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "imm[4]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "imm[3]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "imm[2]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "imm[1]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "imm[0]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[7]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[6]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[5]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[4]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[3]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[2]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[1]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_reg_rd[0]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs";
+		INDEX = 26;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs[7]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs[6]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs[5]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs[4]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs[3]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs[2]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs[1]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rs[0]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt";
+		INDEX = 35;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt[7]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt[6]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt[5]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt[4]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt[3]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt[2]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt[1]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read_data_rt[0]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data";
+		INDEX = 44;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[7]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[6]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[5]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[4]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[3]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[2]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[1]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[0]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pc_clk";
+		INDEX = 53;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1758,7 +2177,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "display[7]";
-		INDEX = 57;
+		INDEX = 54;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1766,7 +2185,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "display[6]";
-		INDEX = 58;
+		INDEX = 55;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1774,7 +2193,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "display[5]";
-		INDEX = 59;
+		INDEX = 56;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1782,7 +2201,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "display[4]";
-		INDEX = 60;
+		INDEX = 57;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1790,7 +2209,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "display[3]";
-		INDEX = 61;
+		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1798,7 +2217,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "display[2]";
-		INDEX = 62;
+		INDEX = 59;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1806,7 +2225,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "display[1]";
-		INDEX = 63;
+		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1814,7 +2233,7 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/proce
 	}
 	LINE{
 		SIGNAL = "display[0]";
-		INDEX = 64;
+		INDEX = 61;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

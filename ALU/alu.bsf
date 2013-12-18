@@ -86,6 +86,13 @@ applicable agreement for further details.
 		(text "overflow" (rect 113 43 155 55)(font "Arial" ))
 		(line (pt 176 48)(pt 160 48)(line_width 1))
 	)
+	(port
+		(pt 176 64)
+		(output)
+		(text "zero" (rect 0 0 20 12)(font "Arial" ))
+		(text "zero" (rect 135 59 155 71)(font "Arial" ))
+		(line (pt 176 64)(pt 160 64)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 160 144)(line_width 1))
 	)

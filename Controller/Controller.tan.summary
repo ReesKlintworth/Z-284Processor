@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 25.500 ns
-From           : opCode[1]
-To             : branch
+Actual Time    : 21.000 ns
+From           : opCode[3]
+To             : memToReg
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0

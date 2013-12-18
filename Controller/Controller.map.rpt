@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Controller
-Tue Dec 17 20:33:21 2013
+Wed Dec 18 12:08:28 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -39,13 +39,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Dec 17 20:33:21 2013        ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 18 12:08:28 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; Controller                                   ;
 ; Top-level Entity Name       ; controller                                   ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 8                                            ;
-; Total pins                  ; 15                                           ;
+; Total logic elements        ; 6                                            ;
+; Total pins                  ; 16                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
@@ -112,13 +112,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+
-; controller.vhd                   ; yes             ; User VHDL File  ; C:/Repos/284Processor/Controller/controller.vhd ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+
+; controller.vhd                   ; yes             ; User VHDL File  ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Controller/controller.vhd ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -126,19 +126,19 @@ applicable agreement for further details.
 +--------------------------------+------------+
 ; Resource                       ; Usage      ;
 +--------------------------------+------------+
-; Total logic elements           ; 8          ;
-; Total combinational functions  ; 8          ;
+; Total logic elements           ; 6          ;
+; Total combinational functions  ; 6          ;
 ;     -- Total 4-input functions ; 5          ;
-;     -- Total 3-input functions ; 2          ;
-;     -- Total 2-input functions ; 1          ;
+;     -- Total 3-input functions ; 1          ;
+;     -- Total 2-input functions ; 0          ;
 ;     -- Total 1-input functions ; 0          ;
 ;     -- Total 0-input functions ; 0          ;
 ; Total registers                ; 0          ;
-; I/O pins                       ; 15         ;
+; I/O pins                       ; 16         ;
 ; Maximum fan-out node           ; opCode[1]  ;
-; Maximum fan-out                ; 8          ;
-; Total fan-out                  ; 38         ;
-; Average fan-out                ; 1.65       ;
+; Maximum fan-out                ; 7          ;
+; Total fan-out                  ; 34         ;
+; Average fan-out                ; 1.55       ;
 +--------------------------------+------------+
 
 
@@ -147,7 +147,7 @@ applicable agreement for further details.
 +----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |controller                ; 8 (8)       ; 0            ; 0           ; 15   ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |controller         ; work         ;
+; |controller                ; 6 (6)       ; 0            ; 0           ; 16   ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |controller         ; work         ;
 +----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -173,7 +173,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Dec 17 20:33:20 2013
+    Info: Processing started: Wed Dec 18 12:08:28 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Controller -c Controller
 Info: Found 2 design units, including 1 entities, in source file controller.vhd
     Info: Found design unit 1: controller-functions
@@ -181,14 +181,14 @@ Info: Found 2 design units, including 1 entities, in source file controller.vhd
 Info: Elaborating entity "Controller" for the top level hierarchy
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk"
-Info: Implemented 23 device resources after synthesis - the final resource count might be different
+Info: Implemented 22 device resources after synthesis - the final resource count might be different
     Info: Implemented 5 input pins
-    Info: Implemented 10 output pins
-    Info: Implemented 8 logic cells
+    Info: Implemented 11 output pins
+    Info: Implemented 6 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 240 megabytes
-    Info: Processing ended: Tue Dec 17 20:33:21 2013
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 239 megabytes
+    Info: Processing ended: Wed Dec 18 12:08:28 2013
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

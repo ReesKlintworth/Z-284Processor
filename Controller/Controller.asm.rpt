@@ -1,5 +1,5 @@
 Assembler report for Controller
-Tue Dec 17 20:33:24 2013
+Wed Dec 18 12:08:32 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Repos/284Processor/Controller/Controller.sof
-  6. Assembler Device Options: C:/Repos/284Processor/Controller/Controller.pof
+  5. Assembler Device Options: C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Controller/Controller.sof
+  6. Assembler Device Options: C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Controller/Controller.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Dec 17 20:33:24 2013 ;
+; Assembler Status      ; Successful - Wed Dec 18 12:08:32 2013 ;
 ; Revision Name         ; Controller                            ;
 ; Top-level Entity Name ; controller                            ;
 ; Family                ; FLEX10K                               ;
@@ -74,37 +74,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------+
-; Assembler Generated Files                       ;
-+-------------------------------------------------+
-; File Name                                       ;
-+-------------------------------------------------+
-; C:/Repos/284Processor/Controller/Controller.sof ;
-; C:/Repos/284Processor/Controller/Controller.pof ;
-+-------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Assembler Generated Files                                                       ;
++---------------------------------------------------------------------------------+
+; File Name                                                                       ;
++---------------------------------------------------------------------------------+
+; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Controller/Controller.sof ;
+; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Controller/Controller.pof ;
++---------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Device Options: C:/Repos/284Processor/Controller/Controller.sof ;
-+----------------+----------------------------------------------------------+
-; Option         ; Setting                                                  ;
-+----------------+----------------------------------------------------------+
-; Device         ; EPF10K70RC240-4                                          ;
-; JTAG usercode  ; 0x0000007F                                               ;
-; Checksum       ; 0x000178A4                                               ;
-+----------------+----------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Controller/Controller.sof ;
++----------------+------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                  ;
++----------------+------------------------------------------------------------------------------------------+
+; Device         ; EPF10K70RC240-4                                                                          ;
+; JTAG usercode  ; 0x0000007F                                                                               ;
+; Checksum       ; 0x00017AD3                                                                               ;
++----------------+------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Device Options: C:/Repos/284Processor/Controller/Controller.pof ;
-+--------------------+------------------------------------------------------+
-; Option             ; Setting                                              ;
-+--------------------+------------------------------------------------------+
-; Device             ; EPC2                                                 ;
-; JTAG usercode      ; 0x00000000                                           ;
-; Checksum           ; 0x018B6647                                           ;
-; Compression Ratio  ; 1                                                    ;
-+--------------------+------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Controller/Controller.pof ;
++--------------------+--------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                              ;
++--------------------+--------------------------------------------------------------------------------------+
+; Device             ; EPC2                                                                                 ;
+; JTAG usercode      ; 0x00000000                                                                           ;
+; Checksum           ; 0x018B552E                                                                           ;
+; Compression Ratio  ; 1                                                                                    ;
++--------------------+--------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -113,13 +113,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Dec 17 20:33:24 2013
+    Info: Processing started: Wed Dec 18 12:08:31 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Controller -c Controller
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 209 megabytes
-    Info: Processing ended: Tue Dec 17 20:33:24 2013
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 208 megabytes
+    Info: Processing ended: Wed Dec 18 12:08:32 2013
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

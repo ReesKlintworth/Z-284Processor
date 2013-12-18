@@ -36,7 +36,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Wed Dec 18 02:08:19 2013
+File Generation Date & Time: Wed Dec 18 12:53:30 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "processor"  ASSIGNED TO AN: EPF10K70RC240-4
 
@@ -47,37 +47,37 @@ CONF_DONE                    : 2         : bidir  :                   :         
 nCEO                         : 3         : output :                   :         :           :                
 TDO                          : 4         : output :                   :         :           :                
 VCC_INT                      : 5         : power  :                   : 5.0V    :           :                
-imm[2]                       : 6         : output : TTL               :         :           : N              
-op_code[1]                   : 7         : output : TTL               :         :           : N              
-write_reg_rd[2]              : 8         : output : TTL               :         :           : N              
-op_code[2]                   : 9         : output : TTL               :         :           : N              
+GND*                         : 6         :        :                   :         :           :                
+GND*                         : 7         :        :                   :         :           :                
+GND*                         : 8         :        :                   :         :           :                
+GND*                         : 9         :        :                   :         :           :                
 GND_INT                      : 10        : gnd    :                   :         :           :                
-alu_code[2]                  : 11        : output : TTL               :         :           : N              
-GND*                         : 12        :        :                   :         :           :                
-GND*                         : 13        :        :                   :         :           :                
-read_data_rs[4]              : 14        : output : TTL               :         :           : N              
-GND*                         : 15        :        :                   :         :           :                
+GND*                         : 11        :        :                   :         :           :                
+read_data_rs[0]              : 12        : output : TTL               :         :           : N              
+op_code[1]                   : 13        : output : TTL               :         :           : N              
+GND*                         : 14        :        :                   :         :           :                
+alu_code[1]                  : 15        : output : TTL               :         :           : N              
 VCC_INT                      : 16        : power  :                   : 5.0V    :           :                
-GND*                         : 17        :        :                   :         :           :                
-GND*                         : 18        :        :                   :         :           :                
+imm[3]                       : 17        : output : TTL               :         :           : N              
+imm[4]                       : 18        : output : TTL               :         :           : N              
 GND*                         : 19        :        :                   :         :           :                
-imm[5]                       : 20        : output : TTL               :         :           : N              
+display[0]                   : 20        : output : TTL               :         :           : N              
 GND*                         : 21        :        :                   :         :           :                
 GND_INT                      : 22        : gnd    :                   :         :           :                
-imm[3]                       : 23        : output : TTL               :         :           : N              
+op_code[2]                   : 23        : output : TTL               :         :           : N              
 GND*                         : 24        :        :                   :         :           :                
-alu_code[1]                  : 25        : output : TTL               :         :           : N              
-GND*                         : 26        :        :                   :         :           :                
+alu_code[0]                  : 25        : output : TTL               :         :           : N              
+read_data_rt[6]              : 26        : output : TTL               :         :           : N              
 VCC_INT                      : 27        : power  :                   : 5.0V    :           :                
-read_data_rs[7]              : 28        : output : TTL               :         :           : N              
+alu_code[2]                  : 28        : output : TTL               :         :           : N              
 GND*                         : 29        :        :                   :         :           :                
-GND*                         : 30        :        :                   :         :           :                
-imm[4]                       : 31        : output : TTL               :         :           : N              
+write_data[5]                : 30        : output : TTL               :         :           : N              
+write_data[6]                : 31        : output : TTL               :         :           : N              
 GND_INT                      : 32        : gnd    :                   :         :           :                
-read_data_rt[5]              : 33        : output : TTL               :         :           : N              
-GND*                         : 34        :        :                   :         :           :                
-GND*                         : 35        :        :                   :         :           :                
-write_reg_rd[5]              : 36        : output : TTL               :         :           : N              
+write_data[0]                : 33        : output : TTL               :         :           : N              
+write_reg_rd[5]              : 34        : output : TTL               :         :           : N              
+write_reg_rd[0]              : 35        : output : TTL               :         :           : N              
+GND*                         : 36        :        :                   :         :           :                
 VCC_INT                      : 37        : power  :                   : 5.0V    :           :                
 GND*                         : 38        :        :                   :         :           :                
 GND*                         : 39        :        :                   :         :           :                
@@ -85,24 +85,24 @@ GND*                         : 40        :        :                   :         
 GND*                         : 41        :        :                   :         :           :                
 GND_INT                      : 42        : gnd    :                   :         :           :                
 GND*                         : 43        :        :                   :         :           :                
-display[0]                   : 44        : output : TTL               :         :           : N              
+GND*                         : 44        :        :                   :         :           :                
 GND*                         : 45        :        :                   :         :           :                
 GND*                         : 46        :        :                   :         :           :                
 VCC_INT                      : 47        : power  :                   : 5.0V    :           :                
 GND*                         : 48        :        :                   :         :           :                
-write_data[3]                : 49        : input  : TTL               :         :           : N              
+imm[5]                       : 49        : output : TTL               :         :           : N              
 GND*                         : 50        :        :                   :         :           :                
 GND*                         : 51        :        :                   :         :           :                
 GND_INT                      : 52        : gnd    :                   :         :           :                
 GND*                         : 53        :        :                   :         :           :                
 GND*                         : 54        :        :                   :         :           :                
 GND*                         : 55        :        :                   :         :           :                
-read_data_rs[5]              : 56        : output : TTL               :         :           : N              
+GND*                         : 56        :        :                   :         :           :                
 VCC_INT                      : 57        : power  :                   : 5.0V    :           :                
 TMS                          : 58        : input  :                   :         :           :                
 TRST                         : 59        : input  :                   :         :           :                
 nSTATUS                      : 60        : bidir  :                   :         :           :                
-display[5]                   : 61        : output : TTL               :         :           : N              
+GND*                         : 61        :        :                   :         :           :                
 GND*                         : 62        :        :                   :         :           :                
 GND*                         : 63        :        :                   :         :           :                
 GND*                         : 64        :        :                   :         :           :                
@@ -114,16 +114,16 @@ GND_INT                      : 69        : gnd    :                   :         
 GND*                         : 70        :        :                   :         :           :                
 GND*                         : 71        :        :                   :         :           :                
 GND*                         : 72        :        :                   :         :           :                
-write_data[0]                : 73        : input  : TTL               :         :           : N              
+GND*                         : 73        :        :                   :         :           :                
 GND*                         : 74        :        :                   :         :           :                
 GND*                         : 75        :        :                   :         :           :                
-GND*                         : 76        :        :                   :         :           :                
+read_data_rt[5]              : 76        : output : TTL               :         :           : N              
 VCC_INT                      : 77        : power  :                   : 5.0V    :           :                
-read_data_rt[0]              : 78        : output : TTL               :         :           : N              
+GND*                         : 78        :        :                   :         :           :                
 GND*                         : 79        :        :                   :         :           :                
-GND*                         : 80        :        :                   :         :           :                
+read_data_rs[6]              : 80        : output : TTL               :         :           : N              
 GND*                         : 81        :        :                   :         :           :                
-display[4]                   : 82        : output : TTL               :         :           : N              
+GND*                         : 82        :        :                   :         :           :                
 GND*                         : 83        :        :                   :         :           :                
 GND*                         : 84        :        :                   :         :           :                
 GND_INT                      : 85        : gnd    :                   :         :           :                
@@ -131,19 +131,19 @@ GND*                         : 86        :        :                   :         
 GND*                         : 87        :        :                   :         :           :                
 GND*                         : 88        :        :                   :         :           :                
 VCC_INT                      : 89        : power  :                   : 5.0V    :           :                
-LED_reg[1]                   : 90        : input  : TTL               :         :           : N              
+LED_reg[0]                   : 90        : input  : TTL               :         :           : N              
 clk                          : 91        : input  : TTL               :         :           : N              
-LED_reg[0]                   : 92        : input  : TTL               :         :           : N              
+LED_reg[2]                   : 92        : input  : TTL               :         :           : N              
 GND_INT                      : 93        : gnd    :                   :         :           :                
 GND*                         : 94        :        :                   :         :           :                
-write_data[5]                : 95        : input  : TTL               :         :           : N              
+GND*                         : 95        :        :                   :         :           :                
 VCC_INT                      : 96        : power  :                   : 5.0V    :           :                
-imm[0]                       : 97        : output : TTL               :         :           : N              
+GND*                         : 97        :        :                   :         :           :                
 GND*                         : 98        :        :                   :         :           :                
 GND*                         : 99        :        :                   :         :           :                
-write_reg_rd[4]              : 100       : output : TTL               :         :           : N              
-write_reg_rd[3]              : 101       : output : TTL               :         :           : N              
-read_data_rs[2]              : 102       : output : TTL               :         :           : N              
+GND*                         : 100       :        :                   :         :           :                
+GND*                         : 101       :        :                   :         :           :                
+read_data_rt[2]              : 102       : output : TTL               :         :           : N              
 display[7]                   : 103       : output : TTL               :         :           : N              
 GND_INT                      : 104       : gnd    :                   :         :           :                
 GND*                         : 105       :        :                   :         :           :                
@@ -154,12 +154,12 @@ GND*                         : 109       :        :                   :         
 GND*                         : 110       :        :                   :         :           :                
 GND*                         : 111       :        :                   :         :           :                
 VCC_INT                      : 112       : power  :                   : 5.0V    :           :                
-read_data_rt[7]              : 113       : output : TTL               :         :           : N              
+GND*                         : 113       :        :                   :         :           :                
 GND*                         : 114       :        :                   :         :           :                
-display[3]                   : 115       : output : TTL               :         :           : N              
-read_data_rt[4]              : 116       : output : TTL               :         :           : N              
+GND*                         : 115       :        :                   :         :           :                
+GND*                         : 116       :        :                   :         :           :                
 GND*                         : 117       :        :                   :         :           :                
-GND*                         : 118       :        :                   :         :           :                
+read_data_rt[4]              : 118       : output : TTL               :         :           : N              
 GND*                         : 119       :        :                   :         :           :                
 GND*                         : 120       :        :                   :         :           :                
 nCONFIG                      : 121       : input  :                   :         :           :                
@@ -173,85 +173,85 @@ GND*                         : 128       :        :                   :         
 GND*                         : 129       :        :                   :         :           :                
 VCC_INT                      : 130       : power  :                   : 5.0V    :           :                
 GND*                         : 131       :        :                   :         :           :                
-GND*                         : 132       :        :                   :         :           :                
+imm[1]                       : 132       : output : TTL               :         :           : N              
 GND*                         : 133       :        :                   :         :           :                
-read_data_rt[6]              : 134       : output : TTL               :         :           : N              
+GND*                         : 134       :        :                   :         :           :                
 GND_INT                      : 135       : gnd    :                   :         :           :                
 GND*                         : 136       :        :                   :         :           :                
-pc_clk                       : 137       : output : TTL               :         :           : N              
+GND*                         : 137       :        :                   :         :           :                
 GND*                         : 138       :        :                   :         :           :                
 GND*                         : 139       :        :                   :         :           :                
 VCC_INT                      : 140       : power  :                   : 5.0V    :           :                
-read_data_rs[0]              : 141       : output : TTL               :         :           : N              
-op_code[3]                   : 142       : output : TTL               :         :           : N              
+GND*                         : 141       :        :                   :         :           :                
+GND*                         : 142       :        :                   :         :           :                
 GND*                         : 143       :        :                   :         :           :                
-GND*                         : 144       :        :                   :         :           :                
+read_data_rs[4]              : 144       : output : TTL               :         :           : N              
 GND_INT                      : 145       : gnd    :                   :         :           :                
-display[6]                   : 146       : output : TTL               :         :           : N              
+GND*                         : 146       :        :                   :         :           :                
 GND*                         : 147       :        :                   :         :           :                
-GND*                         : 148       :        :                   :         :           :                
-GND*                         : 149       :        :                   :         :           :                
+op_code[3]                   : 148       : output : TTL               :         :           : N              
+write_data[1]                : 149       : output : TTL               :         :           : N              
 VCC_INT                      : 150       : power  :                   : 5.0V    :           :                
-GND*                         : 151       :        :                   :         :           :                
-GND*                         : 152       :        :                   :         :           :                
-GND*                         : 153       :        :                   :         :           :                
-GND*                         : 154       :        :                   :         :           :                
+write_reg_rd[2]              : 151       : output : TTL               :         :           : N              
+write_data[7]                : 152       : output : TTL               :         :           : N              
+write_reg_rd[1]              : 153       : output : TTL               :         :           : N              
+write_reg_rd[4]              : 154       : output : TTL               :         :           : N              
 GND_INT                      : 155       : gnd    :                   :         :           :                
-GND*                         : 156       :        :                   :         :           :                
-imm[1]                       : 157       : output : TTL               :         :           : N              
-GND*                         : 158       :        :                   :         :           :                
+read_data_rs[7]              : 156       : output : TTL               :         :           : N              
+imm[2]                       : 157       : output : TTL               :         :           : N              
+read_data_rt[0]              : 158       : output : TTL               :         :           : N              
 GND*                         : 159       :        :                   :         :           :                
 VCC_INT                      : 160       : power  :                   : 5.0V    :           :                
-GND*                         : 161       :        :                   :         :           :                
-GND*                         : 162       :        :                   :         :           :                
+pc_clk                       : 161       : output : TTL               :         :           : N              
+read_data_rt[3]              : 162       : output : TTL               :         :           : N              
 GND*                         : 163       :        :                   :         :           :                
 GND*                         : 164       :        :                   :         :           :                
 GND_INT                      : 165       : gnd    :                   :         :           :                
-GND*                         : 166       :        :                   :         :           :                
-read_data_rs[1]              : 167       : output : TTL               :         :           : N              
-read_data_rs[3]              : 168       : output : TTL               :         :           : N              
-read_data_rt[3]              : 169       : output : TTL               :         :           : N              
+read_data_rs[5]              : 166       : output : TTL               :         :           : N              
+op_code[0]                   : 167       : output : TTL               :         :           : N              
+read_data_rs[2]              : 168       : output : TTL               :         :           : N              
+display[1]                   : 169       : output : TTL               :         :           : N              
 VCC_INT                      : 170       : power  :                   : 5.0V    :           :                
-write_reg_rd[0]              : 171       : output : TTL               :         :           : N              
-write_reg_rd[6]              : 172       : output : TTL               :         :           : N              
-overflow                     : 173       : output : TTL               :         :           : N              
-op_code[0]                   : 174       : output : TTL               :         :           : N              
-write_reg_rd[7]              : 175       : output : TTL               :         :           : N              
+GND*                         : 171       :        :                   :         :           :                
+GND*                         : 172       :        :                   :         :           :                
+GND*                         : 173       :        :                   :         :           :                
+read_data_rt[7]              : 174       : output : TTL               :         :           : N              
+GND*                         : 175       :        :                   :         :           :                
 GND_INT                      : 176       : gnd    :                   :         :           :                
 TDI                          : 177       : input  :                   :         :           :                
 nCE                          : 178       : input  :                   :         :           :                
 DCLK                         : 179       : bidir  :                   :         :           :                
 DATA0                        : 180       : input  :                   :         :           :                
-write_data[6]                : 181       : input  : TTL               :         :           : N              
-read_data_rt[1]              : 182       : output : TTL               :         :           : N              
-GND*                         : 183       :        :                   :         :           :                
+GND*                         : 181       :        :                   :         :           :                
+display[4]                   : 182       : output : TTL               :         :           : N              
+read_data_rs[3]              : 183       : output : TTL               :         :           : N              
 GND*                         : 184       :        :                   :         :           :                
-write_data[4]                : 185       : input  : TTL               :         :           : N              
+GND*                         : 185       :        :                   :         :           :                
 GND*                         : 186       :        :                   :         :           :                
 GND*                         : 187       :        :                   :         :           :                
-display[2]                   : 188       : output : TTL               :         :           : N              
+read_data_rs[1]              : 188       : output : TTL               :         :           : N              
 VCC_INT                      : 189       : power  :                   : 5.0V    :           :                
 GND*                         : 190       :        :                   :         :           :                
-GND*                         : 191       :        :                   :         :           :                
+read_data_rt[1]              : 191       : output : TTL               :         :           : N              
 GND*                         : 192       :        :                   :         :           :                
 GND*                         : 193       :        :                   :         :           :                
 GND*                         : 194       :        :                   :         :           :                
 GND*                         : 195       :        :                   :         :           :                
-write_reg_rd[1]              : 196       : output : TTL               :         :           : N              
+GND*                         : 196       :        :                   :         :           :                
 GND_INT                      : 197       : gnd    :                   :         :           :                
-GND*                         : 198       :        :                   :         :           :                
+imm[0]                       : 198       : output : TTL               :         :           : N              
 GND*                         : 199       :        :                   :         :           :                
-GND*                         : 200       :        :                   :         :           :                
-alu_code[0]                  : 201       : output : TTL               :         :           : N              
-GND*                         : 202       :        :                   :         :           :                
-write_data[7]                : 203       : input  : TTL               :         :           : N              
+write_reg_rd[7]              : 200       : output : TTL               :         :           : N              
+GND*                         : 201       :        :                   :         :           :                
+write_data[4]                : 202       : output : TTL               :         :           : N              
+GND*                         : 203       :        :                   :         :           :                
 GND*                         : 204       :        :                   :         :           :                
 VCC_INT                      : 205       : power  :                   : 5.0V    :           :                
-GND*                         : 206       :        :                   :         :           :                
-read_data_rs[6]              : 207       : output : TTL               :         :           : N              
+write_data[2]                : 206       : output : TTL               :         :           : N              
+write_reg_rd[3]              : 207       : output : TTL               :         :           : N              
 GND*                         : 208       :        :                   :         :           :                
-GND*                         : 209       :        :                   :         :           :                
-LED_reg[2]                   : 210       : input  : TTL               :         :           : N              
+write_data[3]                : 209       : output : TTL               :         :           : N              
+LED_reg[1]                   : 210       : input  : TTL               :         :           : N              
 GND+                         : 211       :        :                   :         :           :                
 GND+                         : 212       :        :                   :         :           :                
 GND*                         : 213       :        :                   :         :           :                
@@ -259,19 +259,19 @@ GND*                         : 214       :        :                   :         
 GND*                         : 215       :        :                   :         :           :                
 GND_INT                      : 216       : gnd    :                   :         :           :                
 GND*                         : 217       :        :                   :         :           :                
-GND*                         : 218       :        :                   :         :           :                
+write_reg_rd[6]              : 218       : output : TTL               :         :           : N              
 GND*                         : 219       :        :                   :         :           :                
 GND*                         : 220       :        :                   :         :           :                
-read_data_rt[2]              : 221       : output : TTL               :         :           : N              
+GND*                         : 221       :        :                   :         :           :                
 GND*                         : 222       :        :                   :         :           :                
 GND*                         : 223       :        :                   :         :           :                
 VCC_INT                      : 224       : power  :                   : 5.0V    :           :                
 GND*                         : 225       :        :                   :         :           :                
 GND*                         : 226       :        :                   :         :           :                
-display[1]                   : 227       : output : TTL               :         :           : N              
-GND*                         : 228       :        :                   :         :           :                
-write_data[2]                : 229       : input  : TTL               :         :           : N              
-write_data[1]                : 230       : input  : TTL               :         :           : N              
+GND*                         : 227       :        :                   :         :           :                
+display[3]                   : 228       : output : TTL               :         :           : N              
+display[6]                   : 229       : output : TTL               :         :           : N              
+GND*                         : 230       :        :                   :         :           :                
 GND*                         : 231       :        :                   :         :           :                
 GND_INT                      : 232       : gnd    :                   :         :           :                
 GND*                         : 233       :        :                   :         :           :                
@@ -280,5 +280,5 @@ GND*                         : 235       :        :                   :         
 GND*                         : 236       :        :                   :         :           :                
 GND*                         : 237       :        :                   :         :           :                
 GND*                         : 238       :        :                   :         :           :                
-GND*                         : 239       :        :                   :         :           :                
-GND*                         : 240       :        :                   :         :           :                
+display[2]                   : 239       : output : TTL               :         :           : N              
+display[5]                   : 240       : output : TTL               :         :           : N              

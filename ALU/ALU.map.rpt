@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Wed Dec 18 02:02:59 2013
+Wed Dec 18 10:57:23 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -52,13 +52,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 18 02:02:59 2013        ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 18 10:57:23 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; ALU                                          ;
 ; Top-level Entity Name       ; alu                                          ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 288                                          ;
-; Total pins                  ; 40                                           ;
+; Total logic elements        ; 299                                          ;
+; Total pins                  ; 41                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
@@ -151,20 +151,20 @@ applicable agreement for further details.
 +-----------------------------------+------------+
 ; Resource                          ; Usage      ;
 +-----------------------------------+------------+
-; Total logic elements              ; 288        ;
-; Total combinational functions     ; 288        ;
-;     -- Total 4-input functions    ; 132        ;
-;     -- Total 3-input functions    ; 93         ;
-;     -- Total 2-input functions    ; 49         ;
+; Total logic elements              ; 299        ;
+; Total combinational functions     ; 299        ;
+;     -- Total 4-input functions    ; 126        ;
+;     -- Total 3-input functions    ; 101        ;
+;     -- Total 2-input functions    ; 58         ;
 ;     -- Total 1-input functions    ; 14         ;
 ;     -- Total 0-input functions    ; 0          ;
 ; Total registers                   ; 0          ;
 ; Total logic cells in carry chains ; 50         ;
-; I/O pins                          ; 40         ;
-; Maximum fan-out node              ; aluCode[0] ;
-; Maximum fan-out                   ; 29         ;
-; Total fan-out                     ; 975        ;
-; Average fan-out                   ; 2.97       ;
+; I/O pins                          ; 41         ;
+; Maximum fan-out node              ; aluCode[2] ;
+; Maximum fan-out                   ; 30         ;
+; Total fan-out                     ; 994        ;
+; Average fan-out                   ; 2.92       ;
 +-----------------------------------+------------+
 
 
@@ -173,7 +173,7 @@ applicable agreement for further details.
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
 +------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
-; |alu                               ; 288 (232)   ; 0            ; 0           ; 40   ; 288 (232)    ; 0 (0)             ; 0 (0)            ; 50 (0)          ; 0 (0)      ; |alu                                                        ; work         ;
+; |alu                               ; 299 (243)   ; 0            ; 0           ; 41   ; 299 (243)    ; 0 (0)             ; 0 (0)            ; 50 (0)          ; 0 (0)      ; |alu                                                        ; work         ;
 ;    |lpm_add_sub:Add0|              ; 15 (0)      ; 0            ; 0           ; 0    ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |alu|lpm_add_sub:Add0                                       ; work         ;
 ;       |addcore:adder|              ; 15 (8)      ; 0            ; 0           ; 0    ; 15 (8)       ; 0 (0)             ; 0 (0)            ; 9 (2)           ; 0 (0)      ; |alu|lpm_add_sub:Add0|addcore:adder                         ; work         ;
 ;          |a_csnbuffer:result_node| ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |alu|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node ; work         ;
@@ -210,6 +210,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; d[6]$latch                                          ; d[7]~1              ; yes                    ;
 ; d[7]$latch                                          ; d[7]~1              ; yes                    ;
 ; overflow$latch                                      ; aluFlag             ; yes                    ;
+; zero$latch                                          ; aluFlag             ; yes                    ;
 ; dCopy[0]                                            ; dCopy[1]~0          ; yes                    ;
 ; signedT[3]                                          ; aluFlag             ; yes                    ;
 ; signedT[4]                                          ; aluFlag             ; yes                    ;
@@ -234,7 +235,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dCopy[5]                                            ; dCopy[1]~0          ; yes                    ;
 ; dCopy[6]                                            ; dCopy[1]~0          ; yes                    ;
 ; dCopy[7]                                            ; dCopy[1]~0          ; yes                    ;
-; Number of user-specified and inferred latches = 33  ;                     ;                        ;
+; Number of user-specified and inferred latches = 34  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -482,122 +483,130 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 02:02:55 2013
+    Info: Processing started: Wed Dec 18 10:57:18 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Info: Found 2 design units, including 1 entities, in source file ALU.vhd
     Info: Found design unit 1: alu-functions
     Info: Found entity 1: alu
 Info: Elaborating entity "ALU" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at ALU.vhd(27): signal "aluFlag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(30): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(31): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(33): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(35): signal "aluCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(28): signal "aluFlag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(32): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(33): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(35): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(37): signal "aluCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(39): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(42): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(41): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(43): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(43): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(44): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(46): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(50): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(50): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(51): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(55): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(55): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(55): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(48): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(52): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(56): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(56): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(57): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(59): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(61): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(62): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(65): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(65): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(67): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(67): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(65): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(69): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(69): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(71): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(71): signal "t" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(72): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(72): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(73): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(81): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(81): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(82): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(75): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(77): signal "signedT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(83): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(83): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(84): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(84): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(84): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(86): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(90): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(90): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(91): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(93): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(93): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(93): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(95): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(95): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(95): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(88): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(88): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(88): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(92): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(96): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(96): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(97): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ALU.vhd(99): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(100): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(102): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(102): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(102): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(104): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(104): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ALU.vhd(104): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "signedS", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "signedT", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "d", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at ALU.vhd(24): inferring latch(es) for signal or variable "dCopy", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "dCopy[0]" at ALU.vhd(24)
-Info (10041): Inferred latch for "dCopy[1]" at ALU.vhd(24)
-Info (10041): Inferred latch for "dCopy[2]" at ALU.vhd(24)
-Info (10041): Inferred latch for "dCopy[3]" at ALU.vhd(24)
-Info (10041): Inferred latch for "dCopy[4]" at ALU.vhd(24)
-Info (10041): Inferred latch for "dCopy[5]" at ALU.vhd(24)
-Info (10041): Inferred latch for "dCopy[6]" at ALU.vhd(24)
-Info (10041): Inferred latch for "dCopy[7]" at ALU.vhd(24)
-Info (10041): Inferred latch for "d[0]" at ALU.vhd(24)
-Info (10041): Inferred latch for "d[1]" at ALU.vhd(24)
-Info (10041): Inferred latch for "d[2]" at ALU.vhd(24)
-Info (10041): Inferred latch for "d[3]" at ALU.vhd(24)
-Info (10041): Inferred latch for "d[4]" at ALU.vhd(24)
-Info (10041): Inferred latch for "d[5]" at ALU.vhd(24)
-Info (10041): Inferred latch for "d[6]" at ALU.vhd(24)
-Info (10041): Inferred latch for "d[7]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedT[0]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedT[1]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedT[2]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedT[3]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedT[4]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedT[5]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedT[6]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedT[7]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedS[0]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedS[1]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedS[2]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedS[3]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedS[4]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedS[5]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedS[6]" at ALU.vhd(24)
-Info (10041): Inferred latch for "signedS[7]" at ALU.vhd(24)
-Info (10041): Inferred latch for "overflow" at ALU.vhd(24)
+Warning (10492): VHDL Process Statement warning at ALU.vhd(101): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(101): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(101): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(105): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(109): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(109): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(110): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(112): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(112): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(112): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(114): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(114): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(114): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(118): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(122): signal "signedS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(122): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(123): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(125): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(125): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(125): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(127): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(127): signal "s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(127): signal "immediate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(131): signal "dCopy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "signedS", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "signedT", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "d", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ALU.vhd(25): inferring latch(es) for signal or variable "dCopy", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "dCopy[0]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[1]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[2]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[3]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[4]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[5]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[6]" at ALU.vhd(25)
+Info (10041): Inferred latch for "dCopy[7]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[0]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[1]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[2]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[3]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[4]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[5]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[6]" at ALU.vhd(25)
+Info (10041): Inferred latch for "d[7]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[0]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[1]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[2]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[3]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[4]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[5]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[6]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedT[7]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[0]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[1]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[2]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[3]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[4]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[5]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[6]" at ALU.vhd(25)
+Info (10041): Inferred latch for "signedS[7]" at ALU.vhd(25)
+Info (10041): Inferred latch for "zero" at ALU.vhd(25)
+Info (10041): Inferred latch for "overflow" at ALU.vhd(25)
 Info: Inferred 6 megafunctions from design logic
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add2"
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add0"
@@ -653,21 +662,21 @@ Info: Instantiated megafunction "lpm_add_sub:Add6" with the following parameter:
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
 Warning: Latch d[0]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
 Warning: Latch d[1]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
 Warning: Latch d[2]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
 Warning: Latch d[3]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
 Warning: Latch d[4]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
 Warning: Latch d[5]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
 Warning: Latch d[6]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
 Warning: Latch d[7]$latch has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal aluCode[1]
 Warning: Latch dCopy[0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal opCode[2]
 Warning: Latch dCopy[1] has unsafe behavior
@@ -687,14 +696,14 @@ Warning: Latch dCopy[7] has unsafe behavior
 Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk"
-Info: Implemented 328 device resources after synthesis - the final resource count might be different
+Info: Implemented 340 device resources after synthesis - the final resource count might be different
     Info: Implemented 31 input pins
-    Info: Implemented 9 output pins
-    Info: Implemented 288 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 111 warnings
+    Info: Implemented 10 output pins
+    Info: Implemented 299 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 118 warnings
     Info: Peak virtual memory: 244 megabytes
-    Info: Processing ended: Wed Dec 18 02:02:59 2013
-    Info: Elapsed time: 00:00:04
+    Info: Processing ended: Wed Dec 18 10:57:23 2013
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 

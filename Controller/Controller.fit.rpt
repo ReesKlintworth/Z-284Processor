@@ -1,5 +1,5 @@
 Fitter report for Controller
-Tue Dec 17 20:33:23 2013
+Wed Dec 18 12:08:31 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -17,16 +17,15 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   9. Global & Other Fast Signals
  10. Non-Global High Fan-Out Signals
  11. LAB
- 12. Local Routing Interconnect
- 13. LAB External Interconnect
- 14. Row Interconnect
+ 12. LAB External Interconnect
+ 13. Row Interconnect
+ 14. LAB Column Interconnect
  15. LAB Column Interconnect
- 16. LAB Column Interconnect
- 17. Fitter Resource Usage Summary
- 18. Fitter Resource Utilization by Entity
- 19. Delay Chain Summary
- 20. Pin-Out File
- 21. Fitter Messages
+ 16. Fitter Resource Usage Summary
+ 17. Fitter Resource Utilization by Entity
+ 18. Delay Chain Summary
+ 19. Pin-Out File
+ 20. Fitter Messages
 
 
 
@@ -52,15 +51,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Tue Dec 17 20:33:23 2013        ;
+; Fitter Status         ; Successful - Wed Dec 18 12:08:31 2013        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; Controller                                   ;
 ; Top-level Entity Name ; controller                                   ;
 ; Family                ; FLEX10K                                      ;
 ; Device                ; EPF10K70RC240-4                              ;
 ; Timing Models         ; Final                                        ;
-; Total logic elements  ; 12 / 3,744 ( < 1 % )                         ;
-; Total pins            ; 15 / 189 ( 8 % )                             ;
+; Total logic elements  ; 11 / 3,744 ( < 1 % )                         ;
+; Total pins            ; 16 / 189 ( 8 % )                             ;
 ; Total memory bits     ; 0 / 18,432 ( 0 % )                           ;
 +-----------------------+----------------------------------------------+
 
@@ -102,7 +101,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -130,11 +129,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 ; Name      ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; Single-Pin CE ; I/O Standard ;
 +-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
-; opCode[0] ; 210   ; --  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; opCode[0] ; 92    ; --  ; --   ; 7       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; opCode[1] ; 212   ; --  ; --   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; opCode[2] ; 90    ; --  ; --   ; 6       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; opCode[3] ; 92    ; --  ; --   ; 6       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
-; clk       ; 227   ; --  ; 39   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; opCode[2] ; 210   ; --  ; --   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; opCode[3] ; 90    ; --  ; --   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; clk       ; 103   ; --  ; 16   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 +-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 
 
@@ -143,16 +142,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 ; Name         ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
 +--------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
-; opCodeOut[0] ; 25    ;  D  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; opCodeOut[1] ; 172   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; opCodeOut[2] ; 136   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; opCodeOut[3] ; 175   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; alu          ; 35    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; immediate    ; 31    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; store        ; 30    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; load         ; 34    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; jump         ; 152   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; branch       ; 33    ;  E  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; opCodeOut[0] ; 126   ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; opCodeOut[1] ; 12    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; opCodeOut[2] ; 132   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; opCodeOut[3] ; 19    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; jump         ; 131   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; branch       ; 136   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; memRead      ; 133   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; memToReg     ; 48    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; memWrite     ; 134   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; regWrite     ; 137   ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; aluFlag      ; 49    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 +--------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 
 
@@ -172,30 +172,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 9     ; GND*         ;              ;
 ; 10    ; GND_INT      ;              ;
 ; 11    ; GND*         ;              ;
-; 12    ; GND*         ;              ;
+; 12    ; opCodeOut[1] ; TTL          ;
 ; 13    ; GND*         ;              ;
 ; 14    ; GND*         ;              ;
 ; 15    ; GND*         ;              ;
 ; 16    ; VCC_INT      ;              ;
 ; 17    ; GND*         ;              ;
 ; 18    ; GND*         ;              ;
-; 19    ; GND*         ;              ;
+; 19    ; opCodeOut[3] ; TTL          ;
 ; 20    ; GND*         ;              ;
 ; 21    ; GND*         ;              ;
 ; 22    ; GND_INT      ;              ;
 ; 23    ; GND*         ;              ;
 ; 24    ; GND*         ;              ;
-; 25    ; opCodeOut[0] ; TTL          ;
+; 25    ; GND*         ;              ;
 ; 26    ; GND*         ;              ;
 ; 27    ; VCC_INT      ;              ;
 ; 28    ; GND*         ;              ;
 ; 29    ; GND*         ;              ;
-; 30    ; store        ; TTL          ;
-; 31    ; immediate    ; TTL          ;
+; 30    ; GND*         ;              ;
+; 31    ; GND*         ;              ;
 ; 32    ; GND_INT      ;              ;
-; 33    ; branch       ; TTL          ;
-; 34    ; load         ; TTL          ;
-; 35    ; alu          ; TTL          ;
+; 33    ; GND*         ;              ;
+; 34    ; GND*         ;              ;
+; 35    ; GND*         ;              ;
 ; 36    ; GND*         ;              ;
 ; 37    ; VCC_INT      ;              ;
 ; 38    ; GND*         ;              ;
@@ -208,8 +208,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 45    ; GND*         ;              ;
 ; 46    ; GND*         ;              ;
 ; 47    ; VCC_INT      ;              ;
-; 48    ; GND*         ;              ;
-; 49    ; GND*         ;              ;
+; 48    ; memToReg     ; TTL          ;
+; 49    ; aluFlag      ; TTL          ;
 ; 50    ; GND*         ;              ;
 ; 51    ; GND*         ;              ;
 ; 52    ; GND_INT      ;              ;
@@ -250,9 +250,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 87    ; GND*         ;              ;
 ; 88    ; GND*         ;              ;
 ; 89    ; VCC_INT      ;              ;
-; 90    ; opCode[2]    ; TTL          ;
+; 90    ; opCode[3]    ; TTL          ;
 ; 91    ; GND+         ;              ;
-; 92    ; opCode[3]    ; TTL          ;
+; 92    ; opCode[0]    ; TTL          ;
 ; 93    ; GND_INT      ;              ;
 ; 94    ; GND*         ;              ;
 ; 95    ; GND*         ;              ;
@@ -263,7 +263,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 100   ; GND*         ;              ;
 ; 101   ; GND*         ;              ;
 ; 102   ; GND*         ;              ;
-; 103   ; GND*         ;              ;
+; 103   ; clk          ; TTL          ;
 ; 104   ; GND_INT      ;              ;
 ; 105   ; GND*         ;              ;
 ; 106   ; GND*         ;              ;
@@ -286,18 +286,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 123   ; ^MSEL1       ;              ;
 ; 124   ; ^MSEL0       ;              ;
 ; 125   ; GND_INT      ;              ;
-; 126   ; GND*         ;              ;
+; 126   ; opCodeOut[0] ; TTL          ;
 ; 127   ; GND*         ;              ;
 ; 128   ; GND*         ;              ;
 ; 129   ; GND*         ;              ;
 ; 130   ; VCC_INT      ;              ;
-; 131   ; GND*         ;              ;
-; 132   ; GND*         ;              ;
-; 133   ; GND*         ;              ;
-; 134   ; GND*         ;              ;
+; 131   ; jump         ; TTL          ;
+; 132   ; opCodeOut[2] ; TTL          ;
+; 133   ; memRead      ; TTL          ;
+; 134   ; memWrite     ; TTL          ;
 ; 135   ; GND_INT      ;              ;
-; 136   ; opCodeOut[2] ; TTL          ;
-; 137   ; GND*         ;              ;
+; 136   ; branch       ; TTL          ;
+; 137   ; regWrite     ; TTL          ;
 ; 138   ; GND*         ;              ;
 ; 139   ; GND*         ;              ;
 ; 140   ; VCC_INT      ;              ;
@@ -312,7 +312,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 149   ; GND*         ;              ;
 ; 150   ; VCC_INT      ;              ;
 ; 151   ; GND*         ;              ;
-; 152   ; jump         ; TTL          ;
+; 152   ; GND*         ;              ;
 ; 153   ; GND*         ;              ;
 ; 154   ; GND*         ;              ;
 ; 155   ; GND_INT      ;              ;
@@ -332,10 +332,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 169   ; GND*         ;              ;
 ; 170   ; VCC_INT      ;              ;
 ; 171   ; GND*         ;              ;
-; 172   ; opCodeOut[1] ; TTL          ;
+; 172   ; GND*         ;              ;
 ; 173   ; GND*         ;              ;
 ; 174   ; GND*         ;              ;
-; 175   ; opCodeOut[3] ; TTL          ;
+; 175   ; GND*         ;              ;
 ; 176   ; GND_INT      ;              ;
 ; 177   ; #TDI         ;              ;
 ; 178   ; ^nCE         ;              ;
@@ -370,7 +370,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 207   ; GND*         ;              ;
 ; 208   ; GND*         ;              ;
 ; 209   ; GND*         ;              ;
-; 210   ; opCode[0]    ; TTL          ;
+; 210   ; opCode[2]    ; TTL          ;
 ; 211   ; GND+         ;              ;
 ; 212   ; opCode[1]    ; TTL          ;
 ; 213   ; GND*         ;              ;
@@ -387,7 +387,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 224   ; VCC_INT      ;              ;
 ; 225   ; GND*         ;              ;
 ; 226   ; GND*         ;              ;
-; 227   ; clk          ; TTL          ;
+; 227   ; GND*         ;              ;
 ; 228   ; GND*         ;              ;
 ; 229   ; GND*         ;              ;
 ; 230   ; GND*         ;              ;
@@ -409,10 +409,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------+-------+---------+--------+
 ; Name      ; Pin # ; Fan-Out ; Global ;
 +-----------+-------+---------+--------+
-; opCode[0] ; 210   ; 7       ; no     ;
+; opCode[0] ; 92    ; 7       ; no     ;
 ; opCode[1] ; 212   ; 8       ; no     ;
-; opCode[2] ; 90    ; 6       ; no     ;
-; opCode[3] ; 92    ; 6       ; no     ;
+; opCode[2] ; 210   ; 8       ; no     ;
+; opCode[3] ; 90    ; 8       ; no     ;
 +-----------+-------+---------+--------+
 
 
@@ -422,21 +422,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name           ; Fan-Out        ;
 +----------------+----------------+
 ; opCode[1]      ; 8              ;
+; opCode[2]      ; 8              ;
+; opCode[3]      ; 8              ;
 ; opCode[0]      ; 7              ;
-; opCode[2]      ; 6              ;
-; opCode[3]      ; 6              ;
-; store~7        ; 3              ;
-; immediate~10   ; 2              ;
-; store~8        ; 1              ;
+; memRead~12     ; 1              ;
 ; opCodeOut[2]~2 ; 1              ;
-; jump~20        ; 1              ;
-; branch~4       ; 1              ;
-; load~5         ; 1              ;
+; branch~8       ; 1              ;
+; aluFlag~4      ; 1              ;
+; regWrite~4     ; 1              ;
+; memWrite~13    ; 1              ;
 ; opCodeOut[0]~0 ; 1              ;
-; opCodeOut[3]~3 ; 1              ;
-; alu~10         ; 1              ;
+; memRead~13     ; 1              ;
+; jump~10        ; 1              ;
 ; opCodeOut[1]~1 ; 1              ;
-; jump~21        ; 1              ;
+; opCodeOut[3]~3 ; 1              ;
 +----------------+----------------+
 
 
@@ -445,28 +444,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 463            ;
-; 1                        ; 4              ;
+; 0                        ; 461            ;
+; 1                        ; 6              ;
 ; 2                        ; 0              ;
 ; 3                        ; 0              ;
 ; 4                        ; 0              ;
-; 5                        ; 0              ;
-; 6                        ; 0              ;
-; 7                        ; 0              ;
-; 8                        ; 1              ;
+; 5                        ; 1              ;
 +--------------------------+----------------+
-
-
-+----------------------------------------------+
-; Local Routing Interconnect                   ;
-+-----------------------------+----------------+
-; Local Routing Interconnects ; Number of LABs ;
-+-----------------------------+----------------+
-; 0                           ; 467            ;
-; 1                           ; 0              ;
-; 2                           ; 0              ;
-; 3                           ; 1              ;
-+-----------------------------+----------------+
 
 
 +---------------------------------------------+
@@ -474,11 +458,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+----------------+
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
-; 0                          ; 463            ;
-; 1                          ; 4              ;
+; 0                          ; 461            ;
+; 1                          ; 3              ;
 ; 2                          ; 0              ;
-; 3                          ; 0              ;
-; 4                          ; 1              ;
+; 3                          ; 1              ;
+; 4                          ; 3              ;
 +----------------------------+----------------+
 
 
@@ -487,16 +471,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+---------------------+-----------------------------+------------------------------+
 ; Row   ; Interconnect Used   ; Left Half Interconnect Used ; Right Half Interconnect Used ;
 +-------+---------------------+-----------------------------+------------------------------+
-;  A    ;  0 / 208 ( 0 % )    ;  2 / 104 ( 2 % )            ;  0 / 104 ( 0 % )             ;
-;  B    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  C    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  D    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  1 / 104 ( < 1 % )           ;
-;  E    ;  3 / 208 ( 1 % )    ;  0 / 104 ( 0 % )            ;  3 / 104 ( 3 % )             ;
+;  A    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  B    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  1 / 104 ( < 1 % )           ;
+;  C    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  1 / 104 ( < 1 % )           ;
+;  D    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  E    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  F    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
 ;  G    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  H    ;  0 / 208 ( 0 % )    ;  1 / 104 ( < 1 % )          ;  0 / 104 ( 0 % )             ;
-;  I    ;  0 / 208 ( 0 % )    ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-; Total ;  3 / 1872 ( < 1 % ) ;  3 / 936 ( < 1 % )          ;  4 / 936 ( < 1 % )           ;
+;  H    ;  2 / 208 ( < 1 % )  ;  5 / 104 ( 5 % )            ;  1 / 104 ( < 1 % )           ;
+;  I    ;  0 / 208 ( 0 % )    ;  1 / 104 ( < 1 % )          ;  0 / 104 ( 0 % )             ;
+; Total ;  2 / 1872 ( < 1 % ) ;  6 / 936 ( < 1 % )          ;  3 / 936 ( < 1 % )           ;
 +-------+---------------------+-----------------------------+------------------------------+
 
 
@@ -576,11 +560,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------+----------------------+
 ; Resource                          ; Usage                ;
 +-----------------------------------+----------------------+
-; Total logic elements              ; 12 / 3,744 ( < 1 % ) ;
+; Total logic elements              ; 11 / 3,744 ( < 1 % ) ;
 ; Registers                         ; 0 / 3,744 ( 0 % )    ;
 ; Logic elements in carry chains    ; 0                    ;
 ; User inserted logic elements      ; 0                    ;
-; I/O pins                          ; 15 / 189 ( 8 % )     ;
+; I/O pins                          ; 16 / 189 ( 8 % )     ;
 ;     -- Clock pins                 ; 0 / 2 ( 0 % )        ;
 ;     -- Dedicated input pins       ; 4 / 4 ( 100 % )      ;
 ; Global signals                    ; 0                    ;
@@ -601,7 +585,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |controller                ; 12 (12)     ; 0            ; 0           ; 15   ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |controller         ; work         ;
+; |controller                ; 11 (11)     ; 0            ; 0           ; 16   ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |controller         ; work         ;
 +----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -620,19 +604,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; opCodeOut[1] ; Output   ; OFF         ;
 ; opCodeOut[2] ; Output   ; OFF         ;
 ; opCodeOut[3] ; Output   ; OFF         ;
-; alu          ; Output   ; OFF         ;
-; immediate    ; Output   ; OFF         ;
-; store        ; Output   ; OFF         ;
-; load         ; Output   ; OFF         ;
 ; jump         ; Output   ; OFF         ;
 ; branch       ; Output   ; OFF         ;
+; memRead      ; Output   ; OFF         ;
+; memToReg     ; Output   ; OFF         ;
+; memWrite     ; Output   ; OFF         ;
+; regWrite     ; Output   ; OFF         ;
+; aluFlag      ; Output   ; OFF         ;
 +--------------+----------+-------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Repos/284Processor/Controller/Controller.pin.
+The pin-out file can be found in C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Controller/Controller.pin.
 
 
 +-----------------+
@@ -641,7 +626,7 @@ The pin-out file can be found in C:/Repos/284Processor/Controller/Controller.pin
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Dec 17 20:33:22 2013
+    Info: Processing started: Wed Dec 18 12:08:29 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Controller -c Controller
 Info: Selected device EPF10K70RC240-4 for design "Controller"
 Info: Fitter is using the Classic Timing Analyzer
@@ -650,8 +635,8 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tsu requirement
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
-Info: Inserted 4 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Tue Dec 17 2013 at 20:33:22
+Info: Inserted 5 logic cells in first fitting attempt
+Info: Started fitting attempt 1 on Wed Dec 18 2013 at 12:08:29
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -660,8 +645,8 @@ Info: Fitter routing operations beginning
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 236 megabytes
-    Info: Processing ended: Tue Dec 17 20:33:23 2013
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed Dec 18 12:08:31 2013
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

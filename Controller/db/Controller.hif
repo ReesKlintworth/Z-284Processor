@@ -30,7 +30,7 @@ ON
 # case_insensitive
 # source_file
 controller.vhd
-8f14d04443513a5c9a2b93fb9645aef9
+588145316881b36a91544cf52b9e9
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -46,7 +46,7 @@ ON
 |
 }
 # lmf
-..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 

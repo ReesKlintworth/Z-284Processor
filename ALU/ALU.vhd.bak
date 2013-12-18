@@ -25,91 +25,88 @@ begin
 	begin
 
 		if(aluFlag = '1') then
-		
-			if(rising_edge(clk)) then
-				overflow <= '0';
-				
-				signedS <= signed(s);
-				signedT <= signed(t);
-				
-				case opCode is
-					when "0000" =>
-						case aluCode is
-							when "000" => 
-								d <= s and t;  --and
-							when "001" => 
-								d <= s or t; --or
-							when "010" => 
-								dCopy <= std_logic_vector(signedS + signedT);  --add
-								d <= dCopy;
-								
-								if (dCopy(7) = '1' AND s(7) = '0' AND t(7) = '0') then
-									overflow <= '1';
-								elsif (dCopy(7) = '0' AND s(7) = '1' AND t(7) = '1') then
-									overflow <= '1';
-								end if;
-							when "011" => 
-								dCopy <=std_logic_vector(signedS - signedT); --sub 
-								d <= dCopy;
-								
-								if (dCopy(7) = '0' AND s(7) = '1' AND t(7) = '0') then
-									overflow <= '1';
-								elsif (dCopy(7) = '1' AND s(7) = '0' AND t(7) = '1') then
-									overflow <= '1';
-								end if;
-							when "100" => 
-								d <= s xor t; --xor             
-							when "101" => 
-								if(s < t) then
-									d <= s; --slt
-								end if;
-							when "110" => 
-								d <= std_logic_vector(signedS sll to_integer(signedT)); --sll   
-							when "111" => 
-								d <= std_logic_vector(signedS srl to_integer(signedT)); --srl   
-							when others =>
-								NULL;
-						end case;
-					when "0001" =>
-						dCopy <= std_logic_vector(unsigned(s) + unsigned(immediate));  --add
-						d <= dCopy;
-								
-						if (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '0') then
-							overflow <= '1';
-						elsif (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '1') then
-							overflow <= '1';
-						end if;
-					when "0010" =>
-						dCopy <=std_logic_vector(unsigned(s) - unsigned(immediate)); --sub 
-						d <= dCopy;
-								
-						if (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '0') then
-							overflow <= '1';
-						elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '1') then
-							overflow <= '1';
-						end if;
-					when "0011" =>
-						dCopy <= std_logic_vector(signedS + signed(immediate));  --add
-						d <= dCopy;
-						
-						if (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '0') then
-							overflow <= '1';
-						elsif (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '1') then
-							overflow <= '1';
-						end if;
-					when "0100" =>
-						dCopy <=std_logic_vector(signedS - signed(immediate)); --sub 
-						d <= dCopy;
-								
-						if (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '0') then
-							overflow <= '1';
-						elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '1') then
-							overflow <= '1';
-						end if;
-					when others =>
-						NULL;
-				end case;       
-			end if;  
+			overflow <= '0';
+			
+			signedS <= signed(s);
+			signedT <= signed(t);
+			
+			case opCode is
+				when "0000" =>
+					case aluCode is
+						when "000" => 
+							d <= s and t;  --and
+						when "001" => 
+							d <= s or t; --or
+						when "010" => 
+							dCopy <= std_logic_vector(signedS + signedT);  --add
+							d <= dCopy;
+							
+							if (dCopy(7) = '1' AND s(7) = '0' AND t(7) = '0') then
+								overflow <= '1';
+							elsif (dCopy(7) = '0' AND s(7) = '1' AND t(7) = '1') then
+								overflow <= '1';
+							end if;
+						when "011" => 
+							dCopy <=std_logic_vector(signedS - signedT); --sub 
+							d <= dCopy;
+							
+							if (dCopy(7) = '0' AND s(7) = '1' AND t(7) = '0') then
+								overflow <= '1';
+							elsif (dCopy(7) = '1' AND s(7) = '0' AND t(7) = '1') then
+								overflow <= '1';
+							end if;
+						when "100" => 
+							d <= s xor t; --xor             
+						when "101" => 
+							if(s < t) then
+								d <= s; --slt
+							end if;
+						when "110" => 
+							d <= std_logic_vector(signedS sll to_integer(signedT)); --sll   
+						when "111" => 
+							d <= std_logic_vector(signedS srl to_integer(signedT)); --srl   
+						when others =>
+							NULL;
+					end case;
+				when "0001" =>
+					dCopy <= std_logic_vector(unsigned(s) + unsigned(immediate));  --add
+					d <= dCopy;
+							
+					if (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '0') then
+						overflow <= '1';
+					elsif (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '1') then
+						overflow <= '1';
+					end if;
+				when "0010" =>
+					dCopy <=std_logic_vector(unsigned(s) - unsigned(immediate)); --sub 
+					d <= dCopy;
+							
+					if (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '0') then
+						overflow <= '1';
+					elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '1') then
+						overflow <= '1';
+					end if;
+				when "0011" =>
+					dCopy <= std_logic_vector(signedS + signed(immediate));  --add
+					d <= dCopy;
+					
+					if (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '0') then
+						overflow <= '1';
+					elsif (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '1') then
+						overflow <= '1';
+					end if;
+				when "0100" =>
+					dCopy <=std_logic_vector(signedS - signed(immediate)); --sub 
+					d <= dCopy;
+							
+					if (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '0') then
+						overflow <= '1';
+					elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '1') then
+						overflow <= '1';
+					end if;
+				when others =>
+					NULL;
+			end case;        
 		end if;
 	end process;    
 end functions;

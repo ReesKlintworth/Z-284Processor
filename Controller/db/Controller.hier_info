@@ -56,11 +56,12 @@ opCodeOut[0] <= opCode[0].DB_MAX_OUTPUT_PORT_TYPE
 opCodeOut[1] <= opCode[1].DB_MAX_OUTPUT_PORT_TYPE
 opCodeOut[2] <= opCode[2].DB_MAX_OUTPUT_PORT_TYPE
 opCodeOut[3] <= opCode[3].DB_MAX_OUTPUT_PORT_TYPE
-alu <= alu~0.DB_MAX_OUTPUT_PORT_TYPE
-immediate <= immediate~0.DB_MAX_OUTPUT_PORT_TYPE
-store <= store~4.DB_MAX_OUTPUT_PORT_TYPE
-load <= load~3.DB_MAX_OUTPUT_PORT_TYPE
-jump <= jump~1.DB_MAX_OUTPUT_PORT_TYPE
-branch <= branch~2.DB_MAX_OUTPUT_PORT_TYPE
+jump <= jump~0.DB_MAX_OUTPUT_PORT_TYPE
+branch <= branch~1.DB_MAX_OUTPUT_PORT_TYPE
+memRead <= memRead~2.DB_MAX_OUTPUT_PORT_TYPE
+memToReg <= memToReg~0.DB_MAX_OUTPUT_PORT_TYPE
+memWrite <= memWrite~3.DB_MAX_OUTPUT_PORT_TYPE
+regWrite <= regWrite~0.DB_MAX_OUTPUT_PORT_TYPE
+aluFlag <= aluFlag~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
