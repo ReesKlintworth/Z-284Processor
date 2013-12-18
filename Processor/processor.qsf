@@ -79,4 +79,5 @@ set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\g
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file"
 set_global_assignment -name QIP_FILE mux/ram_mux.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/ram_test.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/alu_test2.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Tests/ram_test.vwf

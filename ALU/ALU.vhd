@@ -3,10 +3,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity alu is
-port(   clk : in std_logic;
+port(
+        clk : in std_logic;
         s,t : in std_logic_vector(7 downto 0);
         aluFlag : in std_logic;
-        immediate : in std_logic_vector(5 downto 0);
+        immediate : in std_logic_vector(7 downto 0);
         opCode : in std_logic_vector(3 downto 0);
         aluCode : in std_logic_vector(2 downto 0);
         d : out std_logic_vector(7 downto 0);
@@ -83,9 +84,9 @@ begin
 					dCopy <= std_logic_vector(unsigned(s) + unsigned(immediate));  --add
 					d <= dCopy;
 							
-					if (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '0') then
+					if (dCopy(7) = '1' AND s(7) = '0' AND immediate(7) = '0') then
 						overflow <= '1';
-					elsif (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '1') then
+					elsif (dCopy(7) = '0' AND s(7) = '1' AND immediate(7) = '1') then
 						overflow <= '1';
 					end if;
 					
@@ -96,9 +97,9 @@ begin
 					dCopy <=std_logic_vector(unsigned(s) - unsigned(immediate)); --sub 
 					d <= dCopy;
 							
-					if (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '0') then
+					if (dCopy(7) = '0' AND s(7) = '1' AND immediate(7) = '0') then
 						overflow <= '1';
-					elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '1') then
+					elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(7) = '1') then
 						overflow <= '1';
 					end if;
 					
@@ -109,9 +110,9 @@ begin
 					dCopy <= std_logic_vector(signedS + signed(immediate));  --add
 					d <= dCopy;
 					
-					if (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '0') then
+					if (dCopy(7) = '1' AND s(7) = '0' AND immediate(7) = '0') then
 						overflow <= '1';
-					elsif (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '1') then
+					elsif (dCopy(7) = '0' AND s(7) = '1' AND immediate(7) = '1') then
 						overflow <= '1';
 					end if;
 					
@@ -122,9 +123,9 @@ begin
 					dCopy <=std_logic_vector(signedS - signed(immediate)); --sub 
 					d <= dCopy;
 							
-					if (dCopy(7) = '0' AND s(7) = '1' AND immediate(5) = '0') then
+					if (dCopy(7) = '0' AND s(7) = '1' AND immediate(7) = '0') then
 						overflow <= '1';
-					elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(5) = '1') then
+					elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(7) = '1') then
 						overflow <= '1';
 					end if;
 					
