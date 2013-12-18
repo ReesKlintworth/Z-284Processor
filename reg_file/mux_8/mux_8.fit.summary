@@ -1,0 +1,10 @@
+Fitter Status : Successful - Tue Dec 17 20:23:08 2013
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : mux_8
+Top-level Entity Name : mux_8
+Family : FLEX10K
+Device : EPF10K70RC240-4
+Timing Models : Final
+Total logic elements : 40 / 3,744 ( 1 % )
+Total pins : 75 / 189 ( 40 % )
+Total memory bits : 0 / 18,432 ( 0 % )

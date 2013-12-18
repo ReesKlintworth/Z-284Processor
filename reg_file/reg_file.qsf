@@ -43,7 +43,8 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:19:39  DECEMBER 16, 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
-set_global_assignment -name BDF_FILE reg_file.bdf
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name QIP_FILE forty_eight_mux.qip
+set_global_assignment -name VHDL_FILE mux_8/mux_8.vhd
+set_global_assignment -name VHDL_FILE demux_8/demux_8.vhd
+set_global_assignment -name BDF_FILE reg_file.bdf

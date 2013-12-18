@@ -1,5 +1,5 @@
 Analysis & Synthesis report for reg_file
-Mon Dec 16 20:20:34 2013
+Tue Dec 17 21:05:07 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -10,7 +10,11 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
 
 
 
@@ -36,11 +40,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Dec 16 20:20:34 2013            ;
+; Analysis & Synthesis Status ; Successful - Tue Dec 17 21:05:07 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; reg_file                                     ;
 ; Top-level Entity Name       ; reg_file                                     ;
 ; Family                      ; FLEX10K                                      ;
+; Total logic elements        ; 183                                          ;
+; Total pins                  ; 48                                           ;
+; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
 
@@ -106,13 +113,90 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
-; reg_file.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/reg_file/reg_file.bdf ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                       ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+
+; mux_8/mux_8.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/reg_file/mux_8/mux_8.vhd     ;
+; demux_8/demux_8.vhd              ; yes             ; User VHDL File                     ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/reg_file/demux_8/demux_8.vhd ;
+; reg_file.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/reg_file/reg_file.bdf        ;
+; 8dffe.bdf                        ; yes             ; Megafunction                       ; c:/altera/90sp2/quartus/libraries/others/maxplus2/8dffe.bdf                        ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------------+------------+
+; Resource                       ; Usage      ;
++--------------------------------+------------+
+; Total logic elements           ; 183        ;
+; Total combinational functions  ; 127        ;
+;     -- Total 4-input functions ; 79         ;
+;     -- Total 3-input functions ; 48         ;
+;     -- Total 2-input functions ; 0          ;
+;     -- Total 1-input functions ; 0          ;
+;     -- Total 0-input functions ; 0          ;
+; Total registers                ; 56         ;
+; I/O pins                       ; 48         ;
+; Maximum fan-out node           ; clk2       ;
+; Maximum fan-out                ; 56         ;
+; Total fan-out                  ; 708        ;
+; Average fan-out                ; 3.06       ;
++--------------------------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name     ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
+; |reg_file                  ; 183 (0)     ; 56           ; 0           ; 48   ; 127 (0)      ; 56 (0)            ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file               ; work         ;
+;    |8dffe:inst10|          ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|8dffe:inst10  ; work         ;
+;    |8dffe:inst11|          ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|8dffe:inst11  ; work         ;
+;    |8dffe:inst12|          ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|8dffe:inst12  ; work         ;
+;    |8dffe:inst13|          ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|8dffe:inst13  ; work         ;
+;    |8dffe:inst7|           ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|8dffe:inst7   ; work         ;
+;    |8dffe:inst8|           ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|8dffe:inst8   ; work         ;
+;    |8dffe:inst9|           ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|8dffe:inst9   ; work         ;
+;    |demux_8:inst1|         ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|demux_8:inst1 ; work         ;
+;    |mux_8:inst2|           ; 40 (40)     ; 0            ; 0           ; 0    ; 40 (40)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|mux_8:inst2   ; work         ;
+;    |mux_8:inst3|           ; 40 (40)     ; 0            ; 0           ; 0    ; 40 (40)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|mux_8:inst3   ; work         ;
+;    |mux_8:inst|            ; 40 (40)     ; 0            ; 0           ; 0    ; 40 (40)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |reg_file|mux_8:inst    ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++---------------------------------------+---------------------------------------------+
+; Register name                         ; Reason for Removal                          ;
++---------------------------------------+---------------------------------------------+
+; 8dffe:inst6|29                        ; Stuck at GND due to stuck port clock_enable ;
+; 8dffe:inst6|30                        ; Stuck at GND due to stuck port clock_enable ;
+; 8dffe:inst6|31                        ; Stuck at GND due to stuck port clock_enable ;
+; 8dffe:inst6|32                        ; Stuck at GND due to stuck port clock_enable ;
+; 8dffe:inst6|33                        ; Stuck at GND due to stuck port clock_enable ;
+; 8dffe:inst6|34                        ; Stuck at GND due to stuck port clock_enable ;
+; 8dffe:inst6|35                        ; Stuck at GND due to stuck port clock_enable ;
+; 8dffe:inst6|36                        ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 8 ;                                             ;
++---------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 56    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +-------------------------------+
@@ -121,147 +205,39 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 16 20:20:33 2013
+    Info: Processing started: Tue Dec 17 21:05:05 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off reg_file -c reg_file
+Info: Found 2 design units, including 1 entities, in source file mux_8/mux_8.vhd
+    Info: Found design unit 1: mux_8-behav
+    Info: Found entity 1: mux_8
+Info: Found 2 design units, including 1 entities, in source file demux_8/demux_8.vhd
+    Info: Found design unit 1: demux_8-Behavioral
+    Info: Found entity 1: demux_8
 Info: Found 1 design units, including 1 entities, in source file reg_file.bdf
     Info: Found entity 1: reg_file
-Info: Found 2 design units, including 1 entities, in source file forty_eight_mux.vhd
-    Info: Found design unit 1: forty_eight_mux-SYN
-    Info: Found entity 1: forty_eight_mux
 Info: Elaborating entity "reg_file" for the top level hierarchy
-Error: Illegal wire or bus name "write_data(0)" of type signal 
-Error: Illegal wire or bus name "write_data(1)" of type signal 
-Error: Illegal wire or bus name "write_data(2)" of type signal 
-Error: Illegal wire or bus name "write_data(3)" of type signal 
-Error: Illegal wire or bus name "write_data(4)" of type signal 
-Error: Illegal wire or bus name "write_data(5)" of type signal 
-Error: Illegal wire or bus name "write_data(6)" of type signal 
-Error: Illegal wire or bus name "write_data(7)" of type signal 
-Error: Illegal wire or bus name "reg_0_out(0)" of type signal 
-Error: Illegal wire or bus name "reg_0_out(1)" of type signal 
-Error: Illegal wire or bus name "reg_0_out(2)" of type signal 
-Error: Illegal wire or bus name "reg_0_out(3)" of type signal 
-Error: Illegal wire or bus name "reg_0_out(4)" of type signal 
-Error: Illegal wire or bus name "reg_0_out(5)" of type signal 
-Error: Illegal wire or bus name "reg_0_out(6)" of type signal 
-Error: Illegal wire or bus name "reg_0_out(7)" of type signal 
-Error: Illegal wire or bus name "write_data(0)" of type signal 
-Error: Illegal wire or bus name "write_data(1)" of type signal 
-Error: Illegal wire or bus name "write_data(2)" of type signal 
-Error: Illegal wire or bus name "write_data(3)" of type signal 
-Error: Illegal wire or bus name "write_data(4)" of type signal 
-Error: Illegal wire or bus name "write_data(5)" of type signal 
-Error: Illegal wire or bus name "write_data(6)" of type signal 
-Error: Illegal wire or bus name "write_data(7)" of type signal 
-Error: Illegal wire or bus name "write_data(0)" of type signal 
-Error: Illegal wire or bus name "write_data(1)" of type signal 
-Error: Illegal wire or bus name "write_data(2)" of type signal 
-Error: Illegal wire or bus name "write_data(3)" of type signal 
-Error: Illegal wire or bus name "write_data(4)" of type signal 
-Error: Illegal wire or bus name "write_data(5)" of type signal 
-Error: Illegal wire or bus name "write_data(6)" of type signal 
-Error: Illegal wire or bus name "write_data(7)" of type signal 
-Error: Illegal wire or bus name "write_data(0)" of type signal 
-Error: Illegal wire or bus name "write_data(1)" of type signal 
-Error: Illegal wire or bus name "write_data(2)" of type signal 
-Error: Illegal wire or bus name "write_data(3)" of type signal 
-Error: Illegal wire or bus name "write_data(4)" of type signal 
-Error: Illegal wire or bus name "write_data(5)" of type signal 
-Error: Illegal wire or bus name "write_data(6)" of type signal 
-Error: Illegal wire or bus name "write_data(7)" of type signal 
-Error: Illegal wire or bus name "write_data(0)" of type signal 
-Error: Illegal wire or bus name "write_data(1)" of type signal 
-Error: Illegal wire or bus name "write_data(2)" of type signal 
-Error: Illegal wire or bus name "write_data(3)" of type signal 
-Error: Illegal wire or bus name "write_data(4)" of type signal 
-Error: Illegal wire or bus name "write_data(5)" of type signal 
-Error: Illegal wire or bus name "write_data(6)" of type signal 
-Error: Illegal wire or bus name "write_data(7)" of type signal 
-Error: Illegal wire or bus name "write_data(0)" of type signal 
-Error: Illegal wire or bus name "write_data(1)" of type signal 
-Error: Illegal wire or bus name "write_data(2)" of type signal 
-Error: Illegal wire or bus name "write_data(3)" of type signal 
-Error: Illegal wire or bus name "write_data(4)" of type signal 
-Error: Illegal wire or bus name "write_data(5)" of type signal 
-Error: Illegal wire or bus name "write_data(6)" of type signal 
-Error: Illegal wire or bus name "write_data(7)" of type signal 
-Error: Illegal wire or bus name "write_data(0)" of type signal 
-Error: Illegal wire or bus name "write_data(1)" of type signal 
-Error: Illegal wire or bus name "write_data(2)" of type signal 
-Error: Illegal wire or bus name "write_data(3)" of type signal 
-Error: Illegal wire or bus name "write_data(4)" of type signal 
-Error: Illegal wire or bus name "write_data(5)" of type signal 
-Error: Illegal wire or bus name "write_data(6)" of type signal 
-Error: Illegal wire or bus name "write_data(7)" of type signal 
-Error: Illegal wire or bus name "reg_1_out(0)" of type signal 
-Error: Illegal wire or bus name "reg_1_out(1)" of type signal 
-Error: Illegal wire or bus name "reg_1_out(2)" of type signal 
-Error: Illegal wire or bus name "reg_1_out(3)" of type signal 
-Error: Illegal wire or bus name "reg_1_out(4)" of type signal 
-Error: Illegal wire or bus name "reg_1_out(5)" of type signal 
-Error: Illegal wire or bus name "reg_1_out(6)" of type signal 
-Error: Illegal wire or bus name "reg_1_out(7)" of type signal 
-Error: Illegal wire or bus name "reg_2_out(0)" of type signal 
-Error: Illegal wire or bus name "reg_2_out(1)" of type signal 
-Error: Illegal wire or bus name "reg_2_out(2)" of type signal 
-Error: Illegal wire or bus name "reg_2_out(3)" of type signal 
-Error: Illegal wire or bus name "reg_2_out(4)" of type signal 
-Error: Illegal wire or bus name "reg_2_out(5)" of type signal 
-Error: Illegal wire or bus name "reg_2_out(6)" of type signal 
-Error: Illegal wire or bus name "reg_2_out(7)" of type signal 
-Error: Illegal wire or bus name "reg_4_out(0)" of type signal 
-Error: Illegal wire or bus name "reg_4_out(1)" of type signal 
-Error: Illegal wire or bus name "reg_4_out(2)" of type signal 
-Error: Illegal wire or bus name "reg_4_out(3)" of type signal 
-Error: Illegal wire or bus name "reg_4_out(4)" of type signal 
-Error: Illegal wire or bus name "reg_4_out(5)" of type signal 
-Error: Illegal wire or bus name "reg_4_out(6)" of type signal 
-Error: Illegal wire or bus name "reg_4_out(7)" of type signal 
-Error: Illegal wire or bus name "reg_5_out(0)" of type signal 
-Error: Illegal wire or bus name "reg_5_out(1)" of type signal 
-Error: Illegal wire or bus name "reg_5_out(2)" of type signal 
-Error: Illegal wire or bus name "reg_5_out(3)" of type signal 
-Error: Illegal wire or bus name "reg_5_out(4)" of type signal 
-Error: Illegal wire or bus name "reg_5_out(5)" of type signal 
-Error: Illegal wire or bus name "reg_5_out(6)" of type signal 
-Error: Illegal wire or bus name "reg_5_out(7)" of type signal 
-Error: Illegal wire or bus name "reg_6_out(0)" of type signal 
-Error: Illegal wire or bus name "reg_6_out(1)" of type signal 
-Error: Illegal wire or bus name "reg_6_out(2)" of type signal 
-Error: Illegal wire or bus name "reg_6_out(3)" of type signal 
-Error: Illegal wire or bus name "reg_6_out(4)" of type signal 
-Error: Illegal wire or bus name "reg_6_out(5)" of type signal 
-Error: Illegal wire or bus name "reg_6_out(6)" of type signal 
-Error: Illegal wire or bus name "reg_6_out(7)" of type signal 
-Error: Illegal wire or bus name "reg_7_out(7)" of type signal 
-Error: Illegal wire or bus name "reg_7_out(6)" of type signal 
-Error: Illegal wire or bus name "reg_7_out(5)" of type signal 
-Error: Illegal wire or bus name "reg_7_out(4)" of type signal 
-Error: Illegal wire or bus name "reg_7_out(3)" of type signal 
-Error: Illegal wire or bus name "reg_7_out(2)" of type signal 
-Error: Illegal wire or bus name "reg_7_out(1)" of type signal 
-Error: Illegal wire or bus name "reg_7_out(0)" of type signal 
-Error: Illegal wire or bus name "reg_3_out(0)" of type signal 
-Error: Illegal wire or bus name "reg_3_out(1)" of type signal 
-Error: Illegal wire or bus name "reg_3_out(2)" of type signal 
-Error: Illegal wire or bus name "reg_3_out(3)" of type signal 
-Error: Illegal wire or bus name "reg_3_out(4)" of type signal 
-Error: Illegal wire or bus name "reg_3_out(5)" of type signal 
-Error: Illegal wire or bus name "reg_3_out(6)" of type signal 
-Error: Illegal wire or bus name "reg_3_out(7)" of type signal 
-Error: Illegal wire or bus name "write_data(1)" of type signal 
-Error: Illegal wire or bus name "write_data(2)" of type signal 
-Error: Illegal wire or bus name "write_data(3)" of type signal 
-Error: Illegal wire or bus name "write_data(4)" of type signal 
-Error: Illegal wire or bus name "write_data(7)" of type signal 
-Error: Illegal wire or bus name "write_data(5)" of type signal 
-Error: Illegal wire or bus name "write_data(6)" of type signal 
-Error: Illegal wire or bus name "write_data(0)" of type signal 
-Error: Can't elaborate top-level user hierarchy
-Error: Quartus II Analysis & Synthesis was unsuccessful. 129 errors, 0 warnings
-    Error: Peak virtual memory: 239 megabytes
-    Error: Processing ended: Mon Dec 16 20:20:34 2013
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:02
+Info: Elaborating entity "mux_8" for hierarchy "mux_8:inst3"
+Warning (10492): VHDL Process Statement warning at mux_8.vhd(27): signal "reg_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux_8.vhd(28): signal "reg_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux_8.vhd(29): signal "reg_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux_8.vhd(30): signal "reg_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux_8.vhd(31): signal "reg_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux_8.vhd(32): signal "reg_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux_8.vhd(33): signal "reg_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux_8.vhd(34): signal "reg_7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "8dffe" for hierarchy "8dffe:inst6"
+Info: Elaborated megafunction instantiation "8dffe:inst6"
+Info: Elaborating entity "demux_8" for hierarchy "demux_8:inst1"
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "read_reg_rt[3]"
+Info: Implemented 231 device resources after synthesis - the final resource count might be different
+    Info: Implemented 24 input pins
+    Info: Implemented 24 output pins
+    Info: Implemented 183 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 240 megabytes
+    Info: Processing ended: Tue Dec 17 21:05:08 2013
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

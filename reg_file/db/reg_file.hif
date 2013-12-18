@@ -18,5 +18,806 @@ VHSM_ON
 -- End Library Paths --
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
+# entity
+LPM_MUX
+# storage
+db|reg_file.(2).cnf
+db|reg_file.(2).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|LPM_MUX.tdf
+7a4b3384f258c5ff904f89fe97f91077
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_SIZE
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHS
+3
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_SIGNED_DEC
+USR
+CBXI_PARAMETER
+mux_bod
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+SEL2
+-1
+3
+SEL1
+-1
+3
+SEL0
+-1
+3
+RESULT7
+-1
+3
+RESULT6
+-1
+3
+RESULT5
+-1
+3
+RESULT4
+-1
+3
+RESULT3
+-1
+3
+RESULT2
+-1
+3
+RESULT1
+-1
+3
+RESULT0
+-1
+3
+DATA7_7
+-1
+3
+DATA7_6
+-1
+3
+DATA7_5
+-1
+3
+DATA7_4
+-1
+3
+DATA7_3
+-1
+3
+DATA7_2
+-1
+3
+DATA7_1
+-1
+3
+DATA7_0
+-1
+3
+DATA6_7
+-1
+3
+DATA6_6
+-1
+3
+DATA6_5
+-1
+3
+DATA6_4
+-1
+3
+DATA6_3
+-1
+3
+DATA6_2
+-1
+3
+DATA6_1
+-1
+3
+DATA6_0
+-1
+3
+DATA5_7
+-1
+3
+DATA5_6
+-1
+3
+DATA5_5
+-1
+3
+DATA5_4
+-1
+3
+DATA5_3
+-1
+3
+DATA5_2
+-1
+3
+DATA5_1
+-1
+3
+DATA5_0
+-1
+3
+DATA4_7
+-1
+3
+DATA4_6
+-1
+3
+DATA4_5
+-1
+3
+DATA4_4
+-1
+3
+DATA4_3
+-1
+3
+DATA4_2
+-1
+3
+DATA4_1
+-1
+3
+DATA4_0
+-1
+3
+DATA3_7
+-1
+3
+DATA3_6
+-1
+3
+DATA3_5
+-1
+3
+DATA3_4
+-1
+3
+DATA3_3
+-1
+3
+DATA3_2
+-1
+3
+DATA3_1
+-1
+3
+DATA3_0
+-1
+3
+DATA2_7
+-1
+3
+DATA2_6
+-1
+3
+DATA2_5
+-1
+3
+DATA2_4
+-1
+3
+DATA2_3
+-1
+3
+DATA2_2
+-1
+3
+DATA2_1
+-1
+3
+DATA2_0
+-1
+3
+DATA1_7
+-1
+3
+DATA1_6
+-1
+3
+DATA1_5
+-1
+3
+DATA1_4
+-1
+3
+DATA1_3
+-1
+3
+DATA1_2
+-1
+3
+DATA1_1
+-1
+3
+DATA1_0
+-1
+3
+DATA0_7
+-1
+3
+DATA0_6
+-1
+3
+DATA0_5
+-1
+3
+DATA0_4
+-1
+3
+DATA0_3
+-1
+3
+DATA0_2
+-1
+3
+DATA0_1
+-1
+3
+DATA0_0
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.inc
+f172666ca13e5e31e17e3f6cb35af52
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+}
+# macro_sequence
+
+# end
+# entity
+bypassff
+# storage
+db|reg_file.(3).cnf
+db|reg_file.(3).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.tdf
+b4322eae935411b3ea9c187acd14d0
+7
+# user_parameter {
+WIDTH
+3
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+q2
+-1
+3
+d2
+-1
+3
+d1
+-1
+3
+d0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+altshift
+# storage
+db|reg_file.(4).cnf
+db|reg_file.(4).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.tdf
+b979c99547bac7dc31574fe678a95a9
+7
+# user_parameter {
+WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+DEPTH
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+muxlut
+# storage
+db|reg_file.(5).cnf
+db|reg_file.(5).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.tdf
+358a66c66e87fe7f13fd57e72a83725
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+SIZE
+8
+PARAMETER_UNKNOWN
+USR
+LEVEL
+1
+PARAMETER_UNKNOWN
+USR
+TOT_LEVELS
+2
+PARAMETER_UNKNOWN
+USR
+LATENCY
+0
+PARAMETER_UNKNOWN
+USR
+REM_LATENCY
+0
+PARAMETER_UNKNOWN
+DEF
+LOCAL
+0
+PARAMETER_UNKNOWN
+DEF
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+select2
+-1
+3
+select1
+-1
+3
+select0
+-1
+3
+result
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.inc
+f172666ca13e5e31e17e3f6cb35af52
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+}
+# macro_sequence
+
+# end
+# entity
+muxlut
+# storage
+db|reg_file.(6).cnf
+db|reg_file.(6).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.tdf
+358a66c66e87fe7f13fd57e72a83725
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+SIZE
+4
+PARAMETER_UNKNOWN
+USR
+LEVEL
+0
+PARAMETER_UNKNOWN
+USR
+TOT_LEVELS
+2
+PARAMETER_UNKNOWN
+USR
+LATENCY
+0
+PARAMETER_UNKNOWN
+USR
+REM_LATENCY
+0
+PARAMETER_UNKNOWN
+DEF
+LOCAL
+0
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+select1
+-1
+3
+select0
+-1
+3
+result
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.inc
+f172666ca13e5e31e17e3f6cb35af52
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+}
+# macro_sequence
+
+# end
+# entity
+muxlut
+# storage
+db|reg_file.(7).cnf
+db|reg_file.(7).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.tdf
+358a66c66e87fe7f13fd57e72a83725
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+SIZE
+2
+PARAMETER_UNKNOWN
+USR
+LEVEL
+1
+PARAMETER_UNKNOWN
+USR
+TOT_LEVELS
+2
+PARAMETER_UNKNOWN
+USR
+LATENCY
+0
+PARAMETER_UNKNOWN
+USR
+REM_LATENCY
+0
+PARAMETER_UNKNOWN
+DEF
+LOCAL
+1
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+select0
+-1
+3
+result
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.inc
+f172666ca13e5e31e17e3f6cb35af52
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+}
+# macro_sequence
+
+# end
+# entity
+8dffe
+# storage
+db|reg_file.(8).cnf
+db|reg_file.(8).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|8dffe.bdf
+71bb434b4c3356c97774bb55fbc86378
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+8dffe:inst6
+8dffe:inst7
+8dffe:inst8
+8dffe:inst9
+8dffe:inst10
+8dffe:inst11
+8dffe:inst12
+8dffe:inst13
+}
+# macro_sequence
+
+# end
+# entity
+demux_8
+# storage
+db|reg_file.(9).cnf
+db|reg_file.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+demux_8|demux_8.vhd
+386ebc080442d8b49a8482327a3946
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+demux_8:inst1
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+mux_8
+# storage
+db|reg_file.(10).cnf
+db|reg_file.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mux_8|mux_8.vhd
+a9b75968ea6f16254a6ea3ba3d47df0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+mux_8:inst3
+mux_8:inst
+mux_8:inst2
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+reg_file
+# storage
+db|reg_file.(0).cnf
+db|reg_file.(0).cnf
+# case_insensitive
+# source_file
+reg_file.bdf
+b4b59fd2eab653afc16a66caf3aba872
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
 # complete
 
