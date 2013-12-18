@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity mux_8 is
+port
+(
+	reg_0 : in std_logic_vector(7 downto 0);
+	reg_1 : in std_logic_vector(7 downto 0);
+	reg_2 : in std_logic_vector(7 downto 0);
+	reg_3 : in std_logic_vector(7 downto 0);
+	reg_4 : in std_logic_vector(7 downto 0);
+	reg_5 : in std_logic_vector(7 downto 0);
+	reg_6 : in std_logic_vector(7 downto 0);
+	reg_7 : in std_logic_vector(7 downto 0);
+
+	sel : in std_logic_vector(2 downto 0);
+
+	output : out std_logic_vector(7 downto 0)
+);
+end mux_8;
+
+architecture behav of mux_8 is
+begin
+  process(sel)
+  begin
+	  	case sel is
+	  	  when "000" => output <= reg_0;
+	      when "001" => output <= reg_1;
+	      when "010" => output <= reg_2;
+	      when "011" => output <= reg_3;
+	      when "100" => output <= reg_4;
+	      when "101" => output <= reg_5;
+	      when "110" => output <= reg_6;
+	      when "111" => output <= reg_7;
+	      when others => null;
+	    end case; 
+  end process;
+end behav;
