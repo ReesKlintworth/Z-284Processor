@@ -79,3 +79,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/alu_test.vwf
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file\\mux_8"
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file\\demux_8"
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file"
+set_global_assignment -name QIP_FILE ../RAM/lpm_ram_dq0.qip
