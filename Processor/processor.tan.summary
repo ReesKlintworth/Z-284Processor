@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 59.900 ns
+From           : PC:inst3|lpm_counter:pre_count_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]
+To             : output[6]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 125.00 MHz ( period = 8.000 ns )
+From           : PC:inst3|lpm_counter:pre_count_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : PC:inst3|lpm_counter:pre_count_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

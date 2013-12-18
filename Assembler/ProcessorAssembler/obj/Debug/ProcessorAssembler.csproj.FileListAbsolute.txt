@@ -7,3 +7,9 @@ C:\Users\Derek Nordgren\Documents\GitHub\284Processor\ProcessorAssembler\Process
 C:\Users\Derek Nordgren\Documents\GitHub\284Processor\ProcessorAssembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.pdb
 C:\Repos\284Processor\ProcessorAssembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.exe
 C:\Repos\284Processor\ProcessorAssembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.pdb
+C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\bin\Debug\ProcessorAssembler.exe.config
+C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.exe
+C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.pdb
+C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\bin\Debug\ProcessorAssembler.exe
+C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\bin\Debug\ProcessorAssembler.pdb
+C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.csprojResolveAssemblyReference.cache
