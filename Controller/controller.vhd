@@ -4,6 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity controller is
 port(
+        clk : in std_logic;
         opCode : in std_logic_vector(3 downto 0);   
         jump : out std_logic;
         branch : out std_logic;
@@ -18,7 +19,7 @@ end controller;
 architecture functions of controller is
 
 begin
-        process(opCode)
+        process(clk)
         begin
 			aluFlag <= '0';
 			jump <= '0';

@@ -1,4 +1,5 @@
 |Controller
+clk => ~NO_FANOUT~
 opCode[0] => Equal0.IN0
 opCode[0] => Equal1.IN3
 opCode[0] => Equal2.IN0

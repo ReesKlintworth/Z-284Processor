@@ -38,7 +38,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 1760 -248 1928 -232)
+	(rect -8 -32 160 -16)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "LED_reg[2..0]" (rect 5 0 73 12)(font "Arial" ))
 	(pt 168 8)
@@ -54,7 +54,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 120 -208 296 -192)
+	(rect 2664 16 2840 32)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "pc_clk" (rect 90 0 121 12)(font "Arial" ))
 	(pt 0 8)
@@ -70,7 +70,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1864 -184 2048 -168)
+	(rect 2656 -240 2840 -224)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "read_data_rs[7..0]" (rect 90 0 179 12)(font "Arial" ))
 	(pt 0 8)
@@ -86,7 +86,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1864 -168 2046 -152)
+	(rect 2656 -272 2838 -256)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "read_data_rt[7..0]" (rect 90 0 177 12)(font "Arial" ))
 	(pt 0 8)
@@ -102,7 +102,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1864 -152 2040 -136)
+	(rect 2664 -16 2840 0)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "display[7..0]" (rect 90 0 151 12)(font "Arial" ))
 	(pt 0 8)
@@ -118,7 +118,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 2936 -80 3115 -64)
+	(rect 2664 -176 2843 -160)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "write_reg_rd[7..0]" (rect 90 0 174 12)(font "Arial" ))
 	(pt 0 8)
@@ -134,7 +134,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 2664 8 2840 24)
+	(rect 2664 -48 2840 -32)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "op_code[3..0]" (rect 90 0 157 12)(font "Arial" ))
 	(pt 0 8)
@@ -150,7 +150,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 2664 -88 2840 -72)
+	(rect 2664 -112 2840 -96)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "alu_code[2..0]" (rect 90 0 159 12)(font "Arial" ))
 	(pt 0 8)
@@ -166,7 +166,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 3264 112 3440 128)
+	(rect 2664 -144 2840 -128)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "write_data[7..0]" (rect 90 0 165 12)(font "Arial" ))
 	(pt 0 8)
@@ -182,7 +182,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 2264 -192 2440 -176)
+	(rect 2664 -208 2840 -192)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "alu_flag" (rect 90 0 128 12)(font "Arial" ))
 	(pt 0 8)
@@ -198,7 +198,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1168 16 1345 32)
+	(rect 1168 32 1345 48)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "instruction[15..0]" (rect 90 0 172 12)(font "Arial" ))
 	(pt 0 8)
@@ -214,7 +214,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 2664 -40 2840 -24)
+	(rect 2664 -80 2840 -64)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "imm[7..0]" (rect 90 0 137 12)(font "Arial" ))
 	(pt 0 8)
@@ -915,11 +915,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "pc_clk" (rect 90 -216 121 -204)(font "Arial" ))
-	(pt 120 -200)
-	(pt 80 -200)
-)
-(connector
 	(text "pc_clk" (rect 610 112 641 124)(font "Arial" ))
 	(pt 640 128)
 	(pt 600 128)
@@ -984,20 +979,9 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "other_clk" (rect 1584 192 1628 204)(font "Arial" ))
-	(pt 1624 208)
-	(pt 1576 208)
-)
-(connector
 	(text "LED_reg[2..0]" (rect 1576 176 1644 188)(font "Arial" ))
 	(pt 1624 192)
 	(pt 1568 192)
-	(bus)
-)
-(connector
-	(text "LED_reg[2..0]" (rect 1936 -256 2004 -244)(font "Arial" ))
-	(pt 1928 -240)
-	(pt 1976 -240)
 	(bus)
 )
 (connector
@@ -1019,24 +1003,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "display[7..0]" (rect 1824 -160 1885 -148)(font "Arial" ))
-	(pt 1864 -144)
-	(pt 1816 -144)
-	(bus)
-)
-(connector
-	(text "read_data_rt[7..0]" (rect 1824 -176 1911 -164)(font "Arial" ))
-	(pt 1864 -160)
-	(pt 1816 -160)
-	(bus)
-)
-(connector
-	(text "read_data_rs[7..0]" (rect 1824 -192 1913 -180)(font "Arial" ))
-	(pt 1864 -176)
-	(pt 1816 -176)
-	(bus)
-)
-(connector
 	(text "write_data[7..0]" (rect 1560 160 1635 172)(font "Arial" ))
 	(pt 1568 176)
 	(pt 1624 176)
@@ -1045,18 +1011,6 @@ applicable agreement for further details.
 (connector
 	(pt 1368 192)
 	(pt 1432 192)
-	(bus)
-)
-(connector
-	(text "op_code[3..0]" (rect 2600 0 2667 12)(font "Arial" ))
-	(pt 2664 16)
-	(pt 2592 16)
-	(bus)
-)
-(connector
-	(text "alu_code[2..0]" (rect 2600 -96 2669 -84)(font "Arial" ))
-	(pt 2664 -80)
-	(pt 2592 -80)
 	(bus)
 )
 (connector
@@ -1102,37 +1056,9 @@ applicable agreement for further details.
 	(pt 2432 136)
 )
 (connector
-	(text "reg_write" (rect 1568 224 1611 236)(font "Arial" ))
-	(pt 1624 240)
-	(pt 1576 240)
-)
-(connector
 	(text "mem_to_reg" (rect 2888 155 2900 216)(font "Arial" )(vertical))
 	(pt 2904 152)
 	(pt 2904 216)
-)
-(connector
-	(text "write_data[7..0]" (rect 3200 104 3275 116)(font "Arial" ))
-	(pt 3264 120)
-	(pt 3192 120)
-	(bus)
-)
-(connector
-	(text "write_reg_rd[7..0]" (rect 2872 -88 2956 -76)(font "Arial" ))
-	(pt 2856 -72)
-	(pt 2936 -72)
-	(bus)
-)
-(connector
-	(text "alu_flag" (rect 2208 -200 2246 -188)(font "Arial" ))
-	(pt 2200 -184)
-	(pt 2264 -184)
-)
-(connector
-	(text "write_reg_rd[7..0]" (rect 2416 96 2500 108)(font "Arial" ))
-	(pt 2488 112)
-	(pt 2424 112)
-	(bus)
 )
 (connector
 	(text "read_data_rs[7..0]" (rect 2024 112 2113 124)(font "Arial" ))
@@ -1172,26 +1098,6 @@ applicable agreement for further details.
 	(text "op_code[3..0]" (rect 1394 96 1461 108)(font "Arial" ))
 	(pt 1424 112)
 	(pt 1472 112)
-	(bus)
-)
-(connector
-	(pt 1128 112)
-	(pt 1128 24)
-	(bus)
-)
-(connector
-	(pt 1128 24)
-	(pt 1168 24)
-	(bus)
-)
-(connector
-	(pt 1104 112)
-	(pt 1128 112)
-	(bus)
-)
-(connector
-	(pt 1128 112)
-	(pt 1160 112)
 	(bus)
 )
 (connector
@@ -1246,12 +1152,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "imm[7..0]" (rect 2616 -48 2663 -36)(font "Arial" ))
-	(pt 2592 -32)
-	(pt 2664 -32)
-	(bus)
-)
-(connector
 	(pt 1664 472)
 	(pt 1952 472)
 	(bus)
@@ -1266,6 +1166,106 @@ applicable agreement for further details.
 	(text "other_clk" (rect 2024 96 2068 108)(font "Arial" ))
 	(pt 2104 112)
 	(pt 2016 112)
+)
+(connector
+	(text "write_data[7..0]" (rect 2600 -152 2675 -140)(font "Arial" ))
+	(pt 2664 -136)
+	(pt 2592 -136)
+	(bus)
+)
+(connector
+	(text "alu_code[2..0]" (rect 2600 -120 2669 -108)(font "Arial" ))
+	(pt 2664 -104)
+	(pt 2592 -104)
+	(bus)
+)
+(connector
+	(text "imm[7..0]" (rect 2616 -88 2663 -76)(font "Arial" ))
+	(pt 2592 -72)
+	(pt 2664 -72)
+	(bus)
+)
+(connector
+	(text "op_code[3..0]" (rect 2600 -56 2667 -44)(font "Arial" ))
+	(pt 2664 -40)
+	(pt 2592 -40)
+	(bus)
+)
+(connector
+	(text "write_reg_rd[7..0]" (rect 2600 -184 2684 -172)(font "Arial" ))
+	(pt 2592 -168)
+	(pt 2664 -168)
+	(bus)
+)
+(connector
+	(text "alu_flag" (rect 2608 -216 2646 -204)(font "Arial" ))
+	(pt 2592 -200)
+	(pt 2664 -200)
+)
+(connector
+	(text "read_data_rs[7..0]" (rect 2616 -248 2705 -236)(font "Arial" ))
+	(pt 2592 -232)
+	(pt 2656 -232)
+	(bus)
+)
+(connector
+	(text "read_data_rt[7..0]" (rect 2616 -280 2703 -268)(font "Arial" ))
+	(pt 2592 -264)
+	(pt 2656 -264)
+	(bus)
+)
+(connector
+	(text "display[7..0]" (rect 2624 -24 2685 -12)(font "Arial" ))
+	(pt 2592 -8)
+	(pt 2664 -8)
+	(bus)
+)
+(connector
+	(text "pc_clk" (rect 2634 8 2665 20)(font "Arial" ))
+	(pt 2592 24)
+	(pt 2664 24)
+)
+(connector
+	(pt 1128 112)
+	(pt 1128 40)
+	(bus)
+)
+(connector
+	(pt 1128 40)
+	(pt 1168 40)
+	(bus)
+)
+(connector
+	(pt 1104 112)
+	(pt 1128 112)
+	(bus)
+)
+(connector
+	(pt 1128 112)
+	(pt 1160 112)
+	(bus)
+)
+(connector
+	(text "LED_reg[2..0]" (rect 168 -40 236 -28)(font "Arial" ))
+	(pt 216 -24)
+	(pt 160 -24)
+	(bus)
+)
+(connector
+	(text "other_clk" (rect 1584 192 1628 204)(font "Arial" ))
+	(pt 1568 208)
+	(pt 1624 208)
+)
+(connector
+	(text "reg_write" (rect 1568 224 1611 236)(font "Arial" ))
+	(pt 1568 240)
+	(pt 1624 240)
+)
+(connector
+	(text "write_reg_rd[7..0]" (rect 2416 96 2500 108)(font "Arial" ))
+	(pt 2432 112)
+	(pt 2488 112)
+	(bus)
 )
 (junction (pt 864 112))
 (junction (pt 1424 112))

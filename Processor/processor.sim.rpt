@@ -1,5 +1,5 @@
 Simulator report for processor
-Wed Dec 18 15:10:53 2013
+Wed Dec 18 15:18:35 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -6231,7 +6231,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 15:10:51 2013
+    Info: Processing started: Wed Dec 18 15:18:34 2013
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off processor -c processor
 Info: Using vector source file "Tests/ram_test.vwf"
 Warning: Can't find signal in vector source file for input pin "|processor|LED_reg[2]"
@@ -6244,7 +6244,7 @@ Info: Simulation coverage is      12.39 %
 Info: Number of transitions in simulation is 5334
 Info: Quartus II Simulator was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 167 megabytes
-    Info: Processing ended: Wed Dec 18 15:10:53 2013
+    Info: Processing ended: Wed Dec 18 15:18:36 2013
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

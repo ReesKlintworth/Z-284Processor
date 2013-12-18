@@ -36,7 +36,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Wed Dec 18 14:48:53 2013
+File Generation Date & Time: Wed Dec 18 15:23:20 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "Controller"  ASSIGNED TO AN: EPF10K70RC240-4
 
@@ -72,11 +72,11 @@ VCC_INT                      : 27        : power  :                   : 5.0V    
 GND*                         : 28        :        :                   :         :           :                
 GND*                         : 29        :        :                   :         :           :                
 GND*                         : 30        :        :                   :         :           :                
-branch                       : 31        : output : TTL               :         :           : N              
+GND*                         : 31        :        :                   :         :           :                
 GND_INT                      : 32        : gnd    :                   :         :           :                
 GND*                         : 33        :        :                   :         :           :                
 GND*                         : 34        :        :                   :         :           :                
-memRead                      : 35        : output : TTL               :         :           : N              
+GND*                         : 35        :        :                   :         :           :                
 GND*                         : 36        :        :                   :         :           :                
 VCC_INT                      : 37        : power  :                   : 5.0V    :           :                
 GND*                         : 38        :        :                   :         :           :                
@@ -87,9 +87,9 @@ GND_INT                      : 42        : gnd    :                   :         
 GND*                         : 43        :        :                   :         :           :                
 GND*                         : 44        :        :                   :         :           :                
 GND*                         : 45        :        :                   :         :           :                
-GND*                         : 46        :        :                   :         :           :                
+branch                       : 46        : output : TTL               :         :           : N              
 VCC_INT                      : 47        : power  :                   : 5.0V    :           :                
-GND*                         : 48        :        :                   :         :           :                
+memRead                      : 48        : output : TTL               :         :           : N              
 GND*                         : 49        :        :                   :         :           :                
 GND*                         : 50        :        :                   :         :           :                
 GND*                         : 51        :        :                   :         :           :                
@@ -172,13 +172,13 @@ GND*                         : 127       :        :                   :         
 GND*                         : 128       :        :                   :         :           :                
 GND*                         : 129       :        :                   :         :           :                
 VCC_INT                      : 130       : power  :                   : 5.0V    :           :                
-GND*                         : 131       :        :                   :         :           :                
-GND*                         : 132       :        :                   :         :           :                
-GND*                         : 133       :        :                   :         :           :                
+aluFlag                      : 131       : output : TTL               :         :           : N              
+memToReg                     : 132       : output : TTL               :         :           : N              
+regWrite                     : 133       : output : TTL               :         :           : N              
 GND*                         : 134       :        :                   :         :           :                
 GND_INT                      : 135       : gnd    :                   :         :           :                
-GND*                         : 136       :        :                   :         :           :                
-GND*                         : 137       :        :                   :         :           :                
+jump                         : 136       : output : TTL               :         :           : N              
+memWrite                     : 137       : output : TTL               :         :           : N              
 GND*                         : 138       :        :                   :         :           :                
 GND*                         : 139       :        :                   :         :           :                
 VCC_INT                      : 140       : power  :                   : 5.0V    :           :                
@@ -190,12 +190,12 @@ GND_INT                      : 145       : gnd    :                   :         
 GND*                         : 146       :        :                   :         :           :                
 GND*                         : 147       :        :                   :         :           :                
 GND*                         : 148       :        :                   :         :           :                
-memWrite                     : 149       : output : TTL               :         :           : N              
+GND*                         : 149       :        :                   :         :           :                
 VCC_INT                      : 150       : power  :                   : 5.0V    :           :                
-aluFlag                      : 151       : output : TTL               :         :           : N              
-memToReg                     : 152       : output : TTL               :         :           : N              
-jump                         : 153       : output : TTL               :         :           : N              
-regWrite                     : 154       : output : TTL               :         :           : N              
+GND*                         : 151       :        :                   :         :           :                
+GND*                         : 152       :        :                   :         :           :                
+GND*                         : 153       :        :                   :         :           :                
+GND*                         : 154       :        :                   :         :           :                
 GND_INT                      : 155       : gnd    :                   :         :           :                
 GND*                         : 156       :        :                   :         :           :                
 GND*                         : 157       :        :                   :         :           :                
@@ -236,7 +236,7 @@ GND*                         : 191       :        :                   :         
 GND*                         : 192       :        :                   :         :           :                
 GND*                         : 193       :        :                   :         :           :                
 GND*                         : 194       :        :                   :         :           :                
-GND*                         : 195       :        :                   :         :           :                
+clk                          : 195       : input  : TTL               :         :           : N              
 GND*                         : 196       :        :                   :         :           :                
 GND_INT                      : 197       : gnd    :                   :         :           :                
 GND*                         : 198       :        :                   :         :           :                

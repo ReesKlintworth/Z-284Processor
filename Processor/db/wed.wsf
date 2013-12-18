@@ -2268,10 +2268,10 @@ VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/Tests/ra
 VECTOR("C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/db/processor.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 25459;
-		NUMERATOR = 1011;
-		DENOMINATOR = 25765;
+		ZBEGIN = 16692;
+		ZEND = 43309;
+		NUMERATOR = 1057;
+		DENOMINATOR = 26617;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
