@@ -412,7 +412,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-	(annotation_block (location)(rect 3231 -16 3279 184))
+	(annotation_block (location)(rect 3272 -144 3320 56))
 )
 (pin
 	(output)
@@ -564,6 +564,22 @@ applicable agreement for further details.
 	(rect 1768 40 1944 56)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "alu_flag_flag" (rect 90 0 153 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 1512 320 1688 336)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "rd_out[2..0]" (rect 90 0 146 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
@@ -827,7 +843,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1504 232 1536 264)
+	(rect 1528 232 1560 264)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst30" (rect 3 21 32 33)(font "Arial" )(invisible))
 	(port
@@ -1488,9 +1504,48 @@ applicable agreement for further details.
 	)
 )
 (symbol
+	(rect 3256 80 3392 160)
+	(text "ram_mux" (rect 45 2 108 18)(font "Arial" (font_size 10)))
+	(text "inst16" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "data1x[7..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "data1x[7..0]" (rect 4 27 71 41)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 64 40)(line_width 3))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "data0x[7..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "data0x[7..0]" (rect 4 43 71 57)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 64 56)(line_width 3))
+	)
+	(port
+		(pt 72 80)
+		(input)
+		(text "sel" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "sel" (rect 76 67 92 81)(font "Arial" (font_size 8)))
+		(line (pt 72 80)(pt 72 68)(line_width 1))
+	)
+	(port
+		(pt 136 48)
+		(output)
+		(text "result[7..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "result[7..0]" (rect 82 35 142 49)(font "Arial" (font_size 8)))
+		(line (pt 136 48)(pt 80 48)(line_width 3))
+	)
+	(drawing
+		(line (pt 64 24)(pt 64 72)(line_width 1))
+		(line (pt 80 32)(pt 80 64)(line_width 1))
+		(line (pt 64 24)(pt 80 32)(line_width 1))
+		(line (pt 64 72)(pt 80 64)(line_width 1))
+	)
+)
+(symbol
 	(rect 2512 80 2728 240)
 	(text "display_buddy" (rect 5 0 76 12)(font "Arial" ))
-	(text "inst33" (rect 8 144 37 156)(font "Arial" ))
+	(text "inst8" (rect 8 144 31 156)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1580,9 +1635,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 3232 80 3368 160)
-	(text "ram_mux" (rect 45 2 108 18)(font "Arial" (font_size 10)))
-	(text "inst16" (rect 8 64 37 76)(font "Arial" ))
+	(rect 2728 -40 2864 40)
+	(text "lpm_mux1" (rect 42 2 112 18)(font "Arial" (font_size 10)))
+	(text "inst22" (rect 8 64 37 76)(font "Arial" ))
 	(port
 		(pt 0 40)
 		(input)
@@ -1699,11 +1754,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1368 128)
-	(pt 1624 128)
-	(bus)
-)
-(connector
 	(pt 1368 144)
 	(pt 1624 144)
 	(bus)
@@ -1729,20 +1779,6 @@ applicable agreement for further details.
 	(text "other_clk" (rect 2928 160 2972 172)(font "Arial" ))
 	(pt 2976 176)
 	(pt 2920 176)
-)
-(connector
-	(text "read_data_rt[7..0]" (rect 2904 144 2991 156)(font "Arial" ))
-	(pt 2976 160)
-	(pt 2920 160)
-	(bus)
-)
-(connector
-	(pt 1520 224)
-	(pt 1520 232)
-)
-(connector
-	(pt 1520 224)
-	(pt 1624 224)
 )
 (connector
 	(text "mem_write" (rect 2928 128 2981 140)(font "Arial" ))
@@ -1985,28 +2021,6 @@ applicable agreement for further details.
 	(pt 3568 232)
 )
 (connector
-	(pt 3368 128)
-	(pt 3496 128)
-	(bus)
-)
-(connector
-	(text "hw" (rect 3288 189 3300 201)(font "Arial" )(vertical))
-	(pt 3304 160)
-	(pt 3304 216)
-)
-(connector
-	(text "write_reg_rd[7..0]" (rect 2448 112 2532 124)(font "Arial" ))
-	(pt 2512 128)
-	(pt 2448 128)
-	(bus)
-)
-(connector
-	(text "read_data_rt[7..0]" (rect 2448 128 2535 140)(font "Arial" ))
-	(pt 2512 144)
-	(pt 2448 144)
-	(bus)
-)
-(connector
 	(pt 2856 176)
 	(pt 2856 232)
 	(bus)
@@ -2014,31 +2028,6 @@ applicable agreement for further details.
 (connector
 	(pt 3176 232)
 	(pt 2856 232)
-	(bus)
-)
-(connector
-	(pt 3232 120)
-	(pt 3176 120)
-	(bus)
-)
-(connector
-	(pt 3176 120)
-	(pt 3176 232)
-	(bus)
-)
-(connector
-	(pt 3136 120)
-	(pt 3152 120)
-	(bus)
-)
-(connector
-	(pt 3152 120)
-	(pt 3152 136)
-	(bus)
-)
-(connector
-	(pt 3152 136)
-	(pt 3232 136)
 	(bus)
 )
 (connector
@@ -2401,14 +2390,125 @@ applicable agreement for further details.
 	(pt 1728 48)
 )
 (connector
-	(pt 216 16)
-	(pt 216 112)
+	(pt 1544 224)
+	(pt 1544 232)
 )
 (connector
-	(pt 216 112)
+	(pt 1624 224)
+	(pt 1544 224)
+)
+(connector
+	(pt 1504 128)
+	(pt 1504 328)
+	(bus)
+)
+(connector
+	(pt 1504 328)
+	(pt 1512 328)
+	(bus)
+)
+(connector
+	(pt 1368 128)
+	(pt 1504 128)
+	(bus)
+)
+(connector
+	(pt 1504 128)
+	(pt 1624 128)
+	(bus)
+)
+(connector
+	(pt 200 112)
 	(pt 248 112)
+)
+(connector
+	(pt 2800 80)
+	(pt 2808 80)
+)
+(connector
+	(text "branch" (rect 2784 36 2796 69)(font "Arial" )(vertical))
+	(pt 2800 40)
+	(pt 2800 80)
+)
+(connector
+	(pt 2656 16)
+	(pt 2656 24)
+	(bus)
+)
+(connector
+	(pt 2928 8)
+	(pt 2928 16)
+	(bus)
+)
+(connector
+	(text "ram_input[7..0]" (rect 2872 -8 2946 4)(font "Arial" ))
+	(pt 2864 8)
+	(pt 2928 8)
+	(bus)
+)
+(connector
+	(text "ram_input[7..0]" (rect 2904 144 2978 156)(font "Arial" ))
+	(pt 2976 160)
+	(pt 2920 160)
+	(bus)
+)
+(connector
+	(text "write_data_rd[7..0]" (rect 2664 -16 2754 -4)(font "Arial" ))
+	(pt 2728 0)
+	(pt 2656 0)
+	(bus)
+)
+(connector
+	(text "read_data_rt[7..0]" (rect 2664 0 2751 12)(font "Arial" ))
+	(pt 2728 16)
+	(pt 2656 16)
+	(bus)
+)
+(connector
+	(text "write_data_rd[7..0]" (rect 2448 112 2538 124)(font "Arial" ))
+	(pt 2512 128)
+	(pt 2448 128)
+	(bus)
+)
+(connector
+	(text "read_data_rt[7..0]" (rect 2448 128 2535 140)(font "Arial" ))
+	(pt 2512 144)
+	(pt 2448 144)
+	(bus)
+)
+(connector
+	(pt 3176 232)
+	(pt 3176 136)
+	(bus)
+)
+(connector
+	(text "hw" (rect 3312 189 3324 201)(font "Arial" )(vertical))
+	(pt 3328 160)
+	(pt 3328 216)
+)
+(connector
+	(pt 3496 128)
+	(pt 3392 128)
+	(bus)
+)
+(connector
+	(pt 3136 120)
+	(pt 3256 120)
+	(bus)
+)
+(connector
+	(pt 3176 136)
+	(pt 3256 136)
+	(bus)
+)
+(connector
+	(pt 3256 136)
+	(pt 3264 136)
+	(bus)
 )
 (junction (pt 864 112))
 (junction (pt 1424 112))
 (junction (pt 1128 112))
 (junction (pt 1432 192))
+(junction (pt 1504 128))
+(junction (pt 3256 136))

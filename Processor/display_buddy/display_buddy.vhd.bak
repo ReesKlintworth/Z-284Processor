@@ -16,7 +16,6 @@ port
 	decimal_1 : out std_logic;
 	decimal_2 : out std_logic;
 	display_addr : out std_logic_vector(13 downto 0);
-	out_clk : out std_logic;
 	data_out : out std_logic_vector(7 downto 0)
 );
 end display_buddy;
@@ -139,12 +138,6 @@ begin
 				data_out <= "0000000" & not btn2;
 			end if;
 		end if;
-		
-		out_clk <= '1';
-		
-	elsif falling_edge(in_clk) then
-	
-		out_clk <= '0';
 		
 	end if;
 	end process;

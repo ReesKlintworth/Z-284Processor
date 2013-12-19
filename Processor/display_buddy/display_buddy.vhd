@@ -26,17 +26,19 @@ architecture behav of display_buddy is
 	signal right_digit : std_logic_vector(6 downto 0);
 	
 begin
-	process (in_clk)
+	process (ram_addr)
 	begin
-	
-	if rising_edge(in_clk) then
-		
 		if (ram_addr < "00000011") then
 			hw_datasource <= '1';
 		else
 			hw_datasource <= '0';
 		end if;
-		
+	end process; 
+	
+	process (in_clk)
+	begin
+	
+	if rising_edge(in_clk) then
 		if w_e = '1' then
 			if ram_addr = "00000000" then 
 				case ram_data(7 downto 4) is

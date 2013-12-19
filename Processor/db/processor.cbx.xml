@@ -1,12 +1,14 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="processor">
+		<CBX_INST_ENTRY INSTANCE_NAME="|processor|Clock1Hz:inst|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_voh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|alu:inst32|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_fei.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|alu:inst32|lpm_add_sub:Add4" CBX_FILE_NAME="add_sub_sjh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|ram_mux:inst16|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|alu:inst32|lpm_add_sub:Add3" CBX_FILE_NAME="add_sub_rjh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|alu:inst32|lpm_add_sub:Add5" CBX_FILE_NAME="add_sub_rjh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|alu:inst32|lpm_add_sub:Add7" CBX_FILE_NAME="add_sub_sjh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|processor|lpm_mux1:inst22|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|ram_mux:inst13|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_3od.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|addOne:inst6|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_fnh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|processor|alu:inst32|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_mch.tdf"/>

@@ -1,5 +1,4 @@
 |display_buddy
-in_clk => hw_datasource~reg0.CLK
 in_clk => left_digit[6].CLK
 in_clk => left_digit[5].CLK
 in_clk => left_digit[4].CLK
@@ -182,7 +181,7 @@ dip[4] => data_out~19.DATAB
 dip[5] => data_out~18.DATAB
 dip[6] => data_out~17.DATAB
 dip[7] => data_out~16.DATAB
-hw_datasource <= hw_datasource~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hw_datasource <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 decimal_1 <= decimal_1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 decimal_2 <= decimal_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
 display_addr[0] <= display_addr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE

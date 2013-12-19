@@ -30,7 +30,7 @@ ON
 # case_insensitive
 # source_file
 display_buddy.vhd
-de90ec1a928576ec9f6defff39551c5
+13e9c8ccb7a56a4f19af6d55bdca1cf6
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -46,7 +46,7 @@ ON
 |
 }
 # lmf
-..|..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
