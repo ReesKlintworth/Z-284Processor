@@ -6,27 +6,31 @@ entity clock_splitter is
 port
 (
 	clk : in std_logic;
+	
 	out_clk1 : out std_logic;
-	out_clk2 : out std_logic
+	out_clk2 : out std_logic;
+	out_clk3 : out std_logic
 );
 end clock_splitter;
 
 architecture behav of clock_splitter is
 begin
 	process(clk)
-	variable counter : integer range 1 to 2;
+	variable counter : integer range 1 to 3;
 	begin
-		--if falling_edge(clk)
-		--if rising_edge(clk)
 		if clk'event and clk = '1' then
 			if counter = 1 then
 				counter := 2;
-				out_clk1 <= '0';
 				out_clk2 <= '1';
+				out_clk1 <= '0';
 			elsif counter = 2 then
+				counter := 3;
+				out_clk3 <= '1';
+				out_clk2 <= '0';
+			elsif counter = 3 then
 				counter := 1;
 				out_clk1 <= '1';
-				out_clk2 <= '0';
+				out_clk3 <= '0';
 			end if;
 		end if;
 	end process;

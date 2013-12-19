@@ -30,7 +30,7 @@ ON
 # case_insensitive
 # source_file
 clock_splitter.vhd
-74859171490a180d1abb4f67a64417d
+1e9355782097c7c7d427db76a5a0e7
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -46,7 +46,7 @@ ON
 |
 }
 # lmf
-..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 

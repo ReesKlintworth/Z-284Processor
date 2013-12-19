@@ -44,6 +44,13 @@ applicable agreement for further details.
 		(text "out_clk2" (rect 50 43 91 55)(font "Arial" ))
 		(line (pt 112 48)(pt 96 48)(line_width 1))
 	)
+	(port
+		(pt 112 64)
+		(output)
+		(text "out_clk3" (rect 0 0 41 12)(font "Arial" ))
+		(text "out_clk3" (rect 50 59 91 71)(font "Arial" ))
+		(line (pt 112 64)(pt 96 64)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 96 80)(line_width 1))
 	)

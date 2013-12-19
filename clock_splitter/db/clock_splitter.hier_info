@@ -1,9 +1,11 @@
 |clock_splitter
 clk => counter[1].CLK
 clk => counter[0].CLK
-clk => out_clk1~reg0.CLK
 clk => out_clk2~reg0.CLK
+clk => out_clk1~reg0.CLK
+clk => out_clk3~reg0.CLK
 out_clk1 <= out_clk1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out_clk2 <= out_clk2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_clk3 <= out_clk3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

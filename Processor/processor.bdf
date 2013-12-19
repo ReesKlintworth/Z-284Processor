@@ -622,35 +622,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 248 80 360 176)
-	(text "clock_splitter" (rect 5 0 69 12)(font "Arial" ))
-	(text "inst2" (rect 8 80 31 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 1))
-	)
-	(port
-		(pt 112 32)
-		(output)
-		(text "out_clk1" (rect 0 0 41 12)(font "Arial" ))
-		(text "out_clk1" (rect 50 27 91 39)(font "Arial" ))
-		(line (pt 112 32)(pt 96 32)(line_width 1))
-	)
-	(port
-		(pt 112 48)
-		(output)
-		(text "out_clk2" (rect 0 0 41 12)(font "Arial" ))
-		(text "out_clk2" (rect 50 43 91 55)(font "Arial" ))
-		(line (pt 112 48)(pt 96 48)(line_width 1))
-	)
-	(drawing
-		(rectangle (rect 16 16 96 80)(line_width 1))
-	)
-)
-(symbol
 	(rect 640 80 800 208)
 	(text "PC" (rect 5 0 20 12)(font "Arial" ))
 	(text "inst3" (rect 8 112 31 124)(font "Arial" ))
@@ -1618,6 +1589,42 @@ applicable agreement for further details.
 		(line (pt 64 72)(pt 80 64)(line_width 1))
 	)
 )
+(symbol
+	(rect 248 80 360 176)
+	(text "clock_splitter" (rect 5 0 69 12)(font "Arial" ))
+	(text "inst19" (rect 8 80 37 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 112 32)
+		(output)
+		(text "out_clk1" (rect 0 0 41 12)(font "Arial" ))
+		(text "out_clk1" (rect 50 27 91 39)(font "Arial" ))
+		(line (pt 112 32)(pt 96 32)(line_width 1))
+	)
+	(port
+		(pt 112 48)
+		(output)
+		(text "out_clk2" (rect 0 0 41 12)(font "Arial" ))
+		(text "out_clk2" (rect 50 43 91 55)(font "Arial" ))
+		(line (pt 112 48)(pt 96 48)(line_width 1))
+	)
+	(port
+		(pt 112 64)
+		(output)
+		(text "out_clk3" (rect 0 0 41 12)(font "Arial" ))
+		(text "out_clk3" (rect 50 59 91 71)(font "Arial" ))
+		(line (pt 112 64)(pt 96 64)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 96 80)(line_width 1))
+	)
+)
 (connector
 	(pt 104 112)
 	(pt 8 112)
@@ -1724,11 +1731,6 @@ applicable agreement for further details.
 	(pt 1568 176)
 	(pt 1624 176)
 	(bus)
-)
-(connector
-	(text "other_clk" (rect 2928 160 2972 172)(font "Arial" ))
-	(pt 2976 176)
-	(pt 2920 176)
 )
 (connector
 	(text "read_data_rt[7..0]" (rect 2904 144 2991 156)(font "Arial" ))
@@ -2401,12 +2403,18 @@ applicable agreement for further details.
 	(pt 1728 48)
 )
 (connector
-	(pt 216 16)
-	(pt 216 112)
+	(pt 200 112)
+	(pt 248 112)
 )
 (connector
-	(pt 216 112)
-	(pt 248 112)
+	(text "clk3" (rect 368 128 388 140)(font "Arial" ))
+	(pt 360 144)
+	(pt 408 144)
+)
+(connector
+	(text "clk3" (rect 2928 160 2948 172)(font "Arial" ))
+	(pt 2976 176)
+	(pt 2920 176)
 )
 (junction (pt 864 112))
 (junction (pt 1424 112))

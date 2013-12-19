@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for clock_splitter
-Tue Dec 17 21:34:00 2013
+Thu Dec 19 05:23:28 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -41,8 +41,8 @@ applicable agreement for further details.
 +------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
 ; Type                         ; Slack ; Required Time ; Actual Time                      ; From          ; To            ; From Clock ; To Clock ; Failed Paths ;
 +------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
-; Worst-case tco               ; N/A   ; None          ; 16.100 ns                        ; out_clk1~reg0 ; out_clk1      ; clk        ; --       ; 0            ;
-; Clock Setup: 'clk'           ; N/A   ; None          ; 112.36 MHz ( period = 8.900 ns ) ; counter[0]    ; out_clk2~reg0 ; clk        ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 17.000 ns                        ; out_clk2~reg0 ; out_clk2      ; clk        ; --       ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 84.75 MHz ( period = 11.800 ns ) ; counter[0]    ; out_clk3~reg0 ; clk        ; clk      ; 0            ;
 ; Total number of failed paths ;       ;               ;                                  ;               ;               ;            ;          ; 0            ;
 +------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
 
@@ -94,7 +94,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 2      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -104,13 +104,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+------------------------------------------------+---------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack ; Actual fmax (period)                           ; From          ; To            ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-------+------------------------------------------------+---------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 112.36 MHz ( period = 8.900 ns )               ; counter[0]    ; out_clk2~reg0 ; clk        ; clk      ; None                        ; None                      ; 4.900 ns                ;
-; N/A   ; 116.28 MHz ( period = 8.600 ns )               ; counter[1]    ; out_clk2~reg0 ; clk        ; clk      ; None                        ; None                      ; 4.600 ns                ;
+; N/A   ; 84.75 MHz ( period = 11.800 ns )               ; counter[0]    ; out_clk3~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.800 ns                ;
+; N/A   ; 86.96 MHz ( period = 11.500 ns )               ; counter[1]    ; out_clk3~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.500 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns )               ; counter[0]    ; out_clk2~reg0 ; clk        ; clk      ; None                        ; None                      ; 5.700 ns                ;
+; N/A   ; 106.38 MHz ( period = 9.400 ns )               ; counter[1]    ; out_clk2~reg0 ; clk        ; clk      ; None                        ; None                      ; 5.400 ns                ;
 ; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; out_clk1~reg0 ; out_clk1~reg0 ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
-; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; counter[0]    ; out_clk1~reg0 ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
-; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; counter[1]    ; out_clk1~reg0 ; clk        ; clk      ; None                        ; None                      ; 2.200 ns                ;
-; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; counter[0]    ; counter[1]    ; clk        ; clk      ; None                        ; None                      ; 2.200 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; counter[1]    ; out_clk1~reg0 ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; counter[0]    ; counter[1]    ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; out_clk2~reg0 ; out_clk2~reg0 ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; out_clk3~reg0 ; out_clk3~reg0 ; clk        ; clk      ; None                        ; None                      ; 2.500 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; counter[0]    ; out_clk1~reg0 ; clk        ; clk      ; None                        ; None                      ; 2.200 ns                ;
 ; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; counter[1]    ; counter[0]    ; clk        ; clk      ; None                        ; None                      ; 2.200 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; counter[1]    ; counter[1]    ; clk        ; clk      ; None                        ; None                      ; 2.200 ns                ;
 +-------+------------------------------------------------+---------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
@@ -119,8 +124,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+---------------+----------+------------+
 ; Slack ; Required tco ; Actual tco ; From          ; To       ; From Clock ;
 +-------+--------------+------------+---------------+----------+------------+
-; N/A   ; None         ; 16.100 ns  ; out_clk1~reg0 ; out_clk1 ; clk        ;
-; N/A   ; None         ; 15.900 ns  ; out_clk2~reg0 ; out_clk2 ; clk        ;
+; N/A   ; None         ; 17.000 ns  ; out_clk2~reg0 ; out_clk2 ; clk        ;
+; N/A   ; None         ; 15.900 ns  ; out_clk1~reg0 ; out_clk1 ; clk        ;
+; N/A   ; None         ; 15.500 ns  ; out_clk3~reg0 ; out_clk3 ; clk        ;
 +-------+--------------+------------+---------------+----------+------------+
 
 
@@ -130,48 +136,49 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Dec 17 21:33:59 2013
+    Info: Processing started: Thu Dec 19 05:23:28 2013
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off clock_splitter -c clock_splitter
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk" is an undefined clock
-Info: Clock "clk" has Internal fmax of 112.36 MHz between source register "counter[0]" and destination register "out_clk2~reg0" (period= 8.9 ns)
-    Info: + Longest register to register delay is 4.900 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC2_E22; Fanout = 4; REG Node = 'counter[0]'
-        Info: 2: + IC(0.500 ns) + CELL(2.700 ns) = 3.200 ns; Loc. = LC4_E22; Fanout = 1; COMB Node = 'out_clk2~2'
-        Info: 3: + IC(0.500 ns) + CELL(1.200 ns) = 4.900 ns; Loc. = LC8_E22; Fanout = 1; REG Node = 'out_clk2~reg0'
-        Info: Total cell delay = 3.900 ns ( 79.59 % )
-        Info: Total interconnect delay = 1.000 ns ( 20.41 % )
+Info: Clock "clk" has Internal fmax of 84.75 MHz between source register "counter[0]" and destination register "out_clk3~reg0" (period= 11.8 ns)
+    Info: + Longest register to register delay is 7.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3_B42; Fanout = 5; REG Node = 'counter[0]'
+        Info: 2: + IC(0.500 ns) + CELL(2.700 ns) = 3.200 ns; Loc. = LC4_B42; Fanout = 2; COMB Node = 'Equal1~1'
+        Info: 3: + IC(0.500 ns) + CELL(2.400 ns) = 6.100 ns; Loc. = LC7_B42; Fanout = 1; COMB Node = 'out_clk3~3'
+        Info: 4: + IC(0.500 ns) + CELL(1.200 ns) = 7.800 ns; Loc. = LC6_B42; Fanout = 2; REG Node = 'out_clk3~reg0'
+        Info: Total cell delay = 6.300 ns ( 80.77 % )
+        Info: Total interconnect delay = 1.500 ns ( 19.23 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "clk" to destination register is 7.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 4; CLK Node = 'clk'
-            Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC8_E22; Fanout = 1; REG Node = 'out_clk2~reg0'
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 5; CLK Node = 'clk'
+            Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC6_B42; Fanout = 2; REG Node = 'out_clk3~reg0'
             Info: Total cell delay = 2.900 ns ( 41.43 % )
             Info: Total interconnect delay = 4.100 ns ( 58.57 % )
         Info: - Longest clock path from clock "clk" to source register is 7.000 ns
-            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 4; CLK Node = 'clk'
-            Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC2_E22; Fanout = 4; REG Node = 'counter[0]'
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 5; CLK Node = 'clk'
+            Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC3_B42; Fanout = 5; REG Node = 'counter[0]'
             Info: Total cell delay = 2.900 ns ( 41.43 % )
             Info: Total interconnect delay = 4.100 ns ( 58.57 % )
     Info: + Micro clock to output delay of source is 1.400 ns
     Info: + Micro setup delay of destination is 2.600 ns
-Info: tco from clock "clk" to destination pin "out_clk1" through register "out_clk1~reg0" is 16.100 ns
+Info: tco from clock "clk" to destination pin "out_clk2" through register "out_clk2~reg0" is 17.000 ns
     Info: + Longest clock path from clock "clk" to source register is 7.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 4; CLK Node = 'clk'
-        Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC1_E22; Fanout = 2; REG Node = 'out_clk1~reg0'
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 5; CLK Node = 'clk'
+        Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC1_B42; Fanout = 2; REG Node = 'out_clk2~reg0'
         Info: Total cell delay = 2.900 ns ( 41.43 % )
         Info: Total interconnect delay = 4.100 ns ( 58.57 % )
     Info: + Micro clock to output delay of source is 1.400 ns
-    Info: + Longest register to pin delay is 7.700 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_E22; Fanout = 2; REG Node = 'out_clk1~reg0'
-        Info: 2: + IC(2.700 ns) + CELL(5.000 ns) = 7.700 ns; Loc. = PIN_154; Fanout = 0; PIN Node = 'out_clk1'
-        Info: Total cell delay = 5.000 ns ( 64.94 % )
-        Info: Total interconnect delay = 2.700 ns ( 35.06 % )
+    Info: + Longest register to pin delay is 8.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_B42; Fanout = 2; REG Node = 'out_clk2~reg0'
+        Info: 2: + IC(3.600 ns) + CELL(5.000 ns) = 8.600 ns; Loc. = PIN_169; Fanout = 0; PIN Node = 'out_clk2'
+        Info: Total cell delay = 5.000 ns ( 58.14 % )
+        Info: Total interconnect delay = 3.600 ns ( 41.86 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 188 megabytes
-    Info: Processing ended: Tue Dec 17 21:34:00 2013
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 193 megabytes
+    Info: Processing ended: Thu Dec 19 05:23:28 2013
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

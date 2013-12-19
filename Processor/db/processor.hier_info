@@ -1,6 +1,5 @@
 |processor
-pc_clk <= clock_splitter:inst2.out_clk1
-clk_fast => clock_splitter:inst2.clk
+pc_clk <= clock_splitter:inst19.out_clk1
 clk_fast => Clock1Hz:inst.clk
 alu_flag <= controller:inst12.aluFlag
 op_code[0] <= decoder:inst11.op_code[0]
@@ -144,13 +143,55 @@ instruction[14] <= lpm_rom0:inst29.q[14]
 instruction[15] <= lpm_rom0:inst29.q[15]
 
 
-|processor|clock_splitter:inst2
+|processor|clock_splitter:inst19
 clk => counter[1].CLK
 clk => counter[0].CLK
-clk => out_clk1~reg0.CLK
 clk => out_clk2~reg0.CLK
+clk => out_clk1~reg0.CLK
+clk => out_clk3~reg0.CLK
 out_clk1 <= out_clk1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out_clk2 <= out_clk2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_clk3 <= out_clk3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processor|Clock1Hz:inst
+reset => cnt[16].ACLR
+reset => cnt[15].ACLR
+reset => cnt[14].ACLR
+reset => cnt[13].ACLR
+reset => cnt[12].ACLR
+reset => cnt[11].ACLR
+reset => cnt[10].ACLR
+reset => cnt[9].ACLR
+reset => cnt[8].ACLR
+reset => cnt[7].ACLR
+reset => cnt[6].ACLR
+reset => cnt[5].ACLR
+reset => cnt[4].ACLR
+reset => cnt[3].ACLR
+reset => cnt[2].ACLR
+reset => cnt[1].ACLR
+reset => cnt[0].ACLR
+reset => clockTmp.ACLR
+clk => cnt[16].CLK
+clk => cnt[15].CLK
+clk => cnt[14].CLK
+clk => cnt[13].CLK
+clk => cnt[12].CLK
+clk => cnt[11].CLK
+clk => cnt[10].CLK
+clk => cnt[9].CLK
+clk => cnt[8].CLK
+clk => cnt[7].CLK
+clk => cnt[6].CLK
+clk => cnt[5].CLK
+clk => cnt[4].CLK
+clk => cnt[3].CLK
+clk => cnt[2].CLK
+clk => cnt[1].CLK
+clk => cnt[0].CLK
+clk => clockTmp.CLK
+clock <= clockTmp.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor|controller:inst12
@@ -2871,45 +2912,5 @@ output[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 output[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 output[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 output[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|processor|Clock1Hz:inst
-reset => cnt[16].ACLR
-reset => cnt[15].ACLR
-reset => cnt[14].ACLR
-reset => cnt[13].ACLR
-reset => cnt[12].ACLR
-reset => cnt[11].ACLR
-reset => cnt[10].ACLR
-reset => cnt[9].ACLR
-reset => cnt[8].ACLR
-reset => cnt[7].ACLR
-reset => cnt[6].ACLR
-reset => cnt[5].ACLR
-reset => cnt[4].ACLR
-reset => cnt[3].ACLR
-reset => cnt[2].ACLR
-reset => cnt[1].ACLR
-reset => cnt[0].ACLR
-reset => clockTmp.ACLR
-clk => cnt[16].CLK
-clk => cnt[15].CLK
-clk => cnt[14].CLK
-clk => cnt[13].CLK
-clk => cnt[12].CLK
-clk => cnt[11].CLK
-clk => cnt[10].CLK
-clk => cnt[9].CLK
-clk => cnt[8].CLK
-clk => cnt[7].CLK
-clk => cnt[6].CLK
-clk => cnt[5].CLK
-clk => cnt[4].CLK
-clk => cnt[3].CLK
-clk => cnt[2].CLK
-clk => cnt[1].CLK
-clk => cnt[0].CLK
-clk => clockTmp.CLK
-clock <= clockTmp.DB_MAX_OUTPUT_PORT_TYPE
 
 

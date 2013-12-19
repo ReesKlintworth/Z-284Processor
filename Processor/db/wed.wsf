@@ -3107,7 +3107,7 @@ VECTOR("C:/Repos/284Processor/Processor/db/processor.sim.cvwf")
 		ZEND = 87368;
 		NUMERATOR = 582;
 		DENOMINATOR = 24736;
-		TOP_INDEX = 81;
+		TOP_INDEX = 78;
 	}
 	CLOCK{
 		PERIOD = 10000;
