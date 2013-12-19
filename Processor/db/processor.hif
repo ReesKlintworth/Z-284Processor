@@ -4353,39 +4353,6 @@ data0
 
 # end
 # entity
-alu
-# storage
-db|processor.(9).cnf
-db|processor.(9).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-..|alu|alu.vhd
-decffde051cbaa7be24035e78d8e4f3e
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-alu:inst32
-}
-# lmf
-..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 lpm_mux1
 # storage
 db|processor.(48).cnf
@@ -4419,6 +4386,39 @@ lpm_mux1:inst22
 
 # end
 # entity
+alu
+# storage
+db|processor.(9).cnf
+db|processor.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|alu|alu.vhd
+e1ce645eff678da91f8e401765a4e8e4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+alu:inst32
+}
+# lmf
+..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
 processor
 # storage
 db|processor.(0).cnf
@@ -4426,7 +4426,7 @@ db|processor.(0).cnf
 # case_insensitive
 # source_file
 processor.bdf
-2826b298efcd44a3357446dd5909a3b
+7aa74a1748281510984f5b257053fc
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -4585,8 +4585,6 @@ address0
 3
 }
 # include_file {
-..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
-44d4551a35f349f0dbacaf799d39950
 ..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
 c22bfd353214c01495b560fc34e47d79
 ..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
@@ -4597,6 +4595,8 @@ bd0e2f5e01c1bd360461dceb53d48
 74e08939f96a7ea8e7a4d59a5b01fe7
 ..|..|..|altera|90sp2|quartus|libraries|megafunctions|altsyncram.inc
 1b5760dd55919ddb45bfb2c0e896218b
+..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
+44d4551a35f349f0dbacaf799d39950
 }
 # memory_file {
 ..|Assembler|ProcessorAssembler|bin|Debug|multiply2.mif

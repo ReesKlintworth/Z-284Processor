@@ -118,3 +118,4 @@ set_global_assignment -name BSF_FILE jmp_mux/jump_mux.bsf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/processor1.vwf
 set_global_assignment -name QIP_FILE display_buddy/lpm_mux0.qip
 set_global_assignment -name QIP_FILE display_buddy/lpm_mux1.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE aluTest.vwf

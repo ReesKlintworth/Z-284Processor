@@ -1,8 +1,8 @@
-Analysis & Synthesis Status : Successful - Thu Dec 19 08:21:25 2013
+Analysis & Synthesis Status : Successful - Thu Dec 19 09:06:41 2013
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : processor
 Top-level Entity Name : processor
 Family : FLEX10K
-Total logic elements : 742
-Total pins : 135
+Total logic elements : 749
+Total pins : 134
 Total memory bits : 6,144

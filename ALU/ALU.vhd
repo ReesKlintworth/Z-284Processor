@@ -72,7 +72,9 @@ begin
 							d <= s xor t; --xor             
 						when "100" => 
 							if(s < t) then
-								d <= s; --slt
+								d <= "00000001"; --slt
+							else
+								d <= "00000000";
 							end if;
 						when "110" => 
 							d <= std_logic_vector(signedS sll to_integer(signedT)); --sll   
