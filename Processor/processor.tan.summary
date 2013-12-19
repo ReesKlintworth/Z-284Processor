@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 117.200 ns
-From           : alu:inst16|d[4]
-To             : write_data[4]
+Actual Time    : 117.900 ns
+From           : alu:inst16|d[3]
+To             : write_data[3]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 33.600 ns
-From           : LED_reg[1]
-To             : display[4]
+Actual Time    : 31.200 ns
+From           : LED_reg[0]
+To             : display[0]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.03 MHz ( period = 199.000 ns )
-From           : alu:inst16|d[1]
-To             : lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[1]~reg_in
+Actual Time    : 5.27 MHz ( period = 189.800 ns )
+From           : alu:inst16|d[2]
+To             : lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[2]~reg_in
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -36,11 +36,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : reg_file:inst7|8dffe:inst11|33
-To             : alu:inst16|d[4]
+From           : reg_file:inst7|8dffe:inst13|29
+To             : alu:inst16|d[0]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 710
+Failed Paths   : 672
 
 Type           : Total number of failed paths
 Slack          : 
@@ -50,7 +50,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 710
+Failed Paths   : 672
 
 --------------------------------------------------------------------------------------
 

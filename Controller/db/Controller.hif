@@ -30,7 +30,7 @@ ON
 # case_insensitive
 # source_file
 controller.vhd
-9018cb893f8daad872466e276faadf9a
+43172e94908933a2683d60ae6ea6d4f3
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
