@@ -135,7 +135,7 @@ begin
 				data_out <= not dip;
 			elsif ram_addr = "00000001" then
 				data_out <= "0000000" & not btn1;
-			elsif address = "00000010" then
+			elsif ram_addr = "00000010" then
 				data_out <= "0000000" & not btn2;
 			end if;
 		end if;

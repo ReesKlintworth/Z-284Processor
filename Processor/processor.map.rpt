@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor
-Wed Dec 18 21:43:25 2013
+Thu Dec 19 01:28:05 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -28,16 +28,17 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
  20. Source assignments for alu:inst32|lpm_add_sub:Add7|addcore:adder
  21. Parameter Settings for User Entity Instance: lpm_rom0:inst29|lpm_rom:lpm_rom_component
  22. Parameter Settings for User Entity Instance: ram_mux:inst13|LPM_MUX:lpm_mux_component
- 23. Parameter Settings for User Entity Instance: lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component
- 24. Parameter Settings for Inferred Entity Instance: addOne:inst6|lpm_add_sub:Add0
- 25. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add2
- 26. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add0
- 27. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add3
- 28. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add4
- 29. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add5
- 30. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add6
- 31. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add7
- 32. Analysis & Synthesis Messages
+ 23. Parameter Settings for User Entity Instance: ram_mux:inst16|LPM_MUX:lpm_mux_component
+ 24. Parameter Settings for User Entity Instance: lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component
+ 25. Parameter Settings for Inferred Entity Instance: addOne:inst6|lpm_add_sub:Add0
+ 26. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add2
+ 27. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add0
+ 28. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add3
+ 29. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add4
+ 30. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add5
+ 31. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add6
+ 32. Parameter Settings for Inferred Entity Instance: alu:inst32|lpm_add_sub:Add7
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -63,13 +64,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 18 21:43:25 2013        ;
+; Analysis & Synthesis Status ; Successful - Thu Dec 19 01:28:05 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; processor                                    ;
 ; Top-level Entity Name       ; processor                                    ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 609                                          ;
-; Total pins                  ; 86                                           ;
+; Total logic elements        ; 641                                          ;
+; Total pins                  ; 96                                           ;
 ; Total memory bits           ; 6,144                                        ;
 +-----------------------------+----------------------------------------------+
 
@@ -136,80 +137,81 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------+
-; addOne.vhd                       ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/addOne.vhd                  ;
-; clock_splitter.vhd               ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/clock_splitter.vhd          ;
-; clock1hz.vhd                     ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/clock1hz.vhd                ;
-; decoder.vhd                      ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/decoder.vhd                 ;
-; PC.vhd                           ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/PC.vhd                      ;
-; sign_ext.vhd                     ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/sign_ext.vhd                ;
-; processor.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/processor.bdf               ;
-; ../RAM/lpm_ram_dq0.vhd           ; yes             ; User Wizard-Generated File               ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/RAM/lpm_ram_dq0.vhd                   ;
-; mux/ram_mux.vhd                  ; yes             ; User Wizard-Generated File               ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/mux/ram_mux.vhd             ;
-; controller.vhd                   ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/controller/controller.vhd             ;
-; lpm_rom0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; c:/users/derek nordgren/documents/github/284processor/rom/lpm_rom0.vhd                      ;
-; lpm_rom.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_rom.tdf                                 ;
-; altrom.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.inc                                  ;
-; aglobal90.inc                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc                               ;
-; altrom.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.tdf                                  ;
-; memmodes.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/memmodes.inc                              ;
-; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc                              ;
-; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.inc                                 ;
-; altqpram.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altqpram.inc                                ;
-; altsyncram.inc                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altsyncram.inc                              ;
-; three_two_mux.vhd                ; yes             ; Auto-Found VHDL File                     ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/3-2_mux/three_two_mux.vhd   ;
-; alu.vhd                          ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/alu/alu.vhd                           ;
-; reg_file.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; c:/users/derek nordgren/documents/github/284processor/reg_file/reg_file.bdf                 ;
-; mux_8.vhd                        ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/reg_file/mux_8/mux_8.vhd              ;
-; 8dffe.bdf                        ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/8dffe.bdf                                 ;
-; demux_8.vhd                      ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/reg_file/demux_8/demux_8.vhd          ;
-; LPM_MUX.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/LPM_MUX.tdf                                 ;
-; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc                                  ;
-; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc                                ;
-; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc                                ;
-; altshift.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf                                ;
-; muxlut.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf                                  ;
-; lpm_ram_dq.tdf                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf                              ;
-; altram.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.inc                                  ;
-; altram.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.tdf                                  ;
-; extender.vhd                     ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/extender/extender.vhd                 ;
-; two_two_mux.vhd                  ; yes             ; Auto-Found VHDL File                     ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/two_two_mux/two_two_mux.vhd ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf                             ;
-; addcore.inc                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc                                 ;
-; look_add.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc                                ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                     ;
-; alt_mercury_add_sub.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_mercury_add_sub.inc                     ;
-; addcore.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.tdf                                 ;
-; a_csnbuffer.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.inc                             ;
-; a_csnbuffer.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.tdf                             ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                    ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------+
+; addOne.vhd                       ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/addOne.vhd                      ;
+; clock_splitter.vhd               ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/clock_splitter.vhd              ;
+; clock1hz.vhd                     ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/clock1hz.vhd                    ;
+; decoder.vhd                      ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/decoder.vhd                     ;
+; PC.vhd                           ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/PC.vhd                          ;
+; sign_ext.vhd                     ; yes             ; User VHDL File                           ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/sign_ext.vhd                    ;
+; processor.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/processor.bdf                   ;
+; ../RAM/lpm_ram_dq0.vhd           ; yes             ; User Wizard-Generated File               ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/RAM/lpm_ram_dq0.vhd                       ;
+; mux/ram_mux.vhd                  ; yes             ; User Wizard-Generated File               ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/mux/ram_mux.vhd                 ;
+; controller.vhd                   ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/controller/controller.vhd                 ;
+; lpm_rom0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; c:/users/derek nordgren/documents/github/284processor/rom/lpm_rom0.vhd                          ;
+; lpm_rom.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_rom.tdf                                     ;
+; altrom.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.inc                                      ;
+; aglobal90.inc                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc                                   ;
+; altrom.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altrom.tdf                                      ;
+; memmodes.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/memmodes.inc                                  ;
+; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc                                  ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_mux.inc                                     ;
+; altqpram.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altqpram.inc                                    ;
+; altsyncram.inc                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altsyncram.inc                                  ;
+; three_two_mux.vhd                ; yes             ; Auto-Found VHDL File                     ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/3-2_mux/three_two_mux.vhd       ;
+; alu.vhd                          ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/alu/alu.vhd                               ;
+; reg_file.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; c:/users/derek nordgren/documents/github/284processor/reg_file/reg_file.bdf                     ;
+; mux_8.vhd                        ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/reg_file/mux_8/mux_8.vhd                  ;
+; 8dffe.bdf                        ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/8dffe.bdf                                     ;
+; demux_8.vhd                      ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/reg_file/demux_8/demux_8.vhd              ;
+; LPM_MUX.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/LPM_MUX.tdf                                     ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc                                      ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc                                    ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc                                    ;
+; altshift.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf                                    ;
+; muxlut.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf                                      ;
+; display_buddy.vhd                ; yes             ; Auto-Found VHDL File                     ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/display_buddy/display_buddy.vhd ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf                                  ;
+; altram.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.inc                                      ;
+; altram.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.tdf                                      ;
+; extender.vhd                     ; yes             ; Auto-Found VHDL File                     ; c:/users/derek nordgren/documents/github/284processor/extender/extender.vhd                     ;
+; two_two_mux.vhd                  ; yes             ; Auto-Found VHDL File                     ; C:/Users/Derek Nordgren/Documents/GitHub/284Processor/Processor/two_two_mux/two_two_mux.vhd     ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf                                 ;
+; addcore.inc                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc                                     ;
+; look_add.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc                                    ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                         ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_mercury_add_sub.inc                         ;
+; addcore.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.tdf                                     ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.inc                                 ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.tdf                                 ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+-----------------------------------+----------------------------+
-; Resource                          ; Usage                      ;
-+-----------------------------------+----------------------------+
-; Total logic elements              ; 609                        ;
-; Total combinational functions     ; 609                        ;
-;     -- Total 4-input functions    ; 288                        ;
-;     -- Total 3-input functions    ; 232                        ;
-;     -- Total 2-input functions    ; 66                         ;
-;     -- Total 1-input functions    ; 22                         ;
-;     -- Total 0-input functions    ; 1                          ;
-; Total registers                   ; 68                         ;
-; Total logic cells in carry chains ; 66                         ;
-; I/O pins                          ; 86                         ;
-; Total memory bits                 ; 6144                       ;
-; Maximum fan-out node              ; controller:inst12|Equal0~2 ;
-; Maximum fan-out                   ; 65                         ;
-; Total fan-out                     ; 2490                       ;
-; Average fan-out                   ; 3.46                       ;
-+-----------------------------------+----------------------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++-----------------------------------+-------------------------------+
+; Resource                          ; Usage                         ;
++-----------------------------------+-------------------------------+
+; Total logic elements              ; 641                           ;
+; Total combinational functions     ; 641                           ;
+;     -- Total 4-input functions    ; 294                           ;
+;     -- Total 3-input functions    ; 257                           ;
+;     -- Total 2-input functions    ; 66                            ;
+;     -- Total 1-input functions    ; 23                            ;
+;     -- Total 0-input functions    ; 1                             ;
+; Total registers                   ; 77                            ;
+; Total logic cells in carry chains ; 66                            ;
+; I/O pins                          ; 96                            ;
+; Total memory bits                 ; 6144                          ;
+; Maximum fan-out node              ; clock_splitter:inst2|out_clk2 ;
+; Maximum fan-out                   ; 73                            ;
+; Total fan-out                     ; 2608                          ;
+; Average fan-out                   ; 3.43                          ;
++-----------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -217,7 +219,7 @@ applicable agreement for further details.
 +-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                            ; Library Name ;
 +-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
-; |processor                              ; 609 (0)     ; 68           ; 6144        ; 86   ; 541 (0)      ; 0 (0)             ; 68 (0)           ; 66 (0)          ; 0 (0)      ; |processor                                                                     ; work         ;
+; |processor                              ; 641 (0)     ; 77           ; 6144        ; 96   ; 564 (0)      ; 0 (0)             ; 77 (0)           ; 66 (0)          ; 0 (0)      ; |processor                                                                     ; work         ;
 ;    |PC:inst3|                           ; 9 (9)       ; 8            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 8 (8)            ; 1 (1)           ; 0 (0)      ; |processor|PC:inst3                                                            ; work         ;
 ;    |addOne:inst6|                       ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |processor|addOne:inst6                                                        ; work         ;
 ;       |lpm_add_sub:Add0|                ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |processor|addOne:inst6|lpm_add_sub:Add0                                       ; work         ;
@@ -247,22 +249,23 @@ applicable agreement for further details.
 ;             |a_csnbuffer:result_node|   ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |processor|alu:inst32|lpm_add_sub:Add7|addcore:adder|a_csnbuffer:result_node   ; work         ;
 ;    |clock_splitter:inst2|               ; 5 (5)       ; 4            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |processor|clock_splitter:inst2                                                ; work         ;
 ;    |controller:inst12|                  ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|controller:inst12                                                   ; work         ;
+;    |display_buddy:inst33|               ; 24 (24)     ; 9            ; 0           ; 0    ; 15 (15)      ; 0 (0)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |processor|display_buddy:inst33                                                ; work         ;
 ;    |lpm_ram_dq0:inst9|                  ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_ram_dq0:inst9                                                   ; work         ;
 ;       |lpm_ram_dq:lpm_ram_dq_component| ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component                   ; work         ;
 ;          |altram:sram|                  ; 0 (0)       ; 0            ; 2048        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component|altram:sram       ; work         ;
 ;    |lpm_rom0:inst29|                    ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_rom0:inst29                                                     ; work         ;
 ;       |lpm_rom:lpm_rom_component|       ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_rom0:inst29|lpm_rom:lpm_rom_component                           ; work         ;
 ;          |altrom:srom|                  ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|lpm_rom0:inst29|lpm_rom:lpm_rom_component|altrom:srom               ; work         ;
-;    |ram_mux:inst13|                     ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13                                                      ; work         ;
-;       |lpm_mux:lpm_mux_component|       ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component                            ; work         ;
-;          |muxlut:$00009|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00009              ; work         ;
-;          |muxlut:$00011|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00011              ; work         ;
-;          |muxlut:$00013|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00013              ; work         ;
-;          |muxlut:$00015|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00015              ; work         ;
-;          |muxlut:$00017|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00017              ; work         ;
-;          |muxlut:$00019|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00019              ; work         ;
-;          |muxlut:$00021|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00021              ; work         ;
-;          |muxlut:$00023|                ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00023              ; work         ;
+;    |ram_mux:inst13|                     ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13                                                      ; work         ;
+;       |lpm_mux:lpm_mux_component|       ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component                            ; work         ;
+;          |muxlut:$00009|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00009              ; work         ;
+;          |muxlut:$00011|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00011              ; work         ;
+;          |muxlut:$00013|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00013              ; work         ;
+;          |muxlut:$00015|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00015              ; work         ;
+;          |muxlut:$00017|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00017              ; work         ;
+;          |muxlut:$00019|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00019              ; work         ;
+;          |muxlut:$00021|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00021              ; work         ;
+;          |muxlut:$00023|                ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |processor|ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00023              ; work         ;
 ;    |reg_file:inst31|                    ; 223 (0)     ; 56           ; 0           ; 0    ; 167 (0)      ; 0 (0)             ; 56 (0)           ; 0 (0)           ; 0 (0)      ; |processor|reg_file:inst31                                                     ; work         ;
 ;       |8dffe:inst10|                    ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |processor|reg_file:inst31|8dffe:inst10                                        ; work         ;
 ;       |8dffe:inst11|                    ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |processor|reg_file:inst31|8dffe:inst11                                        ; work         ;
@@ -364,7 +367,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------+--------------------------------+----------------------------------------+
 ; Register name                  ; Reason for Removal             ; Registers Removed due to This Register ;
 +--------------------------------+--------------------------------+----------------------------------------+
-; reg_file:inst31|8dffe:inst6|32 ; Stuck at GND                   ; reg_file:inst31|8dffe:inst6|34         ;
+; reg_file:inst31|8dffe:inst6|29 ; Stuck at GND                   ; reg_file:inst31|8dffe:inst6|34         ;
 ;                                ; due to stuck port clock_enable ;                                        ;
 +--------------------------------+--------------------------------+----------------------------------------+
 
@@ -374,12 +377,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 68    ;
+; Total registers                              ; 77    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 57    ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -488,6 +491,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +---------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ram_mux:inst13|LPM_MUX:lpm_mux_component ;
++------------------------+---------+----------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                               ;
++------------------------+---------+----------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                     ;
+; LPM_WIDTH              ; 8       ; Signed Integer                                     ;
+; LPM_SIZE               ; 2       ; Signed Integer                                     ;
+; LPM_WIDTHS             ; 1       ; Signed Integer                                     ;
+; LPM_PIPELINE           ; 0       ; Signed Integer                                     ;
+; CBXI_PARAMETER         ; mux_3od ; Untyped                                            ;
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                            ;
++------------------------+---------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram_mux:inst16|LPM_MUX:lpm_mux_component ;
 +------------------------+---------+----------------------------------------------------+
 ; Parameter Name         ; Value   ; Type                                               ;
 +------------------------+---------+----------------------------------------------------+
@@ -758,7 +780,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 18 21:43:16 2013
+    Info: Processing started: Thu Dec 19 01:27:55 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
 Info: Found 2 design units, including 1 entities, in source file addOne.vhd
     Info: Found design unit 1: addOne-behav
@@ -1005,6 +1027,10 @@ Info: Elaborating entity "altshift" for hierarchy "ram_mux:inst13|LPM_MUX:lpm_mu
 Info: Elaborated megafunction instantiation "ram_mux:inst13|LPM_MUX:lpm_mux_component|altshift:external_latency_ffs", which is child of megafunction instantiation "ram_mux:inst13|LPM_MUX:lpm_mux_component"
 Info: Elaborating entity "muxlut" for hierarchy "ram_mux:inst13|LPM_MUX:lpm_mux_component|muxlut:$00009"
 Info: Elaborated megafunction instantiation "ram_mux:inst13|LPM_MUX:lpm_mux_component|muxlut:$00009", which is child of megafunction instantiation "ram_mux:inst13|LPM_MUX:lpm_mux_component"
+Warning: Using design file display_buddy/display_buddy.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: display_buddy-behav
+    Info: Found entity 1: display_buddy
+Info: Elaborating entity "display_buddy" for hierarchy "display_buddy:inst33"
 Info: Elaborating entity "lpm_ram_dq0" for hierarchy "lpm_ram_dq0:inst9"
 Info: Elaborating entity "lpm_ram_dq" for hierarchy "lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component"
 Info: Elaborated megafunction instantiation "lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component"
@@ -1164,15 +1190,15 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "imm[7]" is stuck at GND
     Warning (13410): Pin "imm[6]" is stuck at GND
 Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
-Info: Implemented 719 device resources after synthesis - the final resource count might be different
-    Info: Implemented 4 input pins
+Info: Implemented 761 device resources after synthesis - the final resource count might be different
+    Info: Implemented 14 input pins
     Info: Implemented 82 output pins
-    Info: Implemented 609 logic cells
+    Info: Implemented 641 logic cells
     Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 202 warnings
-    Info: Peak virtual memory: 254 megabytes
-    Info: Processing ended: Wed Dec 18 21:43:25 2013
-    Info: Elapsed time: 00:00:09
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 203 warnings
+    Info: Peak virtual memory: 255 megabytes
+    Info: Processing ended: Thu Dec 19 01:28:05 2013
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:09
 
 

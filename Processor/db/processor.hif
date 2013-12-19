@@ -15,6 +15,7 @@ VRSM_ON
 VHSM_ON
 0
 -- Start Library Paths --
+display_buddy|
 ..|rom|
 two_two_mux|
 3-2_mux|
@@ -448,18 +449,18 @@ address0
 3
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
-44d4551a35f349f0dbacaf799d39950
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
-c22bfd353214c01495b560fc34e47d79
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altsyncram.inc
 1b5760dd55919ddb45bfb2c0e896218b
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altqpram.inc
 74e08939f96a7ea8e7a4d59a5b01fe7
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
 bd0e2f5e01c1bd360461dceb53d48
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
+44d4551a35f349f0dbacaf799d39950
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
 }
 # memory_file {
 ..|Assembler|ProcessorAssembler|bin|Debug|jbt.mif
@@ -538,18 +539,18 @@ three_two_mux:inst25
 
 # end
 # entity
-sign_ext
+alu
 # storage
-db|processor.(10).cnf
-db|processor.(10).cnf
+db|processor.(9).cnf
+db|processor.(9).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-sign_ext.vhd
-5418251e13611a5ffca8e3c5ce5bfea7
+..|alu|alu.vhd
+ccd29e046981a12889aa72433914bb6
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -562,7 +563,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-sign_ext:inst14
+alu:inst32
 }
 # lmf
 ..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -571,10 +572,30 @@ sign_ext:inst14
 
 # end
 # entity
+reg_file
+# storage
+db|processor.(10).cnf
+db|processor.(10).cnf
+# case_insensitive
+# source_file
+..|reg_file|reg_file.bdf
+cca26bf357cad3869e27808267e4b9f0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+reg_file:inst31
+}
+# macro_sequence
+
+# end
+# entity
 mux_8
 # storage
-db|processor.(12).cnf
-db|processor.(12).cnf
+db|processor.(11).cnf
+db|processor.(11).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -609,8 +630,8 @@ reg_file:inst31|mux_8:inst20
 # entity
 8dffe
 # storage
-db|processor.(13).cnf
-db|processor.(13).cnf
+db|processor.(12).cnf
+db|processor.(12).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|8dffe.bdf
@@ -636,8 +657,8 @@ reg_file:inst31|8dffe:inst13
 # entity
 demux_8
 # storage
-db|processor.(14).cnf
-db|processor.(14).cnf
+db|processor.(13).cnf
+db|processor.(13).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -669,8 +690,8 @@ reg_file:inst31|demux_8:inst1
 # entity
 ram_mux
 # storage
-db|processor.(15).cnf
-db|processor.(15).cnf
+db|processor.(14).cnf
+db|processor.(14).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -692,6 +713,7 @@ ON
 }
 # hierarchies {
 ram_mux:inst13
+ram_mux:inst16
 }
 # lmf
 ..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -702,8 +724,8 @@ ram_mux:inst13
 # entity
 LPM_MUX
 # storage
-db|processor.(16).cnf
-db|processor.(16).cnf
+db|processor.(15).cnf
+db|processor.(15).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|LPM_MUX.tdf
@@ -829,17 +851,18 @@ DATA0_0
 3
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
-8e8df160d449a63ec15dc86ecf2b373f
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.inc
 f172666ca13e5e31e17e3f6cb35af52
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
 }
 # hierarchies {
 ram_mux:inst13|lpm_mux:lpm_mux_component
+ram_mux:inst16|lpm_mux:lpm_mux_component
 }
 # macro_sequence
 
@@ -847,8 +870,8 @@ ram_mux:inst13|lpm_mux:lpm_mux_component
 # entity
 altshift
 # storage
-db|processor.(17).cnf
-db|processor.(17).cnf
+db|processor.(16).cnf
+db|processor.(16).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.tdf
@@ -916,6 +939,7 @@ data0
 }
 # hierarchies {
 ram_mux:inst13|lpm_mux:lpm_mux_component|altshift:external_latency_ffs
+ram_mux:inst16|lpm_mux:lpm_mux_component|altshift:external_latency_ffs
 }
 # macro_sequence
 
@@ -923,8 +947,8 @@ ram_mux:inst13|lpm_mux:lpm_mux_component|altshift:external_latency_ffs
 # entity
 muxlut
 # storage
-db|processor.(18).cnf
-db|processor.(18).cnf
+db|processor.(17).cnf
+db|processor.(17).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.tdf
@@ -997,10 +1021,10 @@ data0
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.inc
 f172666ca13e5e31e17e3f6cb35af52
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
 }
 # hierarchies {
 ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00009
@@ -1011,7 +1035,48 @@ ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00017
 ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00019
 ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00021
 ram_mux:inst13|lpm_mux:lpm_mux_component|muxlut:$00023
+ram_mux:inst16|lpm_mux:lpm_mux_component|muxlut:$00009
+ram_mux:inst16|lpm_mux:lpm_mux_component|muxlut:$00011
+ram_mux:inst16|lpm_mux:lpm_mux_component|muxlut:$00013
+ram_mux:inst16|lpm_mux:lpm_mux_component|muxlut:$00015
+ram_mux:inst16|lpm_mux:lpm_mux_component|muxlut:$00017
+ram_mux:inst16|lpm_mux:lpm_mux_component|muxlut:$00019
+ram_mux:inst16|lpm_mux:lpm_mux_component|muxlut:$00021
+ram_mux:inst16|lpm_mux:lpm_mux_component|muxlut:$00023
 }
+# macro_sequence
+
+# end
+# entity
+display_buddy
+# storage
+db|processor.(18).cnf
+db|processor.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+display_buddy|display_buddy.vhd
+de90ec1a928576ec9f6defff39551c5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+display_buddy:inst33
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end
@@ -1199,12 +1264,12 @@ address0
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
-c22bfd353214c01495b560fc34e47d79
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altram.inc
 e66a83eccf6717bed97c99d891ad085
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
 bd0e2f5e01c1bd360461dceb53d48
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
 }
 # hierarchies {
 lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component
@@ -1369,18 +1434,18 @@ address0
 3
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
-44d4551a35f349f0dbacaf799d39950
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
-c22bfd353214c01495b560fc34e47d79
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altsyncram.inc
 1b5760dd55919ddb45bfb2c0e896218b
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altqpram.inc
 74e08939f96a7ea8e7a4d59a5b01fe7
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
 bd0e2f5e01c1bd360461dceb53d48
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
+44d4551a35f349f0dbacaf799d39950
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
 }
 # memory_file {
 none
@@ -1393,10 +1458,43 @@ lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component|altram:sram
 
 # end
 # entity
-extender
+sign_ext
 # storage
 db|processor.(22).cnf
 db|processor.(22).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+sign_ext.vhd
+5418251e13611a5ffca8e3c5ce5bfea7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+sign_ext:inst14
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+extender
+# storage
+db|processor.(23).cnf
+db|processor.(23).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1428,8 +1526,8 @@ extender:inst27
 # entity
 two_two_mux
 # storage
-db|processor.(23).cnf
-db|processor.(23).cnf
+db|processor.(24).cnf
+db|processor.(24).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1461,8 +1559,8 @@ two_two_mux:inst28
 # entity
 addOne
 # storage
-db|processor.(24).cnf
-db|processor.(24).cnf
+db|processor.(25).cnf
+db|processor.(25).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1494,8 +1592,8 @@ addOne:inst6
 # entity
 Clock1Hz
 # storage
-db|processor.(25).cnf
-db|processor.(25).cnf
+db|processor.(26).cnf
+db|processor.(26).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1525,10 +1623,549 @@ Clock1Hz:inst
 
 # end
 # entity
+processor
+# storage
+db|processor.(0).cnf
+db|processor.(0).cnf
+# case_insensitive
+# source_file
+processor.bdf
+83f89b9d50aab88c1cca150cc8e592
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 lpm_add_sub
 # storage
-db|processor.(26).cnf
-db|processor.(26).cnf
+db|processor.(27).cnf
+db|processor.(27).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_add_sub.tdf
+2e51ebc96381892436afe139aaa6b25
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+LPM_REPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+ADD
+PARAMETER_UNKNOWN
+USR
+ONE_INPUT_IS_CONSTANT
+YES
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+REGISTERED_AT_END
+0
+PARAMETER_UNKNOWN
+DEF
+OPTIMIZE_FOR_SPEED
+1
+PARAMETER_UNKNOWN
+USR
+USE_CS_BUFFERS
+1
+PARAMETER_UNKNOWN
+DEF
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+USE_WYS
+OFF
+PARAMETER_UNKNOWN
+DEF
+STYLE
+FAST
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+add_sub_fnh
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+datab7
+-1
+1
+datab6
+-1
+1
+datab5
+-1
+1
+datab4
+-1
+1
+datab3
+-1
+1
+datab2
+-1
+1
+datab1
+-1
+1
+cin
+-1
+1
+datab0
+-1
+2
+}
+# include_file {
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
+ae39f15ed67cc9a095d29f68f6ad0f8
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
+ab9f577d30c5ef3166fab6c1c32c4a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
+}
+# macro_sequence
+
+# end
+# entity
+addcore
+# storage
+db|processor.(28).cnf
+db|processor.(28).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.tdf
+1b2b6ae11c95f15ac3d40e6c6c4170
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+width
+8
+PARAMETER_UNKNOWN
+USR
+REPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+DIRECTION
+ADD
+PARAMETER_UNKNOWN
+USR
+USE_CS_BUFFERS
+1
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab7
+-1
+3
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cin
+-1
+3
+}
+# include_file {
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
+49de46f6a395e2e6edecabe6eac9d873
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
+}
+# macro_sequence
+
+# end
+# entity
+a_csnbuffer
+# storage
+db|processor.(29).cnf
+db|processor.(29).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.tdf
+0a953daa377c9212d3c374d37725bd
+7
+# user_parameter {
+WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+NEED_CARRY
+0
+PARAMETER_UNKNOWN
+DEF
+USE_CS_BUFFERS
+1
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sout0
+-1
+3
+sin0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+a_csnbuffer
+# storage
+db|processor.(30).cnf
+db|processor.(30).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.tdf
+0a953daa377c9212d3c374d37725bd
+7
+# user_parameter {
+WIDTH
+8
+PARAMETER_UNKNOWN
+USR
+NEED_CARRY
+1
+PARAMETER_UNKNOWN
+USR
+USE_CS_BUFFERS
+1
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sout7
+-1
+3
+sout6
+-1
+3
+sout5
+-1
+3
+sout4
+-1
+3
+sout3
+-1
+3
+sout2
+-1
+3
+sout1
+-1
+3
+sout0
+-1
+3
+sin7
+-1
+3
+sin6
+-1
+3
+sin5
+-1
+3
+sin4
+-1
+3
+sin3
+-1
+3
+sin2
+-1
+3
+sin1
+-1
+3
+sin0
+-1
+3
+cout7
+-1
+3
+cout6
+-1
+3
+cout5
+-1
+3
+cout4
+-1
+3
+cout3
+-1
+3
+cout2
+-1
+3
+cout1
+-1
+3
+cout0
+-1
+3
+cin7
+-1
+3
+cin6
+-1
+3
+cin5
+-1
+3
+cin4
+-1
+3
+cin3
+-1
+3
+cin2
+-1
+3
+cin1
+-1
+3
+cin0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+altshift
+# storage
+db|processor.(31).cnf
+db|processor.(31).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.tdf
+b979c99547bac7dc31574fe678a95a9
+7
+# user_parameter {
+WIDTH
+1
+PARAMETER_UNKNOWN
+USR
+DEPTH
+0
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+result0
+-1
+3
+data0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+lpm_add_sub
+# storage
+db|processor.(32).cnf
+db|processor.(32).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_add_sub.tdf
@@ -1698,18 +2335,18 @@ datab0
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
-ab9f577d30c5ef3166fab6c1c32c4a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
+ab9f577d30c5ef3166fab6c1c32c4a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
 }
 # macro_sequence
 
@@ -1717,8 +2354,8 @@ ff795e21e4847824c03218724f1a1252
 # entity
 addcore
 # storage
-db|processor.(27).cnf
-db|processor.(27).cnf
+db|processor.(33).cnf
+db|processor.(33).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.tdf
@@ -1856,10 +2493,10 @@ dataa0
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
 49de46f6a395e2e6edecabe6eac9d873
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 }
 # macro_sequence
 
@@ -1867,8 +2504,8 @@ ff795e21e4847824c03218724f1a1252
 # entity
 a_csnbuffer
 # storage
-db|processor.(28).cnf
-db|processor.(28).cnf
+db|processor.(34).cnf
+db|processor.(34).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.tdf
@@ -1902,8 +2539,8 @@ sin0
 # entity
 a_csnbuffer
 # storage
-db|processor.(29).cnf
-db|processor.(29).cnf
+db|processor.(35).cnf
+db|processor.(35).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.tdf
@@ -2039,8 +2676,8 @@ cin0
 # entity
 altshift
 # storage
-db|processor.(30).cnf
-db|processor.(30).cnf
+db|processor.(36).cnf
+db|processor.(36).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.tdf
@@ -2116,41 +2753,10 @@ data0
 
 # end
 # entity
-altshift
-# storage
-db|processor.(31).cnf
-db|processor.(31).cnf
-# case_insensitive
-# source_file
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.tdf
-b979c99547bac7dc31574fe678a95a9
-7
-# user_parameter {
-WIDTH
-1
-PARAMETER_UNKNOWN
-USR
-DEPTH
-0
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-result0
--1
-3
-data0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
 lpm_add_sub
 # storage
-db|processor.(32).cnf
-db|processor.(32).cnf
+db|processor.(37).cnf
+db|processor.(37).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_add_sub.tdf
@@ -2314,18 +2920,18 @@ add_sub
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
-ab9f577d30c5ef3166fab6c1c32c4a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
+ab9f577d30c5ef3166fab6c1c32c4a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
 }
 # macro_sequence
 
@@ -2333,8 +2939,8 @@ ff795e21e4847824c03218724f1a1252
 # entity
 addcore
 # storage
-db|processor.(33).cnf
-db|processor.(33).cnf
+db|processor.(38).cnf
+db|processor.(38).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.tdf
@@ -2466,243 +3072,10 @@ add_sub
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
 49de46f6a395e2e6edecabe6eac9d873
-}
-# macro_sequence
-
-# end
-# entity
-a_csnbuffer
-# storage
-db|processor.(34).cnf
-db|processor.(34).cnf
-# case_insensitive
-# source_file
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.tdf
-0a953daa377c9212d3c374d37725bd
-7
-# user_parameter {
-WIDTH
-8
-PARAMETER_UNKNOWN
-USR
-NEED_CARRY
-0
-PARAMETER_UNKNOWN
-DEF
-USE_CS_BUFFERS
-1
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-sout0
--1
-3
-sin0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
-a_csnbuffer
-# storage
-db|processor.(35).cnf
-db|processor.(35).cnf
-# case_insensitive
-# source_file
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.tdf
-0a953daa377c9212d3c374d37725bd
-7
-# user_parameter {
-WIDTH
-8
-PARAMETER_UNKNOWN
-USR
-NEED_CARRY
-1
-PARAMETER_UNKNOWN
-USR
-USE_CS_BUFFERS
-1
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-sout7
--1
-3
-sout6
--1
-3
-sout5
--1
-3
-sout4
--1
-3
-sout3
--1
-3
-sout2
--1
-3
-sout1
--1
-3
-sout0
--1
-3
-sin7
--1
-3
-sin6
--1
-3
-sin5
--1
-3
-sin4
--1
-3
-sin3
--1
-3
-sin2
--1
-3
-sin1
--1
-3
-sin0
--1
-3
-cout7
--1
-3
-cout6
--1
-3
-cout5
--1
-3
-cout4
--1
-3
-cout3
--1
-3
-cout2
--1
-3
-cout1
--1
-3
-cout0
--1
-3
-cin7
--1
-3
-cin6
--1
-3
-cin5
--1
-3
-cin4
--1
-3
-cin3
--1
-3
-cin2
--1
-3
-cin1
--1
-3
-cin0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
-altshift
-# storage
-db|processor.(36).cnf
-db|processor.(36).cnf
-# case_insensitive
-# source_file
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.tdf
-b979c99547bac7dc31574fe678a95a9
-7
-# user_parameter {
-WIDTH
-8
-PARAMETER_UNKNOWN
-USR
-DEPTH
-0
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-result7
--1
-3
-result6
--1
-3
-result5
--1
-3
-result4
--1
-3
-result3
--1
-3
-result2
--1
-3
-result1
--1
-3
-result0
--1
-3
-data7
--1
-3
-data6
--1
-3
-data5
--1
-3
-data4
--1
-3
-data3
--1
-3
-data2
--1
-3
-data1
--1
-3
-data0
--1
-3
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 }
 # macro_sequence
 
@@ -2710,8 +3083,8 @@ data0
 # entity
 lpm_add_sub
 # storage
-db|processor.(37).cnf
-db|processor.(37).cnf
+db|processor.(39).cnf
+db|processor.(39).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_add_sub.tdf
@@ -2875,162 +3248,18 @@ cin
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
-ab9f577d30c5ef3166fab6c1c32c4a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
+ab9f577d30c5ef3166fab6c1c32c4a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
-}
-# macro_sequence
-
-# end
-# entity
-addcore
-# storage
-db|processor.(38).cnf
-db|processor.(38).cnf
-# case_insensitive
-# source_file
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.tdf
-1b2b6ae11c95f15ac3d40e6c6c4170
-7
-# user_parameter {
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-width
-8
-PARAMETER_UNKNOWN
-USR
-REPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-DIRECTION
-ADD
-PARAMETER_UNKNOWN
-USR
-USE_CS_BUFFERS
-1
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN
-MANUAL
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN_LENGTH
-48
-CARRY_CHAIN_LENGTH
-USR
-DEVICE_FAMILY
-FLEX10K
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-result7
--1
-3
-result6
--1
-3
-result5
--1
-3
-result4
--1
-3
-result3
--1
-3
-result2
--1
-3
-result1
--1
-3
-result0
--1
-3
-datab7
--1
-3
-datab6
--1
-3
-datab5
--1
-3
-datab4
--1
-3
-datab3
--1
-3
-datab2
--1
-3
-datab1
--1
-3
-datab0
--1
-3
-dataa7
--1
-3
-dataa6
--1
-3
-dataa5
--1
-3
-dataa4
--1
-3
-dataa3
--1
-3
-dataa2
--1
-3
-dataa1
--1
-3
-dataa0
--1
-3
-cin
--1
-3
-}
-# include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
-49de46f6a395e2e6edecabe6eac9d873
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
 }
 # macro_sequence
 
@@ -3038,8 +3267,8 @@ ff795e21e4847824c03218724f1a1252
 # entity
 lpm_add_sub
 # storage
-db|processor.(39).cnf
-db|processor.(39).cnf
+db|processor.(40).cnf
+db|processor.(40).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_add_sub.tdf
@@ -3209,18 +3438,18 @@ dataa0
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
-ab9f577d30c5ef3166fab6c1c32c4a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
+ab9f577d30c5ef3166fab6c1c32c4a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
 }
 # macro_sequence
 
@@ -3228,8 +3457,8 @@ ff795e21e4847824c03218724f1a1252
 # entity
 addcore
 # storage
-db|processor.(40).cnf
-db|processor.(40).cnf
+db|processor.(41).cnf
+db|processor.(41).cnf
 # case_insensitive
 # source_file
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.tdf
@@ -3370,268 +3599,11 @@ cin
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
 49de46f6a395e2e6edecabe6eac9d873
-}
-# macro_sequence
-
-# end
-# entity
-lpm_add_sub
-# storage
-db|processor.(41).cnf
-db|processor.(41).cnf
-# case_insensitive
-# source_file
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_add_sub.tdf
-2e51ebc96381892436afe139aaa6b25
-7
-# user_parameter {
-LPM_WIDTH
-8
-PARAMETER_UNKNOWN
-USR
-LPM_REPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_DIRECTION
-ADD
-PARAMETER_UNKNOWN
-USR
-ONE_INPUT_IS_CONSTANT
-YES
-PARAMETER_UNKNOWN
-USR
-LPM_PIPELINE
-0
-PARAMETER_UNKNOWN
-DEF
-MAXIMIZE_SPEED
-5
-PARAMETER_UNKNOWN
-DEF
-REGISTERED_AT_END
-0
-PARAMETER_UNKNOWN
-DEF
-OPTIMIZE_FOR_SPEED
-1
-PARAMETER_UNKNOWN
-USR
-USE_CS_BUFFERS
-1
-PARAMETER_UNKNOWN
-DEF
-CARRY_CHAIN
-MANUAL
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN_LENGTH
-48
-CARRY_CHAIN_LENGTH
-USR
-DEVICE_FAMILY
-FLEX10K
-PARAMETER_UNKNOWN
-USR
-USE_WYS
-OFF
-PARAMETER_UNKNOWN
-DEF
-STYLE
-FAST
-PARAMETER_UNKNOWN
-USR
-CBXI_PARAMETER
-add_sub_fnh
-PARAMETER_UNKNOWN
-USR
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-result7
--1
-3
-result6
--1
-3
-result5
--1
-3
-result4
--1
-3
-result3
--1
-3
-result2
--1
-3
-result1
--1
-3
-result0
--1
-3
-dataa7
--1
-3
-dataa6
--1
-3
-dataa5
--1
-3
-dataa4
--1
-3
-dataa3
--1
-3
-dataa2
--1
-3
-dataa1
--1
-3
-dataa0
--1
-3
-datab7
--1
-1
-datab6
--1
-1
-datab5
--1
-1
-datab4
--1
-1
-datab3
--1
-1
-datab2
--1
-1
-datab1
--1
-1
-cin
--1
-1
-datab0
--1
-2
-}
-# include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
-ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
-ab9f577d30c5ef3166fab6c1c32c4a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
-8e8df160d449a63ec15dc86ecf2b373f
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
 }
-# macro_sequence
-
-# end
-# entity
-reg_file
-# storage
-db|processor.(11).cnf
-db|processor.(11).cnf
-# case_insensitive
-# source_file
-..|reg_file|reg_file.bdf
-cca26bf357cad3869e27808267e4b9f0
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-reg_file:inst31
-}
-# macro_sequence
-
-# end
-# entity
-processor
-# storage
-db|processor.(0).cnf
-db|processor.(0).cnf
-# case_insensitive
-# source_file
-processor.bdf
-3b5d55ab1e200935f07749cea3d41
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-alu
-# storage
-db|processor.(9).cnf
-db|processor.(9).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-..|alu|alu.vhd
-ccd29e046981a12889aa72433914bb6
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-alu:inst32
-}
-# lmf
-..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end
