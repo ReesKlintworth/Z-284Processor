@@ -94,6 +94,8 @@ mem_to_reg_flag <= mem_to_reg.DB_MAX_OUTPUT_PORT_TYPE
 mem_write_flag <= mem_write.DB_MAX_OUTPUT_PORT_TYPE
 reg_write_flag <= reg_write.DB_MAX_OUTPUT_PORT_TYPE
 alu_flag_flag <= alu_flag.DB_MAX_OUTPUT_PORT_TYPE
+overflow_flag <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= alu:inst32.overflow
 dip_switch_out[0] <= dip_switch[0].DB_MAX_OUTPUT_PORT_TYPE
 dip_switch_out[1] <= dip_switch[1].DB_MAX_OUTPUT_PORT_TYPE
 dip_switch_out[2] <= dip_switch[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -3068,5 +3070,11 @@ output[4] <= input[4].DB_MAX_OUTPUT_PORT_TYPE
 output[5] <= input[5].DB_MAX_OUTPUT_PORT_TYPE
 output[6] <= input[5].DB_MAX_OUTPUT_PORT_TYPE
 output[7] <= input[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|processor|zero_flag:inst24
+zero_flag_in => zero_flag_out~reg0.ENA
+in_clk => zero_flag_out~reg0.CLK
+zero_flag_out <= zero_flag_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

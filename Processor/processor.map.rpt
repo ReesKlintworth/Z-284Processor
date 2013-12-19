@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor
-Thu Dec 19 09:06:41 2013
+Thu Dec 19 10:08:02 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -67,13 +67,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Dec 19 09:06:41 2013        ;
+; Analysis & Synthesis Status ; Successful - Thu Dec 19 10:08:02 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; processor                                    ;
 ; Top-level Entity Name       ; processor                                    ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 749                                          ;
-; Total pins                  ; 134                                          ;
+; Total logic elements        ; 755                                          ;
+; Total pins                  ; 136                                          ;
 ; Total memory bits           ; 6,144                                        ;
 +-----------------------------+----------------------------------------------+
 
@@ -185,6 +185,7 @@ applicable agreement for further details.
 ; lpm_ram_dq.tdf                                          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf             ;
 ; altram.inc                                              ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.inc                 ;
 ; altram.tdf                                              ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altram.tdf                 ;
+; zero_flag.vhd                                           ; yes             ; Auto-Found VHDL File                     ; C:/Repos/284Processor/Processor/display_buddy/zero_flag/zero_flag.vhd      ;
 ; lpm_add_sub.tdf                                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf            ;
 ; addcore.inc                                             ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc                ;
 ; look_add.inc                                            ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc               ;
@@ -201,21 +202,21 @@ applicable agreement for further details.
 +-----------------------------------+-------------------------------+
 ; Resource                          ; Usage                         ;
 +-----------------------------------+-------------------------------+
-; Total logic elements              ; 749                           ;
-; Total combinational functions     ; 717                           ;
-;     -- Total 4-input functions    ; 319                           ;
-;     -- Total 3-input functions    ; 284                           ;
-;     -- Total 2-input functions    ; 70                            ;
+; Total logic elements              ; 755                           ;
+; Total combinational functions     ; 723                           ;
+;     -- Total 4-input functions    ; 322                           ;
+;     -- Total 3-input functions    ; 285                           ;
+;     -- Total 2-input functions    ; 72                            ;
 ;     -- Total 1-input functions    ; 43                            ;
 ;     -- Total 0-input functions    ; 1                             ;
 ; Total registers                   ; 124                           ;
 ; Total logic cells in carry chains ; 83                            ;
-; I/O pins                          ; 134                           ;
+; I/O pins                          ; 136                           ;
 ; Total memory bits                 ; 6144                          ;
 ; Maximum fan-out node              ; clock_splitter:inst2|out_clk2 ;
 ; Maximum fan-out                   ; 102                           ;
-; Total fan-out                     ; 2980                          ;
-; Average fan-out                   ; 3.29                          ;
+; Total fan-out                     ; 3002                          ;
+; Average fan-out                   ; 3.28                          ;
 +-----------------------------------+-------------------------------+
 
 
@@ -224,7 +225,7 @@ applicable agreement for further details.
 +-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                             ; Library Name ;
 +-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------+--------------+
-; |processor                              ; 749 (3)     ; 124          ; 6144        ; 134  ; 625 (3)      ; 32 (0)            ; 92 (0)           ; 83 (0)          ; 0 (0)      ; |processor                                                                      ; work         ;
+; |processor                              ; 755 (3)     ; 124          ; 6144        ; 136  ; 631 (3)      ; 32 (0)            ; 92 (0)           ; 83 (0)          ; 0 (0)      ; |processor                                                                      ; work         ;
 ;    |Clock1Hz:inst|                      ; 40 (24)     ; 18           ; 0           ; 0    ; 22 (6)       ; 4 (4)             ; 14 (14)          ; 17 (1)          ; 0 (0)      ; |processor|Clock1Hz:inst                                                        ; work         ;
 ;       |lpm_add_sub:Add0|                ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |processor|Clock1Hz:inst|lpm_add_sub:Add0                                       ; work         ;
 ;          |addcore:adder|                ; 16 (1)      ; 0            ; 0           ; 0    ; 16 (1)       ; 0 (0)             ; 0 (0)            ; 16 (1)          ; 0 (0)      ; |processor|Clock1Hz:inst|lpm_add_sub:Add0|addcore:adder                         ; work         ;
@@ -234,7 +235,7 @@ applicable agreement for further details.
 ;       |lpm_add_sub:Add0|                ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |processor|addOne:inst6|lpm_add_sub:Add0                                        ; work         ;
 ;          |addcore:adder|                ; 7 (1)       ; 0            ; 0           ; 0    ; 7 (1)        ; 0 (0)             ; 0 (0)            ; 7 (1)           ; 0 (0)      ; |processor|addOne:inst6|lpm_add_sub:Add0|addcore:adder                          ; work         ;
 ;             |a_csnbuffer:result_node|   ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |processor|addOne:inst6|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node  ; work         ;
-;    |alu:inst32|                         ; 331 (266)   ; 0            ; 0           ; 0    ; 331 (266)    ; 0 (0)             ; 0 (0)            ; 58 (0)          ; 0 (0)      ; |processor|alu:inst32                                                           ; work         ;
+;    |alu:inst32|                         ; 337 (272)   ; 0            ; 0           ; 0    ; 337 (272)    ; 0 (0)             ; 0 (0)            ; 58 (0)          ; 0 (0)      ; |processor|alu:inst32                                                           ; work         ;
 ;       |lpm_add_sub:Add0|                ; 15 (0)      ; 0            ; 0           ; 0    ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |processor|alu:inst32|lpm_add_sub:Add0                                          ; work         ;
 ;          |addcore:adder|                ; 15 (8)      ; 0            ; 0           ; 0    ; 15 (8)       ; 0 (0)             ; 0 (0)            ; 9 (2)           ; 0 (0)      ; |processor|alu:inst32|lpm_add_sub:Add0|addcore:adder                            ; work         ;
 ;             |a_csnbuffer:result_node|   ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |processor|alu:inst32|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node    ; work         ;
@@ -327,6 +328,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:inst32|d[2]                                     ; alu:inst32|d[7]~1         ; yes                    ;
 ; alu:inst32|d[1]                                     ; alu:inst32|d[7]~1         ; yes                    ;
 ; alu:inst32|d[0]                                     ; alu:inst32|d[7]~1         ; yes                    ;
+; alu:inst32|overflow                                 ; controller:inst12|aluFlag ; yes                    ;
 ; alu:inst32|dCopy[1]                                 ; alu:inst32|dCopy[1]~0     ; yes                    ;
 ; alu:inst32|dCopy[2]                                 ; alu:inst32|dCopy[1]~0     ; yes                    ;
 ; alu:inst32|dCopy[3]                                 ; alu:inst32|dCopy[1]~0     ; yes                    ;
@@ -359,7 +361,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alu:inst32|signedD[6]                               ; controller:inst12|aluFlag ; yes                    ;
 ; alu:inst32|signedD[7]                               ; controller:inst12|aluFlag ; yes                    ;
 ; alu:inst32|signedD[0]                               ; controller:inst12|aluFlag ; yes                    ;
-; Number of user-specified and inferred latches = 41  ;                           ;                        ;
+; Number of user-specified and inferred latches = 42  ;                           ;                        ;
 +-----------------------------------------------------+---------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -369,6 +371,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------+---------------------------------------------+
 ; Register name                         ; Reason for Removal                          ;
 +---------------------------------------+---------------------------------------------+
+; zero_flag:inst24|zero_flag_out        ; Stuck at VCC due to stuck port data_in      ;
 ; reg_file:inst31|8dffe:inst6|29        ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst31|8dffe:inst6|30        ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst31|8dffe:inst6|31        ; Stuck at GND due to stuck port clock_enable ;
@@ -377,7 +380,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; reg_file:inst31|8dffe:inst6|34        ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst31|8dffe:inst6|35        ; Stuck at GND due to stuck port clock_enable ;
 ; reg_file:inst31|8dffe:inst6|36        ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 8 ;                                             ;
+; Total Number of Removed Registers = 9 ;                                             ;
 +---------------------------------------+---------------------------------------------+
 
 
@@ -857,7 +860,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 19 09:06:37 2013
+    Info: Processing started: Thu Dec 19 10:07:57 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
 Info: Found 2 design units, including 1 entities, in source file addOne.vhd
     Info: Found design unit 1: addOne-behav
@@ -1148,6 +1151,10 @@ Info: Elaborated megafunction instantiation "lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ra
 Info: Elaborating entity "lpm_mux1" for hierarchy "lpm_mux1:inst22"
 Info: Elaborating entity "addOne" for hierarchy "addOne:inst6"
 Info: Elaborating entity "sign_ext" for hierarchy "sign_ext:inst14"
+Warning: Using design file display_buddy/zero_flag/zero_flag.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: zero_flag-behav
+    Info: Found entity 1: zero_flag
+Info: Elaborating entity "zero_flag" for hierarchy "zero_flag:inst24"
 Info: Inferred 9 megafunctions from design logic
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "addOne:inst6|Add0"
     Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst32|Add2"
@@ -1250,7 +1257,7 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst29|lpm_rom:lpm_rom_component|otri[7]" to the node "reg_file:inst31|mux_8:inst|Mux0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst29|lpm_rom:lpm_rom_component|otri[6]" to the node "reg_file:inst31|mux_8:inst|Mux0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst29|lpm_rom:lpm_rom_component|otri[8]" to the node "reg_file:inst31|mux_8:inst|Mux0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst29|lpm_rom:lpm_rom_component|otri[5]" to the node "reg_file:inst31|mux_8:inst2|Mux0" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst29|lpm_rom:lpm_rom_component|otri[5]" to the node "alu:inst32|overflow" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst29|lpm_rom:lpm_rom_component|otri[4]" to the node "reg_file:inst31|mux_8:inst2|Mux0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst29|lpm_rom:lpm_rom_component|otri[3]" to the node "reg_file:inst31|mux_8:inst2|Mux0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst29|lpm_rom:lpm_rom_component|otri[2]" to the node "alu:inst32|Mux9" into an OR gate
@@ -1277,6 +1284,8 @@ Warning: Latch alu:inst32|d[1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst29|lpm_rom:lpm_rom_component|altrom:srom|q[14]
 Warning: Latch alu:inst32|d[0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst29|lpm_rom:lpm_rom_component|altrom:srom|q[14]
+Warning: Latch alu:inst32|overflow has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst29|lpm_rom:lpm_rom_component|altrom:srom|q[15]
 Warning: Latch alu:inst32|dCopy[1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst29|lpm_rom:lpm_rom_component|altrom:srom|q[14]
 Warning: Latch alu:inst32|dCopy[2] has unsafe behavior
@@ -1297,15 +1306,16 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "imm[7]" is stuck at GND
     Warning (13410): Pin "imm[6]" is stuck at GND
     Warning (13410): Pin "clk_out" is stuck at GND
+    Warning (13410): Pin "overflow_flag" is stuck at GND
 Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
-Info: Implemented 907 device resources after synthesis - the final resource count might be different
+Info: Implemented 915 device resources after synthesis - the final resource count might be different
     Info: Implemented 14 input pins
-    Info: Implemented 120 output pins
-    Info: Implemented 749 logic cells
+    Info: Implemented 122 output pins
+    Info: Implemented 755 logic cells
     Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 216 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 220 warnings
     Info: Peak virtual memory: 256 megabytes
-    Info: Processing ended: Thu Dec 19 09:06:42 2013
+    Info: Processing ended: Thu Dec 19 10:08:02 2013
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 

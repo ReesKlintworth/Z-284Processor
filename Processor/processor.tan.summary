@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.800 ns
+Actual Time    : 7.600 ns
 From           : dip_switch[6]
 To             : display_buddy:inst8|data_out[6]
 From Clock     : --
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 94.600 ns
+Actual Time    : 96.400 ns
 From           : PC:inst3|pre_count[7]
-To             : write_data[4]
+To             : write_data[1]
 From Clock     : clk_fast
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 32.300 ns
+Actual Time    : 32.100 ns
 From           : LED_reg[1]
-To             : display[3]
+To             : display[0]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,8 +35,8 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 4.600 ns
-From           : dip_switch[0]
+Actual Time    : 2.200 ns
+From           : btn2
 To             : display_buddy:inst8|data_out[0]
 From Clock     : --
 To Clock       : clk_fast
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk_fast'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.22 MHz ( period = 121.600 ns )
+Actual Time    : 9.35 MHz ( period = 107.000 ns )
 From           : alu:inst32|zero
-To             : lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[0]~reg_wa3
+To             : lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[0]~reg_wa1
 From Clock     : clk_fast
 To Clock       : clk_fast
 Failed Paths   : 0
@@ -56,11 +56,11 @@ Type           : Clock Hold: 'clk_fast'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : reg_file:inst31|8dffe:inst8|31
-To             : alu:inst32|signedS[2]
+From           : reg_file:inst31|8dffe:inst11|33
+To             : alu:inst32|signedT[4]
 From Clock     : clk_fast
 To Clock       : clk_fast
-Failed Paths   : 831
+Failed Paths   : 812
 
 Type           : Total number of failed paths
 Slack          : 
@@ -70,7 +70,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 831
+Failed Paths   : 812
 
 --------------------------------------------------------------------------------------
 

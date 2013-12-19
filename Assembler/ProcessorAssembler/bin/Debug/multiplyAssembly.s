@@ -1,5 +1,5 @@
-	addi $5,$0,16
-	addi $6,$0,15
+	addi $5,$0,9
+	addi $6,$0,9
 	addi $1,$0,1
 loop:	beq $6,$0,end
 	and $2,$6,$1
