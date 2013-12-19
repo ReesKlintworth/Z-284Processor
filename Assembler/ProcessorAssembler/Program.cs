@@ -80,7 +80,7 @@ namespace ProcessorAssembler
 			numOfImmPerOperationTable["addi"] = 1;
 			numOfImmPerOperationTable["subi"] = 1;
 			numOfImmPerOperationTable["j"] = 1;
-			numOfImmPerOperationTable["jr"] = 1;
+			numOfImmPerOperationTable["jr"] = 0;
 			numOfImmPerOperationTable["jal"] = 1;
 			numOfImmPerOperationTable["beq"] = 1;
 			numOfImmPerOperationTable["bne"] = 1;
@@ -262,6 +262,14 @@ namespace ProcessorAssembler
 						throw new EntryPointNotFoundException();
 					}
 					outputLine += ";";
+
+					// jump reg
+					if (op.Equals("0110"))
+					{
+						outputLine = outputLine.Insert(outputLine.Length - 4, "000");
+						outputLine = outputLine.Insert(outputLine.Length - 1, "000000");
+					}
+
 					outputLines.Add(outputLine);
 				}
 				outputLines.Add("END;");
