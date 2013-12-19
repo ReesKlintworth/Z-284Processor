@@ -1,0 +1,36 @@
+|two_two_mux
+rs[0] => jump_addr~7.DATAA
+rs[1] => jump_addr~6.DATAA
+rs[2] => jump_addr~5.DATAA
+rs[3] => jump_addr~4.DATAA
+rs[4] => jump_addr~3.DATAA
+rs[5] => jump_addr~2.DATAA
+rs[6] => jump_addr~1.DATAA
+rs[7] => jump_addr~0.DATAA
+imm[0] => jump_addr~7.DATAB
+imm[1] => jump_addr~6.DATAB
+imm[2] => jump_addr~5.DATAB
+imm[3] => jump_addr~4.DATAB
+imm[4] => jump_addr~3.DATAB
+imm[5] => jump_addr~2.DATAB
+imm[6] => jump_addr~1.DATAB
+imm[7] => jump_addr~0.DATAB
+jmp => jump_addr~7.OUTPUTSELECT
+jmp => jump_addr~6.OUTPUTSELECT
+jmp => jump_addr~5.OUTPUTSELECT
+jmp => jump_addr~4.OUTPUTSELECT
+jmp => jump_addr~3.OUTPUTSELECT
+jmp => jump_addr~2.OUTPUTSELECT
+jmp => jump_addr~1.OUTPUTSELECT
+jmp => jump_addr~0.OUTPUTSELECT
+jr => ~NO_FANOUT~
+jump_addr[0] <= jump_addr~7.DB_MAX_OUTPUT_PORT_TYPE
+jump_addr[1] <= jump_addr~6.DB_MAX_OUTPUT_PORT_TYPE
+jump_addr[2] <= jump_addr~5.DB_MAX_OUTPUT_PORT_TYPE
+jump_addr[3] <= jump_addr~4.DB_MAX_OUTPUT_PORT_TYPE
+jump_addr[4] <= jump_addr~3.DB_MAX_OUTPUT_PORT_TYPE
+jump_addr[5] <= jump_addr~2.DB_MAX_OUTPUT_PORT_TYPE
+jump_addr[6] <= jump_addr~1.DB_MAX_OUTPUT_PORT_TYPE
+jump_addr[7] <= jump_addr~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

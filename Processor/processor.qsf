@@ -78,6 +78,7 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/alu_test2.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Tests/ram_test.vwf
 set_global_assignment -name QIP_FILE mux_1/mux_1.qip
 set_global_assignment -name BSF_FILE jmp_mux/jump_mux.bsf
+set_global_assignment -name SEARCH_PATH two_two_mux
 set_global_assignment -name SEARCH_PATH "3-2_mux"
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\extender"
 set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\controller"

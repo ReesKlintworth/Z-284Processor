@@ -1,5 +1,5 @@
 Flow report for processor
-Wed Dec 18 17:41:17 2013
+Wed Dec 18 20:36:28 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Wed Dec 18 17:41:16 2013        ;
+; Flow Status             ; Successful - Wed Dec 18 20:36:28 2013        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; processor                                    ;
 ; Top-level Entity Name   ; processor                                    ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPF10K70RC240-4                              ;
 ; Timing Models           ; Final                                        ;
 ; Met timing requirements ; No                                           ;
-; Total logic elements    ; 516 / 3,744 ( 14 % )                         ;
+; Total logic elements    ; 546 / 3,744 ( 15 % )                         ;
 ; Total pins              ; 77 / 189 ( 41 % )                            ;
 ; Total memory bits       ; 6,144 / 18,432 ( 33 % )                      ;
 +-------------------------+----------------------------------------------+
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/18/2013 17:40:44 ;
+; Start date & time ; 12/18/2013 20:35:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processor           ;
 +-------------------+---------------------+
@@ -68,12 +68,14 @@ applicable agreement for further details.
 +------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                                  ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 137240370473119.138741004306428                                        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 137240370473119.138742055204328                                        ; --            ; --          ; --             ;
 ; FITTER_EFFORT                      ; Standard Fit                                                           ; Auto Fit      ; --          ; --             ;
 ; IP_TOOL_NAME                       ; ROM: 1-PORT                                                            ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_ROM                                                                ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_RAM_DQ                                                             ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_MUX                                                                ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MUX                                                                ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                                    ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.0                                                                    ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.0                                                                    ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.0                                                                    ; --            ; --          ; --             ;
@@ -90,7 +92,13 @@ applicable agreement for further details.
 ; MISC_FILE                          ; mux/ram_mux.bsf                                                        ; --            ; --          ; --             ;
 ; MISC_FILE                          ; mux/ram_mux_inst.vhd                                                   ; --            ; --          ; --             ;
 ; MISC_FILE                          ; mux/ram_mux.cmp                                                        ; --            ; --          ; --             ;
+; MISC_FILE                          ; mux_1/mux_1.bsf                                                        ; --            ; --          ; --             ;
+; MISC_FILE                          ; mux_1/mux_1_inst.vhd                                                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; mux_1/mux_1.cmp                                                        ; --            ; --          ; --             ;
 ; OPTIMIZE_HOLD_TIMING               ; IO Paths and Minimum TPD Paths                                         ; --            ; --          ; --             ;
+; SEARCH_PATH                        ; two_two_mux                                                            ; --            ; --          ; --             ;
+; SEARCH_PATH                        ; 3-2_mux                                                                ; --            ; --          ; --             ;
+; SEARCH_PATH                        ; c:\users\derek nordgren\documents\github\284processor\extender         ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; c:\users\derek nordgren\documents\github\284processor\controller       ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; c:\users\derek nordgren\documents\github\284processor\alu              ; --            ; --          ; --             ;
 ; SEARCH_PATH                        ; c:\users\derek nordgren\documents\github\284processor\reg_file\mux_8   ; --            ; --          ; --             ;
@@ -105,11 +113,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:08     ; 1.0                     ; 254 MB              ; 00:00:08                           ;
-; Fitter                  ; 00:00:20     ; 1.0                     ; 221 MB              ; 00:00:19                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 209 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 181 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:30     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis    ; 00:00:10     ; 1.0                     ; 255 MB              ; 00:00:09                           ;
+; Fitter                  ; 00:00:21     ; 1.0                     ; 221 MB              ; 00:00:21                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 213 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 177 MB              ; 00:00:02                           ;
+; Total                   ; 00:00:34     ; --                      ; --                  ; 00:00:33                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
