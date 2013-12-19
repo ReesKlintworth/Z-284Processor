@@ -257,7 +257,7 @@ namespace ProcessorAssembler
 						throw new FormatException();
 					}
 
-					if (rd.Equals("000") && (!((int)numOfRegistersPerOperationTable[components[0]] == 0)))
+					if (rd.Equals("000") && (!(((int)numOfRegistersPerOperationTable[components[0]] == 0) || op.Equals("1000") || op.Equals("1001"))))
 					{
 						throw new EntryPointNotFoundException();
 					}

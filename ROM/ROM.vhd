@@ -43,7 +43,6 @@ ENTITY ROM IS
 	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-		inclock		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 	);
 END ROM;
@@ -67,7 +66,6 @@ ARCHITECTURE SYN OF rom IS
 	);
 	PORT (
 			address	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-			inclock	: IN STD_LOGIC ;
 			q	: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 	);
 	END COMPONENT;
@@ -78,8 +76,8 @@ BEGIN
 	lpm_rom_component : lpm_rom
 	GENERIC MAP (
 		intended_device_family => "FLEX10K",
-		lpm_address_control => "REGISTERED",
-		lpm_file => "../ProcessorAssembler/ProcessorAssembler/bin/Debug/output.mif",
+		lpm_address_control => "UNREGISTERED",
+		lpm_file => "../Assembler/ProcessorAssembler/bin/Debug/jbt.mif",
 		lpm_outdata => "UNREGISTERED",
 		lpm_type => "LPM_ROM",
 		lpm_width => 16,
@@ -87,7 +85,6 @@ BEGIN
 	)
 	PORT MAP (
 		address => address,
-		inclock => inclock,
 		q => sub_wire0
 	);
 
@@ -115,32 +112,30 @@ END SYN;
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
--- Retrieval info: PRIVATE: MIFfilename STRING "../ProcessorAssembler/ProcessorAssembler/bin/Debug/output.mif"
+-- Retrieval info: PRIVATE: MIFfilename STRING "../Assembler/ProcessorAssembler/bin/Debug/jbt.mif"
 -- Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "256"
 -- Retrieval info: PRIVATE: OutputRegistered NUMERIC "0"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
--- Retrieval info: PRIVATE: RegAdd NUMERIC "1"
--- Retrieval info: PRIVATE: RegAddr NUMERIC "1"
+-- Retrieval info: PRIVATE: RegAdd NUMERIC "0"
+-- Retrieval info: PRIVATE: RegAddr NUMERIC "0"
 -- Retrieval info: PRIVATE: RegOutput NUMERIC "0"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: PRIVATE: SingleClock NUMERIC "0"
+-- Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 -- Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
 -- Retrieval info: PRIVATE: WidthAddr NUMERIC "8"
 -- Retrieval info: PRIVATE: WidthData NUMERIC "16"
 -- Retrieval info: PRIVATE: rden NUMERIC "0"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "FLEX10K"
--- Retrieval info: CONSTANT: LPM_ADDRESS_CONTROL STRING "REGISTERED"
--- Retrieval info: CONSTANT: LPM_FILE STRING "../ProcessorAssembler/ProcessorAssembler/bin/Debug/output.mif"
+-- Retrieval info: CONSTANT: LPM_ADDRESS_CONTROL STRING "UNREGISTERED"
+-- Retrieval info: CONSTANT: LPM_FILE STRING "../Assembler/ProcessorAssembler/bin/Debug/jbt.mif"
 -- Retrieval info: CONSTANT: LPM_OUTDATA STRING "UNREGISTERED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_ROM"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "16"
 -- Retrieval info: CONSTANT: LPM_WIDTHAD NUMERIC "8"
 -- Retrieval info: USED_PORT: address 0 0 8 0 INPUT NODEFVAL address[7..0]
--- Retrieval info: USED_PORT: inclock 0 0 0 0 INPUT NODEFVAL inclock
 -- Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL q[15..0]
 -- Retrieval info: CONNECT: @address 0 0 8 0 address 0 0 8 0
 -- Retrieval info: CONNECT: q 0 0 16 0 @q 0 0 16 0
--- Retrieval info: CONNECT: @inclock 0 0 0 0 inclock 0 0 0 0
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL ROM.inc FALSE

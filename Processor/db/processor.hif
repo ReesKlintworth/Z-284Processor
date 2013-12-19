@@ -15,6 +15,7 @@ VRSM_ON
 VHSM_ON
 0
 -- Start Library Paths --
+..|rom|
 two_two_mux|
 3-2_mux|
 ..|extender|
@@ -26,26 +27,6 @@ two_two_mux|
 -- End Library Paths --
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
-# entity
-processor
-# storage
-db|processor.(0).cnf
-db|processor.(0).cnf
-# case_insensitive
-# source_file
-processor.bdf
-5cd5118e753f7e44b995934ead93b575
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
 # entity
 clock_splitter
 # storage
@@ -156,8 +137,8 @@ ON
 }
 # case_insensitive
 # source_file
-..|ROM|lpm_rom0.vhd
-c4697549368c32f93aad7dba5b432f
+..|rom|lpm_rom0.vhd
+c0e1f3f7b5cdc8d37dc3dfea62ca249b
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -170,7 +151,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_rom0:inst10
+lpm_rom0:inst29
 }
 # lmf
 ..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -210,7 +191,7 @@ UNREGISTERED
 PARAMETER_UNKNOWN
 USR
 LPM_FILE
-../Assembler/ProcessorAssembler/bin/Debug/simple_out.mif
+../Assembler/ProcessorAssembler/bin/Debug/jbt.mif
 PARAMETER_UNKNOWN
 USR
 DEVICE_FAMILY
@@ -315,7 +296,7 @@ address0
 d4e3a69a331d3a99d3281790d99a1ebd
 }
 # hierarchies {
-lpm_rom0:inst10|lpm_rom:lpm_rom_component
+lpm_rom0:inst29|lpm_rom:lpm_rom_component
 }
 # macro_sequence
 
@@ -352,7 +333,7 @@ NUMWORDS
 PARAMETER_UNKNOWN
 USR
 FILE
-../Assembler/ProcessorAssembler/bin/Debug/simple_out.mif
+../Assembler/ProcessorAssembler/bin/Debug/jbt.mif
 PARAMETER_UNKNOWN
 USR
 REGISTERINPUTMODE
@@ -467,25 +448,25 @@ address0
 3
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altqpram.inc
-74e08939f96a7ea8e7a4d59a5b01fe7
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
 44d4551a35f349f0dbacaf799d39950
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
 c22bfd353214c01495b560fc34e47d79
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altsyncram.inc
 1b5760dd55919ddb45bfb2c0e896218b
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altqpram.inc
+74e08939f96a7ea8e7a4d59a5b01fe7
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
 }
 # memory_file {
-..|Assembler|ProcessorAssembler|bin|Debug|simple_out.mif
-e2a930d6fca4239b3eebcb135d05644
+..|Assembler|ProcessorAssembler|bin|Debug|jbt.mif
+2d5b517c6716e266c4ee1c5626514181
 }
 # hierarchies {
-lpm_rom0:inst10|lpm_rom:lpm_rom_component|altrom:srom
+lpm_rom0:inst29|lpm_rom:lpm_rom_component|altrom:srom
 }
 # macro_sequence
 
@@ -557,39 +538,6 @@ three_two_mux:inst25
 
 # end
 # entity
-alu
-# storage
-db|processor.(9).cnf
-db|processor.(9).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-..|alu|alu.vhd
-12fabfcf1f254dbc729e1558925e67
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-alu:inst16
-}
-# lmf
-..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 sign_ext
 # storage
 db|processor.(10).cnf
@@ -623,26 +571,6 @@ sign_ext:inst14
 
 # end
 # entity
-reg_file
-# storage
-db|processor.(11).cnf
-db|processor.(11).cnf
-# case_insensitive
-# source_file
-..|reg_file|reg_file.bdf
-e7138a345ac998b78470c4f511e9cee2
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-reg_file:inst7
-}
-# macro_sequence
-
-# end
-# entity
 mux_8
 # storage
 db|processor.(12).cnf
@@ -667,9 +595,10 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-reg_file:inst7|mux_8:inst3
-reg_file:inst7|mux_8:inst
-reg_file:inst7|mux_8:inst2
+reg_file:inst31|mux_8:inst3
+reg_file:inst31|mux_8:inst
+reg_file:inst31|mux_8:inst2
+reg_file:inst31|mux_8:inst20
 }
 # lmf
 ..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -692,14 +621,14 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-reg_file:inst7|8dffe:inst6
-reg_file:inst7|8dffe:inst7
-reg_file:inst7|8dffe:inst8
-reg_file:inst7|8dffe:inst9
-reg_file:inst7|8dffe:inst10
-reg_file:inst7|8dffe:inst11
-reg_file:inst7|8dffe:inst12
-reg_file:inst7|8dffe:inst13
+reg_file:inst31|8dffe:inst6
+reg_file:inst31|8dffe:inst7
+reg_file:inst31|8dffe:inst8
+reg_file:inst31|8dffe:inst9
+reg_file:inst31|8dffe:inst10
+reg_file:inst31|8dffe:inst11
+reg_file:inst31|8dffe:inst12
+reg_file:inst31|8dffe:inst13
 }
 # macro_sequence
 
@@ -729,7 +658,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-reg_file:inst7|demux_8:inst1
+reg_file:inst31|demux_8:inst1
 }
 # lmf
 ..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -900,12 +829,12 @@ DATA0_0
 3
 }
 # include_file {
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.inc
 f172666ca13e5e31e17e3f6cb35af52
 }
@@ -1270,12 +1199,12 @@ address0
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altram.inc
-e66a83eccf6717bed97c99d891ad085
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
 c22bfd353214c01495b560fc34e47d79
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altram.inc
+e66a83eccf6717bed97c99d891ad085
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
 }
 # hierarchies {
 lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component
@@ -1440,18 +1369,18 @@ address0
 3
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altqpram.inc
-74e08939f96a7ea8e7a4d59a5b01fe7
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|others|maxplus2|memmodes.inc
 44d4551a35f349f0dbacaf799d39950
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_mux.inc
 c22bfd353214c01495b560fc34e47d79
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altsyncram.inc
 1b5760dd55919ddb45bfb2c0e896218b
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altqpram.inc
+74e08939f96a7ea8e7a4d59a5b01fe7
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
 }
 # memory_file {
 none
@@ -1767,20 +1696,20 @@ datab0
 2
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
-8e8df160d449a63ec15dc86ecf2b373f
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
 ab9f577d30c5ef3166fab6c1c32c4a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 }
 # macro_sequence
 
@@ -1927,10 +1856,10 @@ dataa0
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
-49de46f6a395e2e6edecabe6eac9d873
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
+49de46f6a395e2e6edecabe6eac9d873
 }
 # macro_sequence
 
@@ -2383,20 +2312,20 @@ add_sub
 3
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
-8e8df160d449a63ec15dc86ecf2b373f
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
 ab9f577d30c5ef3166fab6c1c32c4a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 }
 # macro_sequence
 
@@ -2537,10 +2466,10 @@ add_sub
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
-49de46f6a395e2e6edecabe6eac9d873
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
+49de46f6a395e2e6edecabe6eac9d873
 }
 # macro_sequence
 
@@ -2944,20 +2873,20 @@ cin
 1
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
-8e8df160d449a63ec15dc86ecf2b373f
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
 ab9f577d30c5ef3166fab6c1c32c4a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 }
 # macro_sequence
 
@@ -3098,10 +3027,10 @@ cin
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
-49de46f6a395e2e6edecabe6eac9d873
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
+49de46f6a395e2e6edecabe6eac9d873
 }
 # macro_sequence
 
@@ -3278,20 +3207,20 @@ dataa0
 2
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
-8e8df160d449a63ec15dc86ecf2b373f
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
 ab9f577d30c5ef3166fab6c1c32c4a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 }
 # macro_sequence
 
@@ -3441,10 +3370,10 @@ cin
 # include_file {
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
-49de46f6a395e2e6edecabe6eac9d873
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
 ff795e21e4847824c03218724f1a1252
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|a_csnbuffer.inc
+49de46f6a395e2e6edecabe6eac9d873
 }
 # macro_sequence
 
@@ -3615,21 +3544,94 @@ datab0
 2
 }
 # include_file {
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
-99832fdf63412df51d7531202d74e75
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
-8e8df160d449a63ec15dc86ecf2b373f
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
-..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 ..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|look_add.inc
 ab9f577d30c5ef3166fab6c1c32c4a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
+c08f604aefba5b4f1f554e565113c6
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|..|..|..|altera|90sp2|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 }
+# macro_sequence
+
+# end
+# entity
+reg_file
+# storage
+db|processor.(11).cnf
+db|processor.(11).cnf
+# case_insensitive
+# source_file
+..|reg_file|reg_file.bdf
+cca26bf357cad3869e27808267e4b9f0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+reg_file:inst31
+}
+# macro_sequence
+
+# end
+# entity
+processor
+# storage
+db|processor.(0).cnf
+db|processor.(0).cnf
+# case_insensitive
+# source_file
+processor.bdf
+3b5d55ab1e200935f07749cea3d41
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+alu
+# storage
+db|processor.(9).cnf
+db|processor.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|alu|alu.vhd
+ccd29e046981a12889aa72433914bb6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+alu:inst32
+}
+# lmf
+..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end

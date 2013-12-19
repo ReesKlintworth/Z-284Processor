@@ -1,10 +1,10 @@
-Fitter Status : Successful - Wed Dec 18 01:04:27 2013
+Fitter Status : Successful - Wed Dec 18 21:29:19 2013
 Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
 Revision Name : reg_file
 Top-level Entity Name : reg_file
 Family : FLEX10K
 Device : EPF10K70RC240-4
 Timing Models : Final
-Total logic elements : 183 / 3,744 ( 5 % )
-Total pins : 47 / 189 ( 25 % )
+Total logic elements : 223 / 3,744 ( 6 % )
+Total pins : 55 / 189 ( 29 % )
 Total memory bits : 0 / 18,432 ( 0 % )

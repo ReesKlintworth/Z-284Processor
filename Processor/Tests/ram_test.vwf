@@ -762,6 +762,106 @@ SIGNAL("imm[0]")
 	PARENT = "imm";
 }
 
+SIGNAL("next_addr")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("next_addr[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "next_addr";
+}
+
+SIGNAL("next_addr[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "next_addr";
+}
+
+SIGNAL("next_addr[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "next_addr";
+}
+
+SIGNAL("next_addr[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "next_addr";
+}
+
+SIGNAL("next_addr[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "next_addr";
+}
+
+SIGNAL("next_addr[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "next_addr";
+}
+
+SIGNAL("next_addr[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "next_addr";
+}
+
+SIGNAL("next_addr[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "next_addr";
+}
+
+SIGNAL("zero")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -1344,6 +1444,87 @@ TRANSITION_LIST("imm[1]")
 }
 
 TRANSITION_LIST("imm[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("next_addr[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("next_addr[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("next_addr[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("next_addr[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("next_addr[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("next_addr[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("next_addr[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("next_addr[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("zero")
 {
 	NODE
 	{
@@ -2078,6 +2259,105 @@ DISPLAY_LINE
 	TREE_INDEX = 72;
 	TREE_LEVEL = 1;
 	PARENT = 56;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 73;
+	TREE_LEVEL = 0;
+	CHILDREN = 74, 75, 76, 77, 78, 79, 80, 81;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 74;
+	TREE_LEVEL = 1;
+	PARENT = 73;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 75;
+	TREE_LEVEL = 1;
+	PARENT = 73;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 76;
+	TREE_LEVEL = 1;
+	PARENT = 73;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 77;
+	TREE_LEVEL = 1;
+	PARENT = 73;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 78;
+	TREE_LEVEL = 1;
+	PARENT = 73;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 79;
+	TREE_LEVEL = 1;
+	PARENT = 73;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 80;
+	TREE_LEVEL = 1;
+	PARENT = 73;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "next_addr[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 81;
+	TREE_LEVEL = 1;
+	PARENT = 73;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "zero";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 82;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

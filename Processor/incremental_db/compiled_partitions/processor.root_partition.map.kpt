@@ -1,49 +1,49 @@
 <kpt_db name="processor.map_bb" kpt_version="1.1">
   <key_points_set type="reference" hier_sep="/">
     <key_point id="1" type="register">
-      <name>inst7/inst6/33</name>
+      <name>inst31/inst6/30</name>
       <attributes_list>
         <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
       </attributes_list>
     </key_point>
     <key_point id="2" type="register">
-      <name>inst7/inst6/32</name>
+      <name>inst31/inst6/31</name>
       <attributes_list>
         <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
       </attributes_list>
     </key_point>
     <key_point id="3" type="register">
-      <name>inst7/inst6/35</name>
+      <name>inst31/inst6/32</name>
       <attributes_list>
         <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
       </attributes_list>
     </key_point>
     <key_point id="4" type="register">
-      <name>inst7/inst6/34</name>
+      <name>inst31/inst6/33</name>
       <attributes_list>
         <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
       </attributes_list>
     </key_point>
     <key_point id="5" type="register">
-      <name>inst7/inst6/36</name>
+      <name>inst31/inst6/29</name>
       <attributes_list>
         <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
       </attributes_list>
     </key_point>
     <key_point id="6" type="register">
-      <name>inst7/inst6/31</name>
+      <name>inst31/inst6/34</name>
       <attributes_list>
         <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
       </attributes_list>
     </key_point>
     <key_point id="7" type="register">
-      <name>inst7/inst6/30</name>
+      <name>inst31/inst6/35</name>
       <attributes_list>
         <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
       </attributes_list>
     </key_point>
     <key_point id="8" type="register">
-      <name>inst7/inst6/29</name>
+      <name>inst31/inst6/36</name>
       <attributes_list>
         <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
       </attributes_list>

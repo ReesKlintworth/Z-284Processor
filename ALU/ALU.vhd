@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity alu is
 port(
         clk : in std_logic;
-        s,t : in std_logic_vector(7 downto 0);
+        s,t,dIn : in std_logic_vector(7 downto 0);
         aluFlag : in std_logic;
         immediate : in std_logic_vector(7 downto 0);
         opCode : in std_logic_vector(3 downto 0);
@@ -21,6 +21,7 @@ architecture functions of alu is
 signal dCopy : std_logic_vector(7 downto 0);
 signal signedS : signed(7 downto 0);
 signal signedT : signed(7 downto 0);
+signal signedD : signed(7 downto 0);
 
 begin
 	process(clk)
@@ -32,6 +33,7 @@ begin
 			
 			signedS <= signed(s);
 			signedT <= signed(t);
+			signedD <= signed(dIn);
 			
 			case opCode is
 				when "0000" =>
@@ -128,6 +130,20 @@ begin
 					elsif (dCopy(7) = '1' AND s(7) = '0' AND immediate(7) = '1') then
 						overflow <= '1';
 					end if;
+					
+					if (dCopy = "00000000") then
+						zero <= '1';
+					end if;
+				when "1000" =>
+					dCopy <= std_logic_vector(signedD - signedS);
+					d <= dCopy;
+					
+					if (dCopy = "00000000") then
+						zero <= '1';
+					end if;
+				when "1001" =>
+					dCopy <= std_logic_vector(signedD - signedS);
+					d <= dCopy;
 					
 					if (dCopy = "00000000") then
 						zero <= '1';
