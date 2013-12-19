@@ -77,7 +77,7 @@ BEGIN
 	GENERIC MAP (
 		intended_device_family => "FLEX10K",
 		lpm_address_control => "UNREGISTERED",
-		lpm_file => "../Assembler/ProcessorAssembler/bin/Debug/jbt.mif",
+		lpm_file => "../Assembler/ProcessorAssembler/bin/Debug/multiply2.mif",
 		lpm_outdata => "UNREGISTERED",
 		lpm_type => "LPM_ROM",
 		lpm_width => 16,

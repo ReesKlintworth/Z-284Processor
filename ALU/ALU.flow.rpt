@@ -1,5 +1,5 @@
 Flow report for ALU
-Wed Dec 18 21:36:27 2013
+Thu Dec 19 04:13:11 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Wed Dec 18 21:36:27 2013        ;
+; Flow Status             ; Successful - Thu Dec 19 04:13:11 2013        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; ALU                                          ;
 ; Top-level Entity Name   ; alu                                          ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPF10K70RC240-4                              ;
 ; Timing Models           ; Final                                        ;
 ; Met timing requirements ; No                                           ;
-; Total logic elements    ; 323 / 3,744 ( 9 % )                          ;
+; Total logic elements    ; 326 / 3,744 ( 9 % )                          ;
 ; Total pins              ; 51 / 189 ( 27 % )                            ;
 ; Total memory bits       ; 0 / 18,432 ( 0 % )                           ;
 +-------------------------+----------------------------------------------+
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/18/2013 21:36:06 ;
+; Start date & time ; 12/19/2013 04:13:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 137240370473119.138742416604428 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 137240371852780.138744798207304 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
@@ -80,11 +80,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 244 MB              ; 00:00:04                           ;
-; Fitter                  ; 00:00:12     ; 1.0                     ; 218 MB              ; 00:00:12                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 209 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 176 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:18     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 245 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 226 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 209 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 181 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -93,10 +93,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; Nordgren-PC      ; Windows Vista ; 6.2        ; x86_64         ;
-; Fitter                  ; Nordgren-PC      ; Windows Vista ; 6.2        ; x86_64         ;
-; Assembler               ; Nordgren-PC      ; Windows Vista ; 6.2        ; x86_64         ;
-; Classic Timing Analyzer ; Nordgren-PC      ; Windows Vista ; 6.2        ; x86_64         ;
+; Analysis & Synthesis    ; Rees-MacPC       ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; Rees-MacPC       ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; Rees-MacPC       ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; Rees-MacPC       ; Windows Vista ; 6.2        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

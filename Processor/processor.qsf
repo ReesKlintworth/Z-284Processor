@@ -47,7 +47,6 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE ANY
 set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Tests/ram_test.vwf
 set_global_assignment -name VHDL_FILE addOne.vhd
 set_global_assignment -name VHDL_FILE clock_splitter.vhd
 set_global_assignment -name VHDL_FILE clock1hz.vhd
@@ -76,13 +75,44 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/ram_test.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/alu_test2.vwf
 set_global_assignment -name QIP_FILE mux_1/mux_1.qip
 set_global_assignment -name BSF_FILE jmp_mux/jump_mux.bsf
+set_global_assignment -name SEARCH_PATH "c:\\repos\\284processor\\reg_file"
+set_global_assignment -name SEARCH_PATH "c:\\repos\\284processor\\reg_file\\demux_8"
+set_global_assignment -name SEARCH_PATH "c:\\repos\\284processor\\reg_file\\mux_8"
+set_global_assignment -name SEARCH_PATH "c:\\repos\\284processor\\alu"
+set_global_assignment -name SEARCH_PATH "c:\\repos\\284processor\\controller"
+set_global_assignment -name SEARCH_PATH "c:\\repos\\284processor\\extender"
+set_global_assignment -name SEARCH_PATH "c:\\repos\\284processor\\rom"
 set_global_assignment -name SEARCH_PATH display_buddy
-set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\rom"
 set_global_assignment -name SEARCH_PATH two_two_mux
 set_global_assignment -name SEARCH_PATH "3-2_mux"
-set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\extender"
-set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\controller"
-set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\alu"
-set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file\\mux_8"
-set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file\\demux_8"
-set_global_assignment -name SEARCH_PATH "c:\\users\\derek nordgren\\documents\\github\\284processor\\reg_file"
+set_global_assignment -name FLEX10K_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_41 -to dip_switch[7]
+set_location_assignment PIN_40 -to dip_switch[6]
+set_location_assignment PIN_39 -to dip_switch[5]
+set_location_assignment PIN_38 -to dip_switch[4]
+set_location_assignment PIN_36 -to dip_switch[3]
+set_location_assignment PIN_35 -to dip_switch[2]
+set_location_assignment PIN_34 -to dip_switch[1]
+set_location_assignment PIN_33 -to dip_switch[0]
+set_location_assignment PIN_28 -to btn1
+set_location_assignment PIN_29 -to btn2
+set_location_assignment PIN_91 -to clk
+set_global_assignment -name MISC_FILE "C:/Repos/284Processor/Processor/processor.dpf"
+set_location_assignment PIN_6 -to display_out[13]
+set_location_assignment PIN_7 -to display_out[12]
+set_location_assignment PIN_8 -to display_out[11]
+set_location_assignment PIN_9 -to display_out[10]
+set_location_assignment PIN_11 -to display_out[9]
+set_location_assignment PIN_12 -to display_out[8]
+set_location_assignment PIN_13 -to display_out[7]
+set_location_assignment PIN_17 -to display_out[6]
+set_location_assignment PIN_18 -to display_out[5]
+set_location_assignment PIN_19 -to display_out[4]
+set_location_assignment PIN_20 -to display_out[3]
+set_location_assignment PIN_21 -to display_out[2]
+set_location_assignment PIN_23 -to display_out[1]
+set_location_assignment PIN_24 -to display_out[0]
+set_location_assignment PIN_14 -to clk_out
+set_location_assignment PIN_25 -to btn2_out
+set_global_assignment -name VECTOR_WAVEFORM_FILE Tests/processor1.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Tests/processor1.vwf

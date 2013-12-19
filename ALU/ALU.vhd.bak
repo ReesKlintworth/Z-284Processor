@@ -134,9 +134,16 @@ begin
 					if (dCopy = "00000000") then
 						zero <= '1';
 					end if;
-				when "1000" OR "1001" =>
+				when "1000" =>
 					dCopy <= std_logic_vector(signedD - signedS);
-					d <= dCopy;
+					d <= dIn;
+					
+					if (dCopy = "00000000") then
+						zero <= '1';
+					end if;
+				when "1001" =>
+					dCopy <= std_logic_vector(signedD - signedS);
+					d <= dIn;
 					
 					if (dCopy = "00000000") then
 						zero <= '1';

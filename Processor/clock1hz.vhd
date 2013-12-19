@@ -11,13 +11,13 @@ ARCHITECTURE behav OF Clock1Hz IS
 	SIGNAL clockTmp: BIT;
 BEGIN
 PROCESS (reset, clk)
-    VARIABLE cnt : INTEGER RANGE 0 TO 12587;
+    VARIABLE cnt : INTEGER RANGE 0 TO 125870;
 BEGIN
     IF (reset = '1') THEN
         clockTmp <= '0';
         cnt := 0;
 	ELSIF (clk'EVENT AND clk = '1') THEN
-		IF (cnt = 12587) THEN
+		IF (cnt = 125870) THEN
            	cnt := 0;
            	clockTmp <= NOT clockTmp;
         ELSE

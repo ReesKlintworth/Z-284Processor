@@ -5,29 +5,29 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.300 ns
-From           : btn1
-To             : display_buddy:inst33|data_out[0]
+Actual Time    : 12.800 ns
+From           : dip_switch[5]
+To             : display_buddy:inst33|data_out[5]
 From Clock     : --
-To Clock       : clk
+To Clock       : clk_fast
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 121.900 ns
+Actual Time    : 110.200 ns
 From           : alu:inst32|d[4]
 To             : write_data[4]
-From Clock     : clk
+From Clock     : clk_fast
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 33.900 ns
-From           : LED_reg[0]
-To             : display[3]
+Actual Time    : 33.700 ns
+From           : LED_reg[1]
+To             : display[7]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,32 +35,32 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.300 ns
-From           : dip_switch[7]
-To             : display_buddy:inst33|data_out[7]
+Actual Time    : -4.800 ns
+From           : dip_switch[1]
+To             : display_buddy:inst33|data_out[1]
 From Clock     : --
-To Clock       : clk
+To Clock       : clk_fast
 Failed Paths   : 0
 
-Type           : Clock Setup: 'clk'
+Type           : Clock Setup: 'clk_fast'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.12 MHz ( period = 195.200 ns )
-From           : alu:inst32|d[2]
-To             : lpm_ram_dq0:inst9|lpm_ram_dq:lpm_ram_dq_component|altram:sram|q[2]~reg_in
-From Clock     : clk
-To Clock       : clk
+Actual Time    : 5.39 MHz ( period = 185.400 ns )
+From           : alu:inst32|d[7]
+To             : display_buddy:inst33|left_digit[5]
+From Clock     : clk_fast
+To Clock       : clk_fast
 Failed Paths   : 0
 
-Type           : Clock Hold: 'clk'
+Type           : Clock Hold: 'clk_fast'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : reg_file:inst31|8dffe:inst8|34
-To             : alu:inst32|d[5]
-From Clock     : clk
-To Clock       : clk
-Failed Paths   : 650
+From           : reg_file:inst31|8dffe:inst13|35
+To             : alu:inst32|d[6]
+From Clock     : clk_fast
+To Clock       : clk_fast
+Failed Paths   : 909
 
 Type           : Total number of failed paths
 Slack          : 
@@ -70,7 +70,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 650
+Failed Paths   : 909
 
 --------------------------------------------------------------------------------------
 

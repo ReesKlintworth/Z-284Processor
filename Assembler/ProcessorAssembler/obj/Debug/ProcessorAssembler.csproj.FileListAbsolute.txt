@@ -13,3 +13,6 @@ C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembl
 C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\bin\Debug\ProcessorAssembler.exe
 C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\bin\Debug\ProcessorAssembler.pdb
 C:\Users\Derek Nordgren\Documents\GitHub\284Processor\Assembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.csprojResolveAssemblyReference.cache
+C:\Repos\284Processor\Assembler\ProcessorAssembler\bin\Debug\ProcessorAssembler.exe.config
+C:\Repos\284Processor\Assembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.exe
+C:\Repos\284Processor\Assembler\ProcessorAssembler\obj\Debug\ProcessorAssembler.pdb
